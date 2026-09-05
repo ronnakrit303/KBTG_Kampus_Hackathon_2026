@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>K PLUS JobShield — One-page Pitch Proposal</title>
+  <style>
+    @page { size: A4 portrait; margin: 0; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; width: 210mm; height: 297mm; }
+    body {
+      font-family: Tahoma, "Leelawadee UI", sans-serif;
+      color: #17212b;
+      background: #e7f3f1;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page {
+      position: relative;
+      width: 210mm;
+      height: 297mm;
+      padding: 10mm 11mm 8mm;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 96% 5%, rgba(37,178,145,.16) 0 28mm, transparent 28.2mm),
+        linear-gradient(180deg, #f4fbf9 0%, #ffffff 32%, #f8fbfc 100%);
+    }
+    .header {
+      position: relative;
+      height: 43mm;
+      padding: 7mm 8mm;
+      border-radius: 5mm;
+      color: #fff;
+      overflow: hidden;
+      background: linear-gradient(120deg, #073b3a 0%, #0a5b52 58%, #137a65 100%);
+      box-shadow: 0 2.2mm 6mm rgba(5,54,51,.15);
+    }
+    .header::after {
+      content: "";
+      position: absolute;
+      right: -9mm;
+      top: -20mm;
+      width: 62mm;
+      height: 62mm;
+      border: 8mm solid rgba(82,224,183,.14);
+      border-radius: 50%;
+    }
+    .eyebrow { font-size: 7.6pt; font-weight: 700; letter-spacing: .09em; color: #89f0d0; }
+    h1 { margin: 1.5mm 0 0; font-size: 25pt; line-height: 1.05; letter-spacing: -.02em; }
+    .tagline { margin-top: 2.2mm; max-width: 146mm; font-size: 11pt; line-height: 1.32; font-weight: 700; }
+    .subline { margin-top: 1.1mm; max-width: 150mm; font-size: 8.2pt; line-height: 1.35; color: #ccece5; }
+    .track-chip {
+      position: absolute;
+      top: 7mm;
+      right: 7mm;
+      padding: 1.8mm 3mm;
+      border: .3mm solid rgba(255,255,255,.36);
+      border-radius: 99px;
+      font-size: 7pt;
+      font-weight: 700;
+      color: #e9fff8;
+      background: rgba(255,255,255,.08);
+    }
+    .row { display: grid; gap: 3.6mm; margin-top: 3.8mm; }
+    .top-row { grid-template-columns: 1.72fr .88fr; height: 39mm; }
+    .bottom-row { grid-template-columns: .93fr 1.17fr; height: 62mm; }
+    .card {
+      border: .28mm solid #d7e5e2;
+      border-radius: 3.3mm;
+      padding: 4mm 4.5mm;
+      background: rgba(255,255,255,.96);
+      box-shadow: 0 1mm 3.5mm rgba(9,49,45,.055);
+    }
+    .card h2, .solution h2 {
+      margin: 0 0 2mm;
+      font-size: 10.2pt;
+      line-height: 1.1;
+      color: #075b50;
+      letter-spacing: .01em;
+    }
+    .card h2 span, .solution h2 span { color: #60706d; font-size: 7.5pt; font-weight: 400; }
+    p { margin: 0; font-size: 8.15pt; line-height: 1.46; }
+    .problem strong { color: #a24032; }
+    .target {
+      background: linear-gradient(145deg, #e8f8f3 0%, #f7fcfa 100%);
+      border-color: #b9e6d8;
+    }
+    .target .age {
+      display: inline-block;
+      margin: .5mm 0 2mm;
+      padding: 1.4mm 2.5mm;
+      border-radius: 2mm;
+      font-size: 12.5pt;
+      font-weight: 800;
+      color: #075b50;
+      background: #c9f3e5;
+    }
+    .target p { font-size: 7.8pt; }
+    .solution {
+      height: 85mm;
+      margin-top: 3.8mm;
+      padding: 4mm 4.5mm;
+      border: .3mm solid #b9deda;
+      border-radius: 3.5mm;
+      background: #ffffff;
+      box-shadow: 0 1mm 3.5mm rgba(9,49,45,.055);
+    }
+    .flow { display: grid; grid-template-columns: 1fr 1fr 1.06fr; gap: 3mm; }
+    .step {
+      position: relative;
+      min-height: 37mm;
+      padding: 3.2mm 3.3mm;
+      border-radius: 2.7mm;
+      background: #f1f7f6;
+      border: .25mm solid #d5e5e2;
+    }
+    .step:nth-child(2) { background: #f4f1fb; border-color: #ddd1f3; }
+    .step:nth-child(3) { background: #fff5e8; border-color: #f0d4ae; }
+    .step-no {
+      display: inline-flex;
+      width: 6.2mm;
+      height: 6.2mm;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #fff;
+      background: #0b6d5d;
+      font-size: 7.5pt;
+      font-weight: 800;
+    }
+    .step:nth-child(2) .step-no { background: #7252a3; }
+    .step:nth-child(3) .step-no { background: #c66a21; }
+    .step h3 { display: inline; margin-left: 1.2mm; font-size: 9.2pt; line-height: 1.2; }
+    .step p { margin-top: 2.2mm; font-size: 7.5pt; line-height: 1.42; }
+    .mini { margin-top: 1.6mm; font-size: 6.8pt; color: #5a6866; }
+    .risk-levels { margin-top: 2mm; display: flex; gap: 1mm; }
+    .risk-levels span { padding: .8mm 1.2mm; border-radius: 1.2mm; font-size: 6.2pt; font-weight: 700; }
+    .low { color: #176734; background: #dff5e4; }
+    .med { color: #8a5110; background: #ffe8bd; }
+    .high { color: #9b3027; background: #ffd7d2; }
+    .warning {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 3mm;
+      margin-top: 3mm;
+      padding: 2.8mm 3.2mm;
+      border-left: 1.2mm solid #df5a48;
+      border-radius: 2.2mm;
+      background: #fff4f1;
+    }
+    .warning h3 { margin: 0 0 1mm; font-size: 8.6pt; color: #992f25; }
+    .warning p { font-size: 7pt; line-height: 1.34; }
+    .warning .actions { display: flex; flex-direction: column; justify-content: center; gap: 1.2mm; }
+    .action {
+      padding: 1.4mm 2mm;
+      border-radius: 1.5mm;
+      text-align: center;
+      font-size: 7pt;
+      font-weight: 700;
+      color: #fff;
+      background: #0b6d5d;
+    }
+    .action.secondary { color: #9b3027; border: .25mm solid #dc7a6e; background: #fff; }
+    .integrations {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2mm;
+      margin-top: 2.7mm;
+    }
+    .integration {
+      padding: 1.7mm 2mm;
+      border-radius: 1.8mm;
+      font-size: 6.5pt;
+      line-height: 1.25;
+      color: #3f4e4b;
+      background: #eef5f4;
+    }
+    .integration b { display: block; color: #075b50; font-size: 6.8pt; }
+    .value-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4mm; }
+    .value-box { padding: 2.5mm; border-radius: 2mm; background: #eef8f5; }
+    .value-box:nth-child(2) { background: #eef3fa; }
+    .value-box h3 { margin: 0 0 1mm; font-size: 8pt; color: #075b50; }
+    .value-box p { font-size: 7pt; line-height: 1.38; }
+    .principles { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6mm 2mm; margin-top: 2mm; }
+    .principle { font-size: 6.9pt; line-height: 1.32; }
+    .principle b { color: #075b50; }
+    .boundary {
+      margin-top: 2.2mm;
+      padding: 2mm 2.5mm;
+      border-radius: 1.8mm;
+      color: #5b4a25;
+      background: #fff5da;
+      font-size: 6.6pt;
+      line-height: 1.33;
+    }
+    .footer {
+      margin-top: 3.2mm;
+      padding: 2.2mm 3mm 0;
+      border-top: .28mm solid #cddbd8;
+      color: #5a6765;
+      font-size: 5.8pt;
+      line-height: 1.35;
+    }
+    .footer strong { color: #31413e; }
+    .footer a { color: #176c61; text-decoration: none; }
+    .footer .note { margin-top: .8mm; color: #6d7775; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <div class="eyebrow">KBTG KAMPUS HACKATHON 2026 · ONE-PAGE PITCH</div>
+      <h1>K PLUS JobShield</h1>
+      <div class="tagline">ปกป้อง “เงินสำรองก่อนเงินเดือนแรก” ก่อนถูกบริษัทปลอมขอให้จ่ายเงินเพื่อแลกกับงาน</div>
+      <div class="subline">Career Mode ที่เชื่อมบริบทการหางาน แหล่งเงิน และความเสี่ยงของธุรกรรม เพื่อแทรกแซงก่อนเงินออก</div>
+      <div class="track-chip">TRACK 3 · CYBER SECURITY</div>
+    </header>
+
+    <section class="row top-row">
+      <article class="card problem">
+        <h2>Problem Statement <span>— ปัญหาที่ต้องแก้</span></h2>
+        <p>มิจฉาชีพอาจปลอมเป็นบริษัทหรือ recruiter แล้วเรียก<strong>ค่าสมัคร ค่าอบรม ค่าอุปกรณ์ หรือเงินมัดจำ</strong>ก่อนเริ่มงาน ผู้สมัครเป็นผู้ยืนยันการโอนเอง จึงผ่านการยืนยันตัวตนได้แม้กำลังถูก social engineering ขณะที่คำเตือนทั่วไปไม่ได้รู้ว่าเงินก้อนนี้จำเป็นต่อการใช้ชีวิตก่อนเงินเดือนแรก</p>
+      </article>
+      <article class="card target">
+        <h2>Target Users</h2>
+        <div class="age">First Jobbers 22–30</div>
+        <p>ผู้ที่กำลังสมัครงาน รอเริ่มงาน หรือรอเงินเดือนแรก และเลือกเปิด Career Mode ด้วยตนเอง โดยไม่เหมารวมว่ากลุ่มนี้ประมาทหรือถูกหลอกมากกว่าคนอื่น</p>
+      </article>
+    </section>
+
+    <section class="solution">
+      <h2>Proposed Solution <span>— 3 ขั้นตอนก่อนเงินออก</span></h2>
+      <div class="flow">
+        <article class="step">
+          <span class="step-no">1</span><h3>Prepare</h3>
+          <p>ผู้ใช้เปิด <b>Career Mode</b> แบบ opt-in และกำหนดช่วงเวลา จากนั้นแบ่ง K-ePocket เป็น <b>Job Search Budget</b> สำหรับค่าใช้จ่ายหางาน และ <b>เงินสำรองก่อนเงินเดือนแรก</b> สำหรับค่าเช่า อาหาร เดินทาง และเหตุจำเป็น</p>
+        </article>
+        <article class="step">
+          <span class="step-no">2</span><h3>Detect</h3>
+          <p>ก่อนโอน ระบบรวมหลายสัญญาณ เช่น แหล่งเงิน ผู้รับใหม่ ยอดและการโอนสะสม บริบทการจ่ายเพื่อเริ่มงาน และ destination risk จากระบบธนาคาร โดยคำตอบของผู้ใช้เป็นเพียงหนึ่งสัญญาณ</p>
+          <div class="mini">ไม่อ่านข้อความหรืออีเมลอัตโนมัติ</div>
+        </article>
+        <article class="step">
+          <span class="step-no">3</span><h3>Intervene</h3>
+          <p>ปรับ friction ตามความเสี่ยง พร้อมเหตุผลที่สังเกตได้ หาก High Risk จะพักเป็น <b>Pending Instruction</b> ใน Cooling-off <b>ก่อนส่งเข้าสู่ PromptPay</b> และให้ผู้ใช้ตรวจสอบ ยกเลิก หรือรายงาน</p>
+          <div class="risk-levels"><span class="low">LOW · NORMAL</span><span class="med">MED · EXPLAIN</span><span class="high">HIGH · PAUSE</span></div>
+        </article>
+      </div>
+
+      <div class="warning">
+        <div>
+          <h3>ตัวอย่างคำเตือน: พักรายการนี้และตรวจสอบก่อน</h3>
+          <p>ผู้รับใหม่ · ใช้เงินสำรองก่อนเงินเดือนแรก · ระบุว่าเป็นค่าใช้จ่ายก่อนเริ่มงาน<br><b>คำสั่งยังไม่ถูกส่งเข้าสู่ระบบโอน</b> และผู้ใช้ยังยกเลิกได้</p>
+        </div>
+        <div class="actions"><div class="action">Pause &amp; Verify</div><div class="action secondary">Cancel / Report</div></div>
+      </div>
+
+      <div class="integrations">
+        <div class="integration"><b>1 · K-ePocket</b>บริบทและวัตถุประสงค์ของเงิน</div>
+        <div class="integration"><b>2 · Transaction + Fraud Risk</b>ผู้รับ ยอด รูปแบบ และ destination risk</div>
+        <div class="integration"><b>3 · Security &amp; Fraud Response</b>Warning · Verification · Cooling-off · Report</div>
+      </div>
+    </section>
+
+    <section class="row bottom-row">
+      <article class="card">
+        <h2>Value Proposition</h2>
+        <div class="value-grid">
+          <div class="value-box">
+            <h3>For First Jobbers</h3>
+            <p>ช่วยปกป้องเงินสำคัญ ณ จุดตัดสินใจก่อนโอน อธิบายว่าเตือนเพราะอะไร และยังมีทางผ่านสำหรับธุรกรรมถูกต้องหรือเหตุฉุกเฉิน เช่น โอนไปบัญชีตนเองหรือ verified biller</p>
+          </div>
+          <div class="value-box">
+            <h3>For K PLUS</h3>
+            <p>ต่อยอด K-ePocket และ fraud controls ที่มีอยู่เป็น security journey เฉพาะช่วงหางาน เปลี่ยนจาก awareness ไปสู่ pre-loss intervention และเสริม Digital Trust โดยไม่ต้องอ่านข้อมูลส่วนตัวเป็นค่าเริ่มต้น</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Track Perspective <span>— Cyber Security &amp; Digital Trust</span></h2>
+        <p>รับมือ <b>authorized push payment</b> ที่ผู้ใช้ถูก fake recruiter ชักจูงให้โอนเอง ด้วย defense in depth ก่อนเงินออก:</p>
+        <div class="principles">
+          <div class="principle"><b>Explainable policy</b><br>ใช้ multi-signal rules และเหตุผลที่ผู้ใช้เข้าใจได้</div>
+          <div class="principle"><b>Risk-based control</b><br>Low ปกติ, Medium ยืนยันอย่างตั้งใจ, High ใช้ Cooling-off</div>
+          <div class="principle"><b>Evasion-aware</b><br>ประเมินยอดสะสมและตรวจซ้ำเพื่อรับมือการแบ่งยอด/ตอบ purpose ผิด</div>
+          <div class="principle"><b>Privacy &amp; autonomy</b><br>เก็บ audit data เท่าที่จำเป็น และไม่ล็อกเงินถาวร</div>
+        </div>
+        <div class="boundary"><b>Prototype boundary:</b> ใช้ synthetic data และ deterministic rules; destination risk เป็น simulated bank-side signal ระยะ Cooling-off จริงต้องผ่าน policy, legal และ usability validation ระบบช่วยลดความเสี่ยงแต่ไม่รับประกันว่าจะหยุด Scam ได้ทุกกรณี</div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <strong>Official references (accessed 4 Sep 2026):</strong>
+      <a href="https://www.kasikornbank.com/th/personal/digital-banking/kbankcyberrisk/pages/jobscam.aspx">[1] KBank — หลอกรับสมัครงานออนไลน์</a> ·
+      <a href="https://www.kasikornbank.com/th/kplus/">[2] K PLUS</a> ·
+      <a href="https://www.kasikornbank.com/th/personal/Digital-banking/Pages/k-epocket.aspx">[3] K-ePocket</a> ·
+      <a href="https://www.kasikornbank.com/th/news/pages/sati_fighter.aspx">[4] KBank anti-fraud controls</a>
+      <div class="note">Proposed concept based on reviewed public information; ไม่อ้างการเข้าถึง KBank internal systems และ Email/Link scanning หรือ Fraud Specialist ไม่อยู่ใน Core.</div>
+    </footer>
+  </main>
+</body>
+</html>
