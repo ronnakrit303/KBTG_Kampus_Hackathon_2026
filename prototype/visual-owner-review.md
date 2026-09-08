@@ -1,7 +1,10 @@
 # K PLUS JobShield — Visual Owner Review
 
+> Scope note — 6 กันยายน 2026: เอกสารนี้บันทึกการตรวจ canvas รุ่นก่อน V6; current scope อยู่ใน [figma-flow-spec-v6.md](./figma-flow-spec-v6.md) จึงต้อง visual-review ใหม่หลัง Sync V6
+
 วันที่เตรียม: 4 กันยายน 2026; scope checklist updated 5 กันยายน 2026  
-สถานะ: Automated pre-check completed; latest canvas copy sync and human visual-owner sign-off pending  
+สถานะ: Automated pre-check completed for prior canvas; V6 screens/copy and human visual-owner sign-off pending
+
 ผู้รับผิดชอบตามแผน: สมาชิกคนที่สอง — final visual/prototype owner
 
 ## Figma Target
@@ -56,6 +59,11 @@
 - [ ] ทุกหน้าจอ: ไม่มี clipping/overflow ที่ขนาดปกติ และลองเพิ่ม text size อย่างน้อยหนึ่งระดับ
 - [ ] ทุก action: touch target อย่างน้อยประมาณ 44 px และลำดับปุ่มปลอดภัยชัดเจน
 - [ ] Contrast: body/action text อ่านได้ และไม่ได้ใช้สีเป็นสัญญาณเดียว
+- [ ] `START-NO-EPOCKET`: ผู้ใช้เข้าใจว่า K-ePocket แยกเงิน ส่วน JobShield ปกป้องก่อนโอน และสามารถสร้างสองกระเป๋าแบบ One-tap ได้
+- [ ] `START-RESERVE-SETUP`: ผู้ใช้ตั้ง essential-expense target, Auto-Routing และ stop-at-cap ได้ โดย consent ไม่ถูกเลือกไว้ล่วงหน้า
+- [ ] `START-RESERVE-WITHDRAW`: own/verified emergency, general-spending nudge และ High-Risk route ให้ friction ต่างกันตาม specification
+- [ ] Friendly character ใช้เฉพาะ nudge/education; High-Risk Scam screen ยังจริงจังและไม่ใช้สีเป็นสัญญาณเดียว
+- [ ] K Point/ดอกเบี้ยติดป้ายว่าเป็นแนวคิดที่ยังไม่รับรอง และไม่มีอัตราหรือ reward earn rate สมมติ
 - [ ] Prototype-only labels ไม่ปะปนกับข้อความที่จะเสนอเป็น production claim
 
 ## Issue Log — Fill From Actual Review

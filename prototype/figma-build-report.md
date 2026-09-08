@@ -1,7 +1,8 @@
 # K PLUS JobShield — Figma Build Report
 
-วันที่: 4 กันยายน 2026; scope status updated 5 กันยายน 2026  
-สถานะ: Clickable prototype built; latest canvas copy sync pending; pilot not started; final Proposal not started
+วันที่: 4 กันยายน 2026; scope status updated 6 กันยายน 2026
+
+สถานะ: Existing 31-screen clickable prototype is a prior snapshot; V6 `Protected Reserve + Auto-Save + Benefit + Risk-based Protection` ถูกระบุใน repository แล้วแต่ **not applied to canvas**; `0 pilot sessions conducted`; `0 participant sessions conducted`
 
 ## Target
 
@@ -28,6 +29,13 @@
   - `START-LEGIT-MEDIUM`
   - `START-EMERGENCY`
 
+V6 planned but not yet built on the canvas:
+
+- setup, schedule-based auto-save, Benefit Tier และ two-route withdrawal screens ตาม `prototype/figma-flow-spec-v6.md`
+- ไม่มี career-stage selection, reserve-name transition หรือ Job Search Budget
+- planned start points ระบุครบใน `prototype/figma-flow-spec-v6.md`
+- High-risk reserve withdrawal ใช้ระบบคำเตือนเดิม `H05 → H06` แทนการสร้าง fraud-warning system ซ้ำ
+
 ## Validation Performed
 
 - Structural audit: 31 named screens present
@@ -48,21 +56,26 @@ Figma Starter plan reached the MCP tool-call limit while requesting additional s
 4. `L02` verified payment-channel wording
 5. contrast, Thai text scaling, clipping and keyboard/focus order where Figma supports it
 
-Latest scope copy that still must be applied and verified on the canvas:
+Latest V6 scope copy that still must be applied and verified on the canvas:
 
-- use `เงินสำรองก่อนเงินเดือนแรก`
+- use `เงินสำรองตั้งหลัก` as the only current reserve name
 - show Dynamic Time Lock only as part of risk-based Cooling-off
 - limit Core to 3 integrations: K-ePocket, K PLUS Transaction + Bank-side Fraud Risk and K PLUS Security & Fraud Response
 - keep Email/Link scanning and Fraud Specialist outside Core as Optional/Future
 - state that H06 is a Pending Instruction before the payment system/PromptPay
 - do not claim a model that has not been built; the Prototype uses deterministic rules/policy and synthetic data
+- หากยังไม่มีบัญชี K-ePocket ให้ส่งผู้ใช้ไปยัง official account-opening flow แล้วกลับมาสร้าง/เลือก Pocket ย่อย; ไม่อ้างว่าเปิดบัญชีแบบ one-tap
+- show that Pause holds only the instruction and exact amount, not the whole account/pocket, and repeated taps do not bypass it
+- add starting amount, fixed-amount monthly Schedule, target/cap, Qualified Round, Grace/Checkpoint, Tier progress และ risk-based withdrawal flow ตาม `prototype/figma-flow-spec-v6.md`
+- separate friendly self-control nudges from serious High-Risk Scam warnings
+- แสดง K Point/partner coupon ได้เฉพาะ Benefit Preview ภายใต้เงื่อนไขธนาคาร; ไม่ระบุคะแนน/มูลค่า และไม่มี step-up interest ใน MVP
 
 Do not describe this remaining review as completed until it is actually performed.
 
 Human sign-off checklist: `prototype/visual-owner-review.md`
-Exact pending copy patch: `prototype/figma-scope-sync-patch.md`
+Current pending V6 patch: `prototype/figma-scope-sync-v6.md`
 
-ล่าสุดเมื่อ 5 กันยายน 2026: Figma Starter MCP call limit ยัง active จึงยังไม่สามารถเขียน latest scope copy ลง canvas, ดึงภาพเพิ่ม หรือเซ็นแทน human visual owner ได้
+ล่าสุดเมื่อ 5 กันยายน 2026: Figma Starter MCP call limit ยัง active และการตรวจผ่าน Figma MCP คืนข้อความ rate-limit อีกครั้ง จึงยังไม่สามารถเขียน latest scope copy/extension ลง canvas, ดึงภาพเพิ่ม หรือเซ็นแทน human visual owner ได้ ไม่มีการ retry ซ้ำหลัง error
 
 ## Research Accounting
 

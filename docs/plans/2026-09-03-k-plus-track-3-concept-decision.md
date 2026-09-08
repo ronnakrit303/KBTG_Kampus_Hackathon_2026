@@ -1,14 +1,82 @@
 # K PLUS Track 3 Concept Decision
 
-Status: Test Final Proposal 1 generated and visually verified on 2026-09-05; Figma canvas copy sync, pilot and participant sessions remain pending
+Status: V6 integration-and-benefit scope approved on 2026-09-06; repository sync in progress; Test Final Proposal 1 and Diagram v2/v3/v4/v5 retained as prior snapshots; Figma canvas sync, pilot and participant sessions remain pending
 Created: 2026-09-03
 Approval: `Test_ Final-Proposal-1.pdf` created by explicit user request; final submission wording/design still awaits user review and test evidence
 
 ## Summary
 
-แนวคิดที่ผ่าน research gates แบบมีข้อจำกัดคือ `K PLUS JobShield — ปกป้องเงินก้อนเริ่มต้นของ First Jobbers เมื่อถูกบริษัทปลอมขอให้จ่ายเงินเพื่อแลกกับงาน` ภายใต้ Track 3 — Cyber Security & Digital Trust โดย core loss path คือ fake recruiter หลอกให้ผู้ใช้โอนค่าสมัคร ค่าตรวจประวัติ ค่าอบรม ค่าอุปกรณ์ หรือเงินมัดจำ หลักฐานยืนยันภัยได้ แต่ยังห้ามอ้างว่า First Jobbers 22–30 เป็นเหยื่อมากกว่ากลุ่มอื่น Novelty คือ scenario-aware security policy ที่ใช้ Career Mode, source pocket และ transaction/recipient risk เพื่อเลือก intervention ก่อนโอน—not budget/pocket/lock/destination detection ที่มีส่วนประกอบอยู่แล้ว Figma เชื่อมแล้วและสร้าง clickable prototype 31 screens พร้อม 44/44 reactions และ 10 test start points สำเร็จ แต่ยังไม่มี usability result: `0 pilot sessions conducted` และ `0 participant sessions conducted`
+แนวคิดปัจจุบันคือ `K PLUS JobShield — ช่วย First Jobbers สร้างเงินสำรองอย่างต่อเนื่อง และเพิ่มการป้องกันตามความเสี่ยงเมื่อเงินสำคัญกำลังถูกโอนไปยังปลายทางภายนอก` ภายใต้ Track 3 — Cyber Security & Digital Trust ผู้ใช้เลือกหรือสร้าง Pocket ย่อยใน K-ePocket สำหรับ `เงินสำรองตั้งหลัก (Protected Reserve)` เพียงก้อนเดียว ตั้งเป้าจากค่าใช้จ่ายจำเป็น 3–6 เดือนหรือกำหนดเอง นำเงินที่มีอยู่มากันเป็นยอดเริ่มต้น และเลือกเปิดแผนออมอัตโนมัติตามจำนวน/วันที่ที่กำหนดได้ รอบที่เข้าเกณฑ์จะเพิ่ม Benefit Tier แบบ Prototype ที่ 1/3/6 เดือน ส่วนทุกการนำเงินออกจะผ่าน Savings Nudge หรือ High-Risk Security Intervention ตาม multi-signal policy Fake Recruiter ยังคงเป็น Hero Threat Scenario และ novelty อยู่ที่ `Protected Reserve + goal-aware saving plan + context-aware pre-transfer protection` ปัจจุบันยังไม่มี usability result: `0 pilot sessions conducted` และ `0 participant sessions conducted`
 
-## Scope Lock — 5 September 2026
+## Current Scope Lock — K PLUS Integration & Benefit Loop (V6)
+
+- K-ePocket เป็นผลิตภัณฑ์เดิมที่ใช้เป็น money container; JobShield เป็น goal/benefit experience และ security policy layer ไม่ใช่บัญชีเงินฝากหรือ Pocket รูปแบบใหม่
+- ถ้ามีบัญชี K-ePocket แล้ว ผู้ใช้เลือก Pocket เดิมหรือสร้าง Pocket ย่อยสำหรับ `เงินสำรองตั้งหลัก`; ถ้ายังไม่มีบัญชี ระบบนำไปเปิด K-ePocket ตามขั้นตอนทางการแล้วกลับเข้า JobShield ห้ามเรียกการเปิดบัญชีว่า One-tap
+- เป้าหมายเงินสำรองคำนวณจากค่าใช้จ่ายจำเป็นต่อเดือน × 3/6 เดือนหรือกำหนดเอง และผู้ใช้เริ่มที่ศูนย์หรือเติมยอดเริ่มต้นได้
+- MVP ใช้ความสามารถแบบ Schedule Transfer เป็นฐาน: ผู้ใช้เลือกจำนวนเงินคงที่และวันที่ออมรายเดือน หากกรอกเปอร์เซ็นต์ ระบบใช้เพื่อคำนวณเป็นจำนวนคงที่จากรายได้ประมาณการที่ผู้ใช้กรอก
+- การตรวจเงินเดือนเข้าแบบ event-triggered, โอนตรงเข้า Pocket ย่อย, หยุดอัตโนมัติเมื่อถึงเพดาน และ API ภายในเป็น production dependencies ที่ยังไม่ยืนยันจากข้อมูลสาธารณะ
+- Auto-Routing เป็น opt-in ปรับ พัก หรือปิดได้; รอบที่พัก/เงินไม่พอไม่นับเพิ่ม และใช้ Grace/Pause ได้ 1–2 รอบโดยไม่ลด Tier
+- Prototype Benefit Tier ใช้รอบ Auto-Routing ที่เข้าเกณฑ์: 1 เดือน = `เริ่มต้น`, 3 เดือน = `ต่อเนื่อง`, 6 เดือน = `มั่นคง`
+- รอบที่เข้าเกณฑ์ต้องโอนสำเร็จและมียอดสุทธิคงอยู่ถึงวันสรุปรอบ การถอนเงินไม่ลด Tier เดิม แต่พักการเลื่อนไประดับถัดไปจนเติมกลับถึง Checkpoint
+- K Point/คูปองพาร์ตเนอร์เป็นเพียงตัวอย่าง `สิทธิประโยชน์ภายใต้เงื่อนไขธนาคาร`; ไม่ระบุคะแนน มูลค่า หรือรับรองสิทธิ และไม่ใช้ดอกเบี้ยขั้นบันไดใน MVP
+- เงินสำรองไม่ใช่กระเป๋าใช้จ่าย ทุกการนำออกมี 2 user-facing routes: ไม่เข้า High-Risk combination → Mascot Savings Nudge ที่กดข้ามได้; เข้า High-Risk combination → คำเตือนจริงจัง ไม่มี Mascot และเข้าสู่ Cooling-off
+- Mascot copy เป็น Draft ที่สื่อความเป็นห่วง พร้อมปุ่ม `ใช้เงินสำรอง` และ `เก็บไว้ก่อน`; เมื่อผู้ใช้ยืนยันใช้ ให้ส่งกำลังใจสั้น ๆ โดยไม่ถามซ้ำ
+- High Risk ยังคงต้องมาจากหลายสัญญาณ เช่น protected reserve + ผู้รับบุคคลใหม่ + job-payment/repetition/destination risk และพัก Pending Instruction ก่อนส่งเข้าสู่ระบบโอน/PromptPay
+- Core integrations คง 3 ส่วน: K-ePocket, K PLUS Transaction + Bank-side Fraud Risk และ K PLUS Security & Fraud Response
+- Business Claim ใช้แบบมีเงื่อนไข: การออมต่อเนื่องอาจช่วยเพิ่มยอดเงินฝากที่มีเสถียรภาพและ Engagement ซึ่งสนับสนุนฐานเงินทุน/โอกาสสร้างคุณค่า; Benefit ยังขึ้นกับต้นทุน ความเสี่ยง กฎเกณฑ์ และ Business Approval
+- Email/Link scanning และ Fraud Specialist ไม่ใช่ Core; Prototype ใช้ deterministic policy + synthetic data ไม่มี AI/ML model
+
+## Previous Approved Scope — V5 Snapshot
+
+รายละเอียด V5 ด้านล่างเก็บเป็นประวัติ หากขัดกับ V6 ให้ใช้ `Current Scope Lock — K PLUS Integration & Benefit Loop (V6)`
+
+### One Continuous Reserve (V5)
+
+- ใช้ชื่อเดียวตลอด Flow: `เงินสำรองตั้งหลัก (Protected Reserve)`
+- ตัด career-stage selection, การแยกก่อน/หลังเงินเดือน และการเปลี่ยนวัตถุประสงค์หรือย้าย Pocket ออก
+- ผู้ใช้ไม่ต้องมี K-ePocket มาก่อน; onboarding เสนอสร้างหรือเชื่อม Pocket เดียวแบบ One-tap
+- ผู้ใช้กำหนดค่าใช้จ่ายจำเป็นต่อเดือน เป้าหมาย 3/6 เดือนหรือกำหนดเอง และยอดเริ่มต้นจากเงินที่มีอยู่
+- Auto-Routing เป็น opt-in: จำนวนคงที่หรือเปอร์เซ็นต์ของเงินเข้า เปิดภายหลังได้ ปรับ พัก ปิด และหยุดเมื่อถึงเป้าหมายได้
+- หากยังไม่มีรายได้ ผู้ใช้ยังใช้ JobShield และเงินสำรองตั้งหลักได้ โดย Auto-Routing อยู่สถานะยังไม่เปิดหรือรอแหล่งเงินที่ผู้ใช้กำหนด
+- บัญชีตนเอง/verified biller ที่ไม่มี risk conflict ใช้ flow ปกติ; ค่าใช้จ่ายทั่วไปที่ไม่จำเป็นใช้ Savings Nudge ที่กดข้ามได้
+- Fraud/Scam Intervention ต้องใช้หลายสัญญาณร่วมกัน เช่น protected reserve + ผู้รับบุคคลใหม่ + job-payment/repetition/destination risk
+- Fake Recruiter ยังเป็น Hero Scenario โดยไม่ใช้สถานะงานเป็นสัญญาณ
+- Core statement คือ `เงินสำรองตั้งหลักก้อนเดียว → สร้างต่อเนื่องด้วย Auto-Routing → ปกป้องด้วย Risk-based Protection`
+- Core integrations ยังมี 3 ส่วนเดิม: K-ePocket, K PLUS Transaction + Bank-side Fraud Risk และ K PLUS Security & Fraud Response
+- Email/Link scanning และ Fraud Specialist ไม่ใช่ Core; Prototype ใช้ deterministic rules/policy กับ synthetic data และไม่อ้างว่ามี ML model
+- High-Risk Cooling-off พักเฉพาะ Pending Instruction และยอดรายการนั้นก่อนส่งเข้าสู่ระบบโอน/PromptPay
+
+## Previous Approved Scope — V4 Snapshot
+
+เนื้อหา V4 ด้านล่างเก็บไว้เป็น decision history เท่านั้น หากขัดกับ `Current Scope Lock — One Continuous Reserve (V5)` ให้ใช้ V5 เป็นปัจจุบัน
+
+### Approved Scope Alignment — 6 September 2026
+
+- Positioning ใช้วงจร `Set up → Build → Protect → Continue` โดย Auto-Routing เป็น money-management mechanism และ context-aware pre-transfer policy เป็นแกน Track 3
+- `Career Mode` เดิมลดบทบาทเหลือ `career stage/context` ที่ผู้ใช้เลือกตอนเปิด JobShield: กำลังหางาน/รอเงินเดือนแรก หรือเริ่มมีรายได้แล้ว
+- ช่วงก่อนรับเงินเดือนแรกใช้ protected reserve เพียงก้อนเดียวชื่อ `เงินสำรองก่อนเงินเดือนแรก`; หลังมีรายได้เปลี่ยนวัตถุประสงค์เป็น `เงินสำรองฉุกเฉิน` ที่ตั้งเป้าจากค่าใช้จ่ายจำเป็น 3–6 เดือนหรือกำหนดเอง
+- เงินที่เหลือจากช่วงก่อนเงินเดือนแรกย้ายไปเริ่มเป้าหมายเงินสำรองฉุกเฉินได้เฉพาะเมื่อผู้ใช้ยืนยัน ไม่ย้ายอัตโนมัติ
+- Auto-Routing เป็น opt-in ปรับ พัก ปิด และหยุดเมื่อถึงเป้าหมายได้; Prototype ใช้ user-configured/synthetic salary event
+- แยก `Savings Nudge` ที่กดข้ามได้ออกจาก `Fraud/Scam Intervention` ที่ใช้ friction ตามระดับความเสี่ยง
+- Fake recruiter payment เป็น Hero Threat Scenario ไม่ใช่ขอบเขตการใช้งานทั้งหมดของผลิตภัณฑ์
+- K Point เป็น Future Concept ที่ต้องผ่าน Business/Product approval; ตัดดอกเบี้ยพิเศษและ claim เรื่องนำเงินลูกค้าไปลงทุนออกจาก Prototype/Proposal
+- Email/Link scanning, employer network และ Fraud Specialist ยังคงเป็น Optional/Future และไม่ใช่ Core
+- High-Risk Cooling-off พักเฉพาะ Pending Instruction และยอดนั้นก่อนเข้าสู่ PromptPay; ไม่ล็อกทั้งบัญชีหรือทั้ง K-ePocket
+- Test Final Proposal 1 และ Diagram v3 เป็น snapshot เดิม ห้ามเขียนทับ; artifact ใหม่ต้องใช้ชื่อเวอร์ชันถัดไป
+
+### Approved Simplification — Single Protected Reserve
+
+- ผู้ใช้อนุมัติให้ตัด `Job Search Budget` ออกจากแนวคิดปัจจุบันเมื่อ 6 กันยายน 2026
+- ก่อนรับเงินเดือนแรก ผู้ใช้นำเงินที่มีอยู่มากันไว้ใน `เงินสำรองก่อนเงินเดือนแรก` และทยอยใช้สำหรับค่าใช้ชีวิตที่จำเป็น
+- หลังรับเงินเดือน ผู้ใช้ยืนยันการเปลี่ยนวัตถุประสงค์ของเงินก้อนเดิมเป็น `เงินสำรองฉุกเฉิน` หรือเลือกเริ่ม Pocket ใหม่; ระบบไม่ย้ายหรือเปลี่ยนให้เอง
+- Auto-Routing เติมเงินใหม่เข้าสู่เงินสำรองฉุกเฉินตามจำนวนหรือเปอร์เซ็นต์ที่ผู้ใช้กำหนด
+- Hero Scenario คือ Fake Recruiter พยายามให้ผู้ใช้ดึงเงินสำรองก่อนเงินเดือนแรกไปยังบัญชีบุคคลใหม่
+- Core statement ใช้ `Protected Reserve + Auto-Routing + Risk-based Protection`
+- การอ้างอิง Job Search Budget ใน Historical Scope Lock, prior PDF, Diagram v2/v3 และ research history เป็น snapshot เดิม ไม่ใช่ current scope
+
+## Historical Scope Lock — 5 September 2026
+
+ส่วนนี้เก็บไว้เป็น decision history เท่านั้น หากขัดกับ `Current Scope Lock — One Continuous Reserve (V5)` ให้ใช้ V5 และ Draw.io V5 เป็นปัจจุบัน
 
 - คำเรียกมาตรฐานในภาษาไทยคือ `เงินสำรองก่อนเงินเดือนแรก` และใช้คำนี้เหมือนกันทุกเอกสาร/หน้าจอที่ใช้งานต่อจากนี้
 - Core มีเพียง 3 integrations: (1) `K-ePocket` สำหรับแยกวัตถุประสงค์ของเงิน (2) `K PLUS Transaction + Bank-side Fraud Risk` สำหรับข้อมูลผู้รับ ยอด รูปแบบธุรกรรม และสัญญาณปลายทาง และ (3) `K PLUS Security & Fraud Response` สำหรับคำเตือน การยืนยันที่เข้มขึ้น Cooling-off และ Cancel/Report
@@ -17,8 +85,15 @@ Approval: `Test_ Final-Proposal-1.pdf` created by explicit user request; final s
 - Email/Link scanning และ Fraud Specialist ไม่อยู่ใน Core; หากกล่าวถึง ให้ติดป้าย `Optional/Future integration` ชัดเจนเท่านั้น
 - Prototype ปัจจุบันใช้ deterministic multi-signal rules/policy และ synthetic data; ห้ามเรียกว่าโมเดลอัจฉริยะหรืออ้างว่ามี ML model ที่ยังไม่ได้สร้าง
 - FigJam อ้างอิงชุดใหม่ที่ [K PLUS JobShield — Detailed System Flow](https://www.figma.com/board/2Zucnsm9P4uPJdZ1BHVRv9); Mermaid source ใน Repository ต้องเป็น canonical source ชุดเดียวกัน
+- ผู้ใช้ไม่ต้องมี K-ePocket มาก่อน; Full JobShield onboarding ต้องเสนอสร้าง/เชื่อม `Job Search Budget` และ `เงินสำรองก่อนเงินเดือนแรก` แบบ One-tap ส่วนการข้ามเหลือเพียง baseline protection
+- เพิ่ม Protected Savings/Auto-Routing เป็น Supporting Prototype flow หลังได้รับเงินเดือนแรก โดยแยก `เงินสำรองฉุกเฉิน` ออกจาก `เงินสำรองก่อนเงินเดือนแรก`; Core Track 3 ยังเป็น pre-transfer JobShield policy
+- Auto-Routing เป็น opt-in ปรับ/พัก/ปิดและหยุดเมื่อถึงเพดานได้; recommendation ใช้ deterministic rule ไม่ใช้คำว่า AI
+- K Point และดอกเบี้ยพิเศษเป็น unconfirmed future business concepts เท่านั้น ห้ามแสดงอัตรา สิทธิ หรือผลตอบแทนเสมือนว่าได้รับอนุมัติแล้ว
+- Figma canvas ยังมีโครงสร้างเดิม 31 screens; A01K/A01N และ R00–R09B อยู่ใน local Figma-ready specification และยังไม่ได้ apply เพราะ Starter MCP tool-call limit
 
-## Clarifying Questions
+## Clarifying Questions — Historical Decision Log
+
+รายการด้านล่างเก็บคำตอบระหว่างการพัฒนาแนวคิดไว้เพื่อการตรวจสอบย้อนหลัง หากกล่าวถึง `Job Search Budget`, Career Mode, Stage branching หรือชื่อเงินสำรองเดิม ให้ถือว่าถูกแทนที่ด้วย `Current Scope Lock — One Continuous Reserve (V5)`
 
 - [x] เลือก Direction A เป็นแนวคิดหลัก: JobShield สำหรับ recruitment-payment scam ต่อ First Jobbers
 - [x] เลือกความเสียหายหลัก: ถูกหลอกให้โอนเงินเพื่อแลกกับการสมัครหรือเริ่มงาน
@@ -77,14 +152,14 @@ Approval: `Test_ Final-Proposal-1.pdf` created by explicit user request; final s
 - `research/user-problem.md` — หลักฐาน fake-job payment scam และ First Jobber claim boundary
 - `research/competitor-gap.md` — public KBank capability matrix และ refined novelty statement
 - `research/signal-feasibility.md` — bank-visible/derived signals, assumptions และ prototype boundaries
-- `research/threat-model.md` — actors, assets, trust boundaries, attack journey, threats, controls และ residual risks
-- `research/synthetic-risk-table.md` — deterministic rule precedence, four boundary cases, negative tests และ acceptance criteria
+- `research/threat-model-v5.md` — current actors, assets, trust boundaries, attack paths, controls และ residual risks
+- `research/synthetic-risk-table-v5.md` — current deterministic rule precedence, boundary cases และ acceptance criteria
 - `proposal/content-skeleton.md` — โครงเนื้อหาห้าส่วนและ three-step visual map; ไม่ใช่ final Proposal
 - `proposal/Test_ Final-Proposal-1.pdf` — one-page test Final Proposal; A4, one page, rendered and visually inspected on 5 September 2026
 - `proposal/generate_test_final_proposal_1.py` — reproducible source for the test PDF
 - `prototype/technical-visual-cross-review.md` — consistency review, issue resolutions และ Figma constraints
-- `prototype/figma-flow-spec.md` — frame inventory, components, interaction map และ clickable build checklist
-- `prototype/figma-scope-sync-patch.md` — exact screen-copy patch และ verification checklist ที่ยังรอลง Figma canvas
+- `prototype/figma-flow-spec-v5.md` — current frame inventory, components, interaction map และ clickable build checklist
+- `prototype/figma-scope-sync-v5.md` — current screen-copy patch และ verification checklist ที่ยังรอลง Figma canvas
 - `research/formative-usability-test-plan.md` — consent, counterbalanced tasks, measures, observation/synthesis templates และ decision rules
 - `research/phase-a-research-plan.md` — facts, hypotheses, research workstreams และ milestone status
 
@@ -92,7 +167,7 @@ Approval: `Test_ Final-Proposal-1.pdf` created by explicit user request; final s
 
 | Direction | First Jobber specificity | Money/saving fit | Track 3 fit | Duplication/dependency risk | Demo story |
 |---|---|---|---|---|---|
-| A. JobShield: recruitment-payment protection + protected reserve | สูง | สูง | สูง | ปานกลาง: ต้องพิสูจน์ Career Mode adoption และ verification integration | ชัดและเฉพาะเจาะจง |
+| A. JobShield: recruitment-payment protection + protected reserve | สูง | สูง | สูง | ปานกลาง: ต้องพิสูจน์ JobShield adoption และ verification integration | ชัดและเฉพาะเจาะจง |
 | B. SafeStart: protected savings + scam intervention ทั่วไป | ปานกลาง | สูง | สูง | สูง: เสี่ยงซ้ำ pocket และ transaction warning เดิม | กว้างและอธิบายยากกว่า |
 | C. MuleGuard: recipient/graph risk ก่อนโอน | ต่ำ–ปานกลาง | ต่ำ | สูง | สูง: KBank ระบุว่ามี suspicious-destination detection และต้องพึ่ง internal graph data | เทคนิคเด่นแต่โจทย์ออมอ่อน |
 | D. Recruitment PhishScan: สแกนอีเมล/ลิงก์ปลอม | สูง | ต่ำ | สูง | สูง: generic scanner, cross-app visibility และ privacy | เข้าใจง่ายแต่ K PLUS fit อ่อน |
@@ -101,7 +176,7 @@ Approval: `Test_ Final-Proposal-1.pdf` created by explicit user request; final s
 
 ## Proposed Differentiation
 
-JobShield ไม่อ้างว่า pocket, fraud detection หรือ warning เป็นองค์ประกอบใหม่โดยลำพัง ความแตกต่างที่เสนอคือการเชื่อม `purpose-bound protected funds + Career Mode/job-payment context + recipient/transaction risk` เข้าเป็น context-aware security policy ซึ่งปรับ intervention ก่อนผู้ใช้ยืนยัน authorized transfer ภายใต้ social engineering
+JobShield ไม่อ้างว่า pocket, Auto-Routing, fraud detection หรือ warning เป็นองค์ประกอบใหม่โดยลำพัง ความแตกต่างที่เสนอคือการเชื่อม `เงินสำรองตั้งหลัก + user-controlled Auto-Routing + job-payment/recipient/transaction risk` เข้าเป็น context-aware security policy ซึ่งปรับ intervention ก่อนผู้ใช้ยืนยัน authorized transfer ภายใต้ social engineering
 
 Claim boundary: ใช้คำว่า proposed differentiation จนกว่าจะตรวจ capability ล่าสุดของ K PLUS, K-ePocket, MAKE by KBank และมาตรการ anti-fraud ทางการครบถ้วน ห้ามใช้คำว่า first, unique หรือ KBank ยังไม่มีโดยไม่มีหลักฐานโดยตรง
 
@@ -126,7 +201,7 @@ K PLUS อยู่ที่จุดก่อนเงินออกและ�
 ## High-Risk Warning UX
 
 - ใช้ plain Thai ที่สั้น ชัด และไม่ตำหนิผู้ใช้
-- แสดง observable reasons 2–3 ข้อและจำนวน `เงินสำรองก่อนเงินเดือนแรก` ที่กำลังเสี่ยง โดยไม่เปิดกฎและ thresholds ทั้งหมด
+- แสดง observable reasons 2–3 ข้อและจำนวน `เงินสำรองตั้งหลัก` ที่กำลังเสี่ยง โดยไม่เปิดกฎและ thresholds ทั้งหมด
 - Primary actions คือ `Pause & Verify` และ `Cancel/Report`; รายละเอียดเชิงเทคนิคอยู่ใน `Learn more`
 - ไม่ใช้ risk score ที่อธิบายไม่ได้และไม่กล่าวยืนยันว่าผู้รับเป็นมิจฉาชีพ
 - ใช้สีร่วมกับข้อความ/ไอคอน ไม่พึ่งสีอย่างเดียว และออกแบบรองรับ text scaling กับ screen reader
@@ -141,12 +216,13 @@ K PLUS อยู่ที่จุดก่อนเงินออกและ�
 
 ## Synthetic Boundary Scenarios
 
-1. Fake recruiter ขอให้โอนไป new personal payee โดยดึงเงินจาก `เงินสำรองก่อนเงินเดือนแรก`
-2. ค่าใช้จ่ายสมัครงานที่ถูกต้องและอยู่ในแผน จ่ายจาก Job Search Budget ไป verified biller
-3. เหตุฉุกเฉินที่ใช้เงินสำรองก่อนเงินเดือนแรกไปบัญชีตนเองหรือ verified biller ผ่าน limited break-glass
-4. Attacker-coached bypass เช่น แบ่งยอดโอนหรือบอกให้ผู้ใช้ตอบ purpose ผิด โดย multi-signal policy ยังประเมินยอดสะสม แหล่งเงิน ผู้รับใหม่ และ destination risk
+1. Fake recruiter ขอให้โอนไป new personal payee โดยดึงเงินจาก `เงินสำรองตั้งหลัก`
+2. ค่าใช้ชีวิตที่ถูกต้อง จ่ายจากเงินสำรองตั้งหลักไป verified biller โดยไม่มี High-Risk warning
+3. เหตุฉุกเฉินที่ใช้เงินสำรองตั้งหลักไปบัญชีตนเองหรือ verified biller ผ่าน normal/limited break-glass path
+4. การใช้เงินสำรองตั้งหลักกับผู้รับเดิมและไม่มี Fraud signal แสดง Savings Nudge ที่กดข้ามได้ ไม่สร้าง Cooling-off
+5. Attacker-coached bypass เช่น แบ่งยอดโอนหรือบอกให้ผู้ใช้ตอบ purpose ผิด โดย multi-signal policy ยังประเมินยอดสะสม แหล่งเงิน ผู้รับใหม่ และ destination risk
 
-Risk table ต้องมีครบทั้งสี่กรณี ส่วน Figma usability flow เน้นสามกรณีแรก; กรณีที่สี่เป็น adversarial policy test และไม่ต้องสร้างหน้าจอสำหรับทุก permutation
+Risk table ต้องมีครบทั้งห้ากรณี ส่วน Figma usability flow เน้น Hero, legitimate, emergency และ Savings Nudge; กรณี coached bypass เป็น adversarial policy test และไม่ต้องสร้างหน้าจอสำหรับทุก permutation
 
 ## Ownership
 
@@ -181,7 +257,7 @@ JobShield จะถูกล็อกสำหรับ Proposal เมื่อ
 ### Gate Results — 4 September 2026
 
 1. **Gate 1 — PASS WITH CLAIM LIMITS:** แหล่งทางการไทยยืนยัน fake-job/recruitment-payment scam แต่ไม่พบ comparative evidence ว่า First Jobbers 22–30 เสี่ยงกว่ากลุ่มอื่น จึงใช้ transitional-risk context เป็น hypothesis และไม่ใช้ prevalence claim
-2. **Gate 2 — PASS WITH MATERIAL NARROWING:** ไม่พบ public end-to-end flow ที่รวม Career Mode + source-of-funds + recruitment context + adaptive pre-transfer action แต่แทบทุก primitive มีอยู่แล้ว Novelty จึงอยู่ที่ orchestration/policy เท่านั้น และต้องเรียกว่า proposed differentiation based on reviewed public sources
+2. **Gate 2 — PASS WITH MATERIAL NARROWING:** ไม่พบ public end-to-end flow ที่รวม protected source-of-funds + user-controlled Auto-Routing + recruitment/transaction context + adaptive pre-transfer action แต่แทบทุก primitive มีอยู่แล้ว Novelty จึงอยู่ที่ orchestration/policy เท่านั้น และต้องเรียกว่า proposed differentiation based on reviewed public sources
 3. **Gate 3 — PASS FOR CONCEPT/PROTOTYPE:** core ใช้ app state และ transaction-derived signals ได้โดยไม่อ่านข้อความส่วนตัว; destination-risk ใช้ simulated bank-side flag ส่วน recipient legal type, verified-employer network, registry automation, fraud graph และ cooling-off authority เป็น assumptions/future integrations
 
 หลักฐานและขอบเขตอยู่ที่ `research/user-problem.md`, `research/competitor-gap.md`, `research/signal-feasibility.md` และ `research/sources.md`
@@ -191,7 +267,7 @@ JobShield จะถูกล็อกสำหรับ Proposal เมื่อ
 - Evidence-backed layer ที่พบแล้ว: รูปแบบ fake-job/recruitment scam และการเรียกเก็บเงินเพื่อสมัครหรือเริ่มงาน
 - Hypothesis layer ที่ต้องตรวจสอบ: First Jobbers อาจส่งใบสมัครหลายแห่ง คาดหวังการติดต่อจากผู้ส่งที่ไม่รู้จัก ถูกกดดันให้ตอบสนองเร็ว และมีเงินสำรองช่วงเปลี่ยนผ่านจำกัด
 - Claim boundary: ห้ามเขียนว่า First Jobbers ถูกหลอกมากกว่ากลุ่มอื่นหรือมีลักษณะดังกล่าวทุกคน หากไม่มี comparative evidence โดยตรง
-- Product implication: Career Mode และ `เงินสำรองก่อนเงินเดือนแรก` ตอบบริบทช่วงเปลี่ยนผ่าน ไม่ได้ตั้งอยู่บนสมมติฐานว่าผู้ใช้ขาดความรู้หรือความระมัดระวัง
+- Product implication: `เงินสำรองตั้งหลัก` และ Fake Recruiter hero scenario ตอบบริบทของ First Jobbers โดยไม่ต้องถามสถานะงาน และไม่ได้ตั้งอยู่บนสมมติฐานว่าผู้ใช้ขาดความรู้หรือความระมัดระวัง
 
 ## Plan Todos
 
@@ -230,7 +306,7 @@ JobShield จะถูกล็อกสำหรับ Proposal เมื่อ
 - Figma target: [K PLUS JobShield — Clickable Prototype](https://www.figma.com/design/5uoF2s6cq2JMGRFfwmdpc2) ใน Drafts ของ `Re: Verse's team`
 - FigJam diagrams: [K PLUS JobShield — Detailed System Flow](https://www.figma.com/board/2Zucnsm9P4uPJdZ1BHVRv9); editable Mermaid source อยู่ที่ `prototype/jobshield-diagrams.md`
 - Completed todos: plugin connection, new-file creation, cover/foundations, 31-screen clickable flow, 44/44 reaction audit, 10 testing start points และ formative usability test kit
-- Partial QA: visual spot-check ผ่าน `A04` และ `E02`; full visual sweep ถูกหยุดเมื่อ Figma Starter plan ถึง MCP tool-call limit จึงยังต้องลง latest copy ตาม `prototype/figma-scope-sync-patch.md` และให้ visual owner ตรวจ `H05`, `H06`, warning variants, contrast, text scaling และ focus order
+- Partial QA: prior Figma canvas ผ่านเพียง visual spot-check บางหน้า; V5 ยังต้องลงตาม `prototype/figma-scope-sync-v5.md` และให้ visual owner ตรวจ H05/H06, warning variants, contrast, text scaling และ focus order
 - Visual-owner handoff: ใช้ `prototype/visual-owner-review.md`; automated pre-check ไม่ใช่ human sign-off และยังห้ามระบุ `READY FOR PILOT`
 - Blocking dependencies: ต้องมี human visual-owner sign-off และ pilot participant จริง 1 คนก่อน sessions จริง 5–8 คน; ขณะนี้ `0 pilot sessions conducted` และ `0 participant sessions conducted`
 - Next selected todos: visual-owner QA → pilot 1 คน → แก้ Critical/High defects → sessions 5–8 คน → synthesize actual findings
@@ -261,21 +337,21 @@ JobShield จะถูกล็อกสำหรับ Proposal เมื่อ
 - ผู้ทดสอบ 5–8 คนไม่รองรับ statistical/general population claim และอาจเกิด learning/order effect จึงต้องระบุว่าเป็น formative study และจัดลำดับ scenario อย่างระมัดระวัง
 - หาก synthetic scenarios มีเฉพาะ Scam ที่ชัดเจน ผลทดสอบจะไม่เปิดเผย false positives, emergency harm หรือช่องทาง evasion และไม่เพียงพอสำหรับ Track 3 review
 - หากเหลือเพียง URL/domain check จะกลายเป็น generic link scanner และเชื่อมกับการจัดการเงิน/เงินออมไม่พอ
-- Career Mode อาจมี adoption ต่ำเพราะผู้ใช้ที่ไม่คิดว่าตนเสี่ยงอาจไม่เปิดใช้งาน ต้องออกแบบ onboarding/value ให้คุ้มกับ friction
-- โครงสร้างเงินสองก้อนซ้ำกับ K-ePocket/MAKE ได้ง่าย หากไม่มี policy ที่เชื่อม fund source, recruitment context และ transaction risk เข้าด้วยกัน
+- JobShield อาจมี adoption ต่ำเพราะผู้ใช้ที่ไม่คิดว่าตนเสี่ยงอาจไม่เปิดใช้งาน ต้องออกแบบ onboarding/value ให้คุ้มกับ friction
+- หากอธิบายเงินสำรองตั้งหลักเป็นเพียง Pocket ออมเงินอีกใบ แนวคิดจะซ้ำกับ K-ePocket/MAKE ได้ง่าย; ความต่างต้องอยู่ที่ Auto-Routing journey และ risk-based pre-transfer policy
 - Risk policy จะไม่ credible หากไม่แยกสัญญาณที่ K PLUS เห็นได้โดยตรงออกจากข้อมูล fraud network ภายในที่เป็นเพียง integration assumption
 - หาก risk score ทุกระดับลงท้ายด้วย pop-up แบบเดียว ระบบจะไม่ใช่ risk-based control และจะเกิด warning fatigue
 - Face scan หรือการกดยืนยันซ้ำเพียงอย่างเดียวพิสูจน์ได้แค่ว่าเจ้าของบัญชีเป็นผู้ทำรายการ ไม่ได้พิสูจน์ว่าเจ้าของบัญชีไม่ได้กำลังถูก social engineering
 - หากใช้เบอร์โทร เว็บไซต์ หรือลิงก์จากข้อความต้องสงสัยเป็นช่องทางตรวจสอบ ผู้ใช้จะถูกส่งกลับไปยืนยันกับมิจฉาชีพคนเดิม
 - การพึ่งยอดเงินขั้นต่ำเพียงอย่างเดียวเปิดช่องให้มิจฉาชีพแบ่งธุรกรรมเป็นยอดเล็กหลายครั้ง
 - หากใช้คำตอบของผู้ใช้ว่า “เกี่ยวกับงานหรือไม่” เป็นสวิตช์ตัดสินหลัก มิจฉาชีพสามารถ coach ให้เลือกคำตอบอื่นและลดความเสี่ยงเทียมได้
-- การเตือนค่าสอบ ใบรับรอง หรือบริการสมัครงานที่ถูกต้องทุกครั้งจะทำให้เกิด warning fatigue และลด adoption ของ Career Mode
+- การเตือนค่าสอบ ใบรับรอง หรือบริการสมัครงานที่ถูกต้องทุกครั้งจะทำให้เกิด warning fatigue และลด adoption ของ JobShield
 - Cooling-off ที่สั้นหรือง่ายต่อการ bypass จะไม่หยุดผู้ใช้ที่กำลังถูกกดดัน แต่ถ้ายาวแบบตายตัวอาจกระทบค่าใช้จ่ายจำเป็นและโอกาสงานที่ถูกต้อง
 - แม้มีหลายขั้น ผู้ใช้ที่ยังเชื่อมิจฉาชีพหลังครบ cooling-off อาจยืนยันต่อได้ จึงต้องวัด risk reduction และ comprehension แทนการอ้าง complete prevention
-- หาก Career Mode ซ่อนอยู่ใน settings ผู้ใช้เสี่ยงไม่พบ แต่หากเปิดให้อัตโนมัติตามอายุหรือพฤติกรรม ระบบอาจสร้างความรู้สึกถูกเฝ้าดูและผิดพลาดเรื่องสถานะการทำงาน
+- หาก JobShield ซ่อนอยู่ใน settings ผู้ใช้เสี่ยงไม่พบ แต่หากเปิดให้อัตโนมัติตามอายุหรือพฤติกรรม ระบบอาจสร้างความรู้สึกถูกเฝ้าดูและผิดพลาดเรื่องสถานะการทำงาน
 - Prototype ที่แสดงเพียงหน้าจอและ risk score จะไม่พิสูจน์ว่า contextual intervention ช่วยการตัดสินใจหรือรักษา usability ของธุรกรรมปกติ
 - หากไม่กำหนด failure condition ทีมอาจเลือกตีความผลทดสอบทุกแบบว่าแนวคิดสำเร็จและไม่ยอมตัด scope ที่อ่อน
-- หากใส่ Job Search Budget, เงินสำรองก่อนเงินเดือนแรก, link scan, verified employer network, risk engine, Cooling-off, Fraud Specialist และ reporting เป็นฟีเจอร์หลักทั้งหมด Proposal หนึ่งหน้าจะดูเป็น feature bundle ที่ทำจริงยาก; Core จึงล็อกไว้ที่ 3 integrations ตาม Scope Lock
+- บทเรียนจาก scope เดิมคือ หากใส่หลายกระเป๋า, Stage branching, link scan, employer network, risk engine และ Fraud Specialist เป็น Core พร้อมกัน Proposal หนึ่งหน้าจะกลายเป็น feature bundle; V5 จึงเหลือเงินสำรองตั้งหลักก้อนเดียวและ 3 integrations
 - Scope ที่วางไว้ต้องทำได้แม้ทีมเล็ก; ห้ามแจกบทบาทหรืออ้างความสามารถสมาชิกที่ยังไม่ได้ยืนยัน
 - แม้สมาชิกคนที่สองทำได้หลายด้าน แต่ถ้าไม่มี primary owner ต่อ deliverable งานอาจซ้ำกันและไม่มีผู้รับผิดชอบปิดคุณภาพขั้นสุดท้าย
 - หาก content owner และ visual owner ไม่ cross-review ก่อน freeze Proposal กับ Figma อาจใช้คำ นิยามระดับความเสี่ยง หรือ user flow ไม่ตรงกัน
@@ -284,4 +360,4 @@ JobShield จะถูกล็อกสำหรับ Proposal เมื่อ
 
 ## Approval
 
-- Status: Clickable Figma build completed with partial visual QA; pilot and participant testing remain pending; final Proposal remains unstarted
+- Status: V5 continuous-reserve repository scope and Draw.io are synced; existing 31-screen Figma canvas remains a prior snapshot and still needs the V5 patch plus human visual QA; `0 pilot sessions conducted`; `0 participant sessions conducted`; Test Final Proposal 1 remains an earlier snapshot and is not approved for submission

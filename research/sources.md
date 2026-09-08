@@ -114,15 +114,17 @@
 - วันที่เข้าถึง: 4 กันยายน 2026
 - ประเภทแหล่งข้อมูล: หน้าผลิตภัณฑ์ทางการของ K PLUS
 - สิ่งที่รองรับ: K PLUS มี My Budget สำหรับตั้งงบ/หมวดรายจ่าย, K-ePocket สำหรับแบ่งเงินตามวัตถุประสงค์ และมาตรการยืนยันตัวตนสำหรับธุรกรรมสำคัญ
-- ผลต่อ novelty: Job Search Budget และ `เงินสำรองก่อนเงินเดือนแรก` ต้องนำเสนอเป็น context/policy ที่ต่อยอดของเดิม ไม่ใช่ budget engine หรือ pocket รูปแบบใหม่
+- ผลต่อ novelty: `เงินสำรองตั้งหลัก` และแผนออมอัตโนมัติต้องนำเสนอเป็นการต่อยอด K-ePocket/My Budget ไม่ใช่ budget engine หรือ Pocket รูปแบบใหม่; V6 ใช้ Pocket เดียวต่อเนื่องและไม่ถามสถานะงาน
 
 ## S-KBANK-005 — K-ePocket
 
 - URL: https://www.kasikornbank.com/th/personal/Digital-banking/Pages/k-epocket.aspx
-- วันที่เข้าถึง: 4 กันยายน 2026
+- URL เงื่อนไขบัญชี: https://www.kasikornbank.com/th/Download/TC/tc_opening_k-ePocket_account-20250919-th.pdf
+- วันที่เข้าถึง: 4 กันยายน 2026; ตรวจซ้ำ 6 กันยายน 2026
 - ประเภทแหล่งข้อมูล: หน้าผลิตภัณฑ์/FAQ ทางการของ KBank
-- สิ่งที่รองรับ: ผู้ใช้แยกเงินเป็นกระเป๋าเพื่อเก็บ ใช้ และตั้งเป้าหมาย รวมถึงเลือกกระเป๋าเพื่อโอนหรือจ่ายได้
-- ผลต่อ novelty: การแบ่งเงินสองก้อนไม่ใช่นวัตกรรมของ JobShield; สิ่งที่เสนอเพิ่มคือการใช้ source pocket เป็น risk context ก่อนโอน
+- สิ่งที่รองรับ: ผู้ใช้แยกเงินเป็นกระเป๋าเพื่อเก็บ ใช้ และตั้งเป้าหมาย รวมถึงเลือกกระเป๋าเพื่อโอนหรือจ่ายได้; K-ePocket เป็นบัญชีเงินจริงที่มีขั้นตอนเปิดบัญชี ไม่ใช่การสร้าง Pocket ย่อยอย่างเดียว
+- ผลต่อ novelty: การสร้าง pocket ไม่ใช่นวัตกรรมของ JobShield; สิ่งที่เสนอเพิ่มคือ goal/benefit orchestration และการใช้ protected-reserve source เป็น risk context ก่อนโอน
+- ข้อจำกัดต่อ Flow: ถ้ายังไม่มีบัญชี K-ePocket ต้องผ่านขั้นตอนเปิดบัญชีของธนาคารก่อนกลับเข้า JobShield ห้ามอ้างว่าเปิดบัญชี One-tap
 
 ## S-KBANK-006 — MAKE by KBank: Cloud Pocket และ Lock Cloud Pocket
 
@@ -181,3 +183,94 @@
 - ประเภทแหล่งข้อมูล: หน่วยงานคุ้มครองผู้บริโภคสหรัฐฯ
 - สิ่งที่รองรับ: ผู้โจมตีอาจแอบอ้างบริษัทที่มีชื่อเสียง ใช้ขั้นตอนสัมภาษณ์/offer ที่ดูจริง แล้วเรียกให้ผู้สมัครออกเงินค่าอุปกรณ์ก่อน พร้อมแนะนำให้ตรวจผ่านช่องทางบริษัทที่หาแยกเอง
 - ข้อจำกัด: ใช้ยืนยัน attack pattern ระหว่างประเทศ ไม่ใช้สรุป prevalence หรือมูลค่าความเสียหายในไทย
+
+## S-TH-005 — SET: เงินสำรองฉุกเฉิน 3–6 เท่าของค่าใช้จ่าย
+
+- URL: https://www.set.or.th/th/about/mediacenter/insights/video/1253-ruthunpakthong-emergency-reserve
+- วันที่เข้าถึง: 5 กันยายน 2026
+- ประเภทแหล่งข้อมูล: สื่อความรู้ทางการของตลาดหลักทรัพย์แห่งประเทศไทย
+- สิ่งที่รองรับ: เงินสำรองฉุกเฉินควรมีสภาพคล่องและมักตั้งเป้าประมาณ 3–6 เท่าของค่าใช้จ่ายต่อเดือน
+- ผลต่อ Prototype: คำนวณเพดานจาก `ค่าใช้จ่ายจำเป็นต่อเดือน × จำนวนเดือน` ไม่ใช้เงินเดือนทั้งหมดเป็นฐาน และไม่ทำให้เงินฉุกเฉินถอนยากจนใช้เมื่อจำเป็นไม่ได้
+- ข้อจำกัด: เป็นแนวทางความรู้ทางการเงินทั่วไป ไม่ใช่งานสำรวจ demand ของ First Jobbers ต่อ JobShield
+
+## S-INT-005 — Saving by Default: randomized field experiment
+
+- URL: https://www.aeaweb.org/articles?id=10.1257/app.20160547
+- วันที่เข้าถึง: 5 กันยายน 2026
+- ประเภทแหล่งข้อมูล: งานวิจัยภาคสนามแบบ randomized experiment ใน American Economic Journal: Applied Economics
+- สิ่งที่รองรับ: วิธีรับ/จัดสรรเงินแบบ default สามารถเปลี่ยนพฤติกรรมการออมในบริบทที่ศึกษาได้ จึงมีเหตุผลให้ทดสอบ Auto-Routing
+- ข้อจำกัด: ศึกษาชนบทอินเดียและไม่ใช่ payroll Auto-Routing ใน K PLUS จึงห้ามนำผลเชิงปริมาณมาอ้างกับ First Jobbers ไทย
+
+## S-INT-006 — Warning habituation and polymorphic warnings
+
+- URL: https://www.jmis-web.org/articles/1304
+- URL เพิ่มเติม: https://doi.org/10.1016/j.dss.2016.09.010
+- วันที่เข้าถึง: 5 กันยายน 2026
+- ประเภทแหล่งข้อมูล: งานวิจัยเชิงทดลองด้าน security-warning habituation
+- สิ่งที่รองรับ: ผู้ใช้อาจลดความสนใจเมื่อเห็นคำเตือนซ้ำ และการเปลี่ยนองค์ประกอบภาพบางส่วนสามารถช่วยลด habituation ได้ในบริบทที่ศึกษา
+- ผลต่อ Prototype: ลดจำนวนคำเตือน ใช้ risk tier เลือก friction และทดลอง illustration/ข้อความหลายแบบโดยคงตำแหน่งการกระทำหลักให้สม่ำเสมอ
+- ข้อจำกัด: ไม่พิสูจน์ว่าตัวละครน่ารักหรือ polymorphic warning จะลด Scam loss ใน mobile banking ไทย ต้องทดสอบ comprehension และ warning fatigue จริง
+
+## S-KBANK-009 — K Point ecosystem
+
+- URL: https://www.kasikornbank.com/th/personal/Digital-banking/kplus-kpoint
+- วันที่เข้าถึง: 5 กันยายน 2026
+- ประเภทแหล่งข้อมูล: หน้าผลิตภัณฑ์ทางการของ KBank
+- สิ่งที่รองรับ: K Point เป็นระบบสิทธิประโยชน์ที่มีอยู่และใช้งานผ่าน K PLUS ได้ภายใต้เงื่อนไขที่ธนาคารกำหนด
+- ข้อจำกัด: ไม่ยืนยันว่า JobShield สามารถให้ K Point จากการออมได้ การคำนวณคะแนน ต้นทุน และ eligibility ต้องผ่าน Business/Product approval
+
+## S-KBANK-010 — K PLUS Schedule Transfer
+
+- URL: https://www.kasikornbank.com/th/kplus/instruction/forward-transfers
+- FAQ: https://www.kasikornbank.com/th/kplus/faqs/transfer-money/27
+- วันที่เข้าถึง: 6 กันยายน 2026
+- ประเภทแหล่งข้อมูล: คู่มือและ FAQ ทางการของ K PLUS
+- สิ่งที่รองรับ: ผู้ใช้ตั้งรายการโอนล่วงหน้าโดยระบุบัญชี จำนวนเงิน และวัน/เวลาที่ต้องการทำรายการได้
+- ผลต่อ Prototype: ใช้เป็นฐานของ Auto-Routing แบบจำนวนคงที่ตามวันที่ผู้ใช้กำหนด หากผู้ใช้เลือกเปอร์เซ็นต์ ระบบคำนวณเป็นจำนวนคงที่จากรายได้ประมาณการที่ผู้ใช้กรอก
+- ข้อจำกัด: หน้าสาธารณะไม่ยืนยันการตรวจเงินเดือนเข้าแบบ event-triggered, การโอนตรงเข้า Pocket ย่อย, การหยุดเมื่อถึงเพดาน หรือ internal API สำหรับ JobShield
+
+## S-KBANK-011 — K PLUS real-time account notifications
+
+- URL: https://www.kasikornbank.com/th/personal/digital-banking/kbankcyberrisk/pages/realtimetxncheck.aspx
+- วันที่เข้าถึง: 6 กันยายน 2026
+- ประเภทแหล่งข้อมูล: หน้า Cyber Risk ทางการของ KBank
+- สิ่งที่รองรับ: K PLUS มีการแจ้งเตือนความเคลื่อนไหวเงินเข้า–ออกแบบเรียลไทม์
+- ผลต่อ Prototype: ใช้แนวทางช่องทางเดิมสำหรับ quiet Auto-Routing receipt และสถานะ Pending/Cancelled โดยไม่ได้หมายความว่า event schema ภายในเปิดให้ทีมใช้แล้ว
+
+## S-KBANK-012 — ช่องทางรายงานภัยทางการเงินผ่าน K PLUS
+
+- URL: https://www.kasikornbank.com/th/personal/digital-banking/kbankcyberrisk/pages/index.aspx
+- วันที่เข้าถึง: 6 กันยายน 2026
+- ประเภทแหล่งข้อมูล: Cyber Risk hub ทางการของ KBank
+- สิ่งที่รองรับ: KBank แสดงช่องทางศูนย์รับแจ้งเหตุและข้อมูลภัยทางการเงินจากมิจฉาชีพผ่าน K PLUS และ K-Contact Center
+- ผลต่อ Prototype: `Cancel & Report` สามารถ hand off ไปช่องทางเดิมพร้อมข้อมูลธุรกรรมที่จำเป็นและ consent; ไม่อ้างว่า JobShield อายัดบัญชีปลายทางหรือกู้เงินคืนได้
+
+## S-TH-006 — GPPC/PDPC: purpose, consent and retention examples
+
+- URL: https://gppc.pdpc.or.th/privacy-policy/
+- วันที่เข้าถึง: 5 กันยายน 2026
+- ประเภทแหล่งข้อมูล: Privacy notice ของ Government Platform for PDPA Compliance ภายใต้สำนักงานคณะกรรมการคุ้มครองข้อมูลส่วนบุคคล
+- สิ่งที่รองรับ: การประมวลผลควรผูกกับวัตถุประสงค์ที่แจ้งไว้ การเปลี่ยนไปสู่วัตถุประสงค์ใหม่ที่ไม่มีฐานอื่นต้องขอความยินยอมใหม่ และควรกำหนดขอบเขตการเก็บรักษา
+- ผลต่อ Prototype: ขอ consent ต่อ feature, เก็บข้อมูลขั้นต่ำ, แสดงวิธีปิด Auto-Routing/JobShield และไม่อ่านข้อความหรืออีเมล
+- ข้อจำกัด: เป็นตัวอย่าง privacy notice ไม่ใช่ legal opinion สำหรับการออกผลิตภัณฑ์ธนาคาร ฝ่ายกฎหมาย/DPO ต้องประเมินฐานประมวลผลจริง
+
+## S-SEC-001 — OWASP MASVS: storage, cryptography and privacy
+
+- URL Storage: https://mas.owasp.org/MASVS/05-MASVS-STORAGE/
+- URL Cryptography: https://mas.owasp.org/MASVS/06-MASVS-CRYPTO/
+- URL Privacy: https://mas.owasp.org/MASVS/controls/MASVS-PRIVACY-1/
+- วันที่เข้าถึง: 5 กันยายน 2026
+- ประเภทแหล่งข้อมูล: มาตรฐานความปลอดภัยแอปมือถือของ OWASP
+- สิ่งที่รองรับ: ปกป้องข้อมูลอ่อนไหวที่จัดเก็บ ใช้ cryptography และ key management ตามมาตรฐาน และลดการเข้าถึงข้อมูลให้เหลือเท่าที่จำเป็น
+- ผลต่อ Prototype: บันทึกเป็น production architecture requirements ได้แก่ encryption in transit/at rest, approved keystore/KMS, least privilege และ data minimization
+- ข้อจำกัด: Figma prototype ไม่ได้พิสูจน์ว่ามาตรการเหล่านี้ถูก implement แล้ว และไม่ควรเดา cryptographic stack ภายในของ K PLUS
+
+## S-KBANK-013 — K-ePocket Sales Sheet และประกาศอัตราดอกเบี้ยเงินฝาก
+
+- Sales Sheet: https://www.kasikornbank.com/th/Download/TC/Sales_Sheet_K-ePocket_TH.pdf
+- ประกาศอัตราดอกเบี้ย: https://www.kasikornbank.com/th/rate/deposits/09052026-deposit-rates-th.pdf
+- วันที่เข้าถึง: 7 กันยายน 2026
+- ประเภทแหล่งข้อมูล: เอกสารผลิตภัณฑ์และประกาศอัตราดอกเบี้ยทางการของ KBank มีผลวันที่ 9 พฤษภาคม 2569
+- สิ่งที่รองรับ: K-ePocket ไม่กำหนดจำนวนเงินเปิดบัญชีขั้นต่ำ และใช้อัตราดอกเบี้ยแบบก้าวหน้า 1.25% ต่อปีสำหรับส่วนไม่เกิน 500,000 บาท กับ 0.35% ต่อปีสำหรับส่วนที่เกิน 500,000 บาท โดยคำนวณดอกเบี้ยรายวันตามเงื่อนไขที่ประกาศ
+- ผลต่อ Prototype: เกณฑ์เติมเองตั้งแต่ 1 บาทเป็นกติกา UX ของ JobShield ไม่ใช่ขั้นต่ำการเปิด K-ePocket ส่วนอัตรา 2.5% / 1.5% / 0.25% เป็น Product Hypothesis ที่ต่างจากอัตราปัจจุบันและต้องผ่าน Product, Treasury, Legal และ Business Approval
+- ข้อจำกัด: อัตราดอกเบี้ยเปลี่ยนแปลงได้ ต้องตรวจประกาศล่าสุดก่อนนำไปใช้ใน Proposal หรือ Pitch และต้องประเมินว่าช่วง 0.25% หลัง 100,000 บาททำให้ผู้ใช้บางกลุ่มได้รับดอกเบี้ยต่ำกว่าผลิตภัณฑ์ปัจจุบันหรือไม่

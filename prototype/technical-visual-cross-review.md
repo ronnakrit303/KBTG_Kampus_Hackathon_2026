@@ -1,5 +1,7 @@
 # K PLUS JobShield — Technical/Visual Cross-Review
 
+> Scope note — 6 กันยายน 2026: ตารางเดิมเป็น review history ก่อน V6; current scope อยู่ใน [figma-flow-spec-v6.md](./figma-flow-spec-v6.md) และต้อง cross-review ใหม่หลัง Figma V6 ถูกสร้าง
+
 สถานะ: Cross-review completed at specification level; scope sync added — 5 กันยายน 2026  
 ผู้รับผิดชอบตามแผน: ผู้สมัครหลัก = technical/content owner; สมาชิกคนที่สอง = visual/prototype owner  
 ขอบเขต: ตรวจความสอดคล้องระหว่าง threat model, synthetic policy และ non-final content skeleton ก่อนสร้าง Figma  

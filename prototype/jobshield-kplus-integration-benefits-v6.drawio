@@ -1,0 +1,426 @@
+<mxfile host="app.diagrams.net" agent="Codex" compressed="false" pages="4">
+  <diagram id="v6-lifecycle" name="01 ภาพรวมสำหรับผู้บริหาร">
+    <mxGraphModel dx="890" dy="495" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p1-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=28;fontStyle=1;fontColor=#174C3C;align=left;" value="K PLUS JobShield — ออมเงินสำรองต่อเนื่อง และช่วยหยุดคิดก่อนเงินออก" vertex="1">
+          <mxGeometry height="45" width="1300" x="50" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-sub" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=15;fontColor=#49645C;align=left;" value="สำหรับ First Jobbers: ตั้งเป้าหมายครั้งเดียว ออมตามแผน เห็นความคืบหน้า และได้รับการปกป้องเมื่อรายการมีความเสี่ยง" vertex="1">
+          <mxGeometry height="35" width="1700" x="50" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F8F6;strokeColor=#B7C9C2;fontSize=14;spacing=8;align=left;" value="&lt;b&gt;JobShield คืออะไร?&lt;/b&gt; K-ePocket เป็นที่เก็บเงิน ส่วน JobShield เป็นตัวช่วยตั้งเป้าหมาย ออมต่อเนื่อง แสดงสิทธิประโยชน์ และเพิ่มการตรวจสอบก่อนนำเงินสำรองออก" vertex="1">
+          <mxGeometry height="55" width="2300" x="50" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-phase1" parent="1" style="swimlane;html=1;rounded=1;startSize=36;fillColor=#F4FBF8;swimlaneFillColor=#E7F6F0;strokeColor=#49A987;fontSize=15;fontStyle=1;fontColor=#174C3C;" value="1. เริ่มต้น — เตรียมเงินสำรองตั้งหลัก" vertex="1">
+          <mxGeometry height="300" width="850" x="50" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-s1" parent="p1-phase1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#49A987;strokeWidth=2;fontSize=13;spacing=6;" value="&lt;b&gt;มี K-ePocket อยู่แล้วหรือยัง?&lt;br&gt;&lt;/b&gt;&lt;strong&gt;มีแล้ว:&lt;/strong&gt; เลือก K-ePocket ที่ต้องการใช้&amp;nbsp;&lt;div&gt;หรือสร้างกระเป๋าใหม่&lt;b&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;ยังไม่มี:&lt;/strong&gt; เปิด K-ePocket ตามขั้นตอนปกติของธนาคาร&lt;/div&gt;" vertex="1">
+          <mxGeometry height="208.75" width="270" x="260" y="60.620000000000005" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-s0" parent="p1-phase1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#49A987;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;strong&gt;เลือกเปิดใช้งาน JobShield&lt;/strong&gt;&lt;br&gt;ผู้ใช้สามารถเปิดใช้งานได้ด้วยตนเอง และ รับทราบว่าระบบจะใช้ข้อมูลใดในการประเมินความเสี่ยง" vertex="1">
+          <mxGeometry height="120" width="215" x="10" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e01" edge="1" parent="p1-phase1" source="p1-s0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#49A987;strokeWidth=2;" target="p1-s1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-phase2" parent="1" style="swimlane;html=1;rounded=1;startSize=36;fillColor=#F7FAFF;swimlaneFillColor=#EAF3FF;strokeColor=#5B93D3;fontSize=15;fontStyle=1;fontColor=#285F9C;" value="2. ออมต่อเนื่อง — ตั้งจำนวนเงินและวันที่" vertex="1">
+          <mxGeometry height="300" width="560" x="930" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-a1" parent="p1-phase2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B93D3;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;ตั้งแผนการออมรายเดือน&lt;/b&gt;&lt;br&gt;เลือกจำนวนเงิน หรือ ให้ระบบตั้งค่าเงินออมฉุกเฉินจาก&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ค่าใช้จ่าย&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ที่จำเป็นต่อเดือน&lt;/span&gt;&lt;div&gt;&lt;div&gt;และ เลือกวันที่จะออม&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ในแต่ละเดือน&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ซึ่งผู้ใช้สามารถที่จะ&lt;/span&gt;&lt;div&gt;ปรับเปลี่ยน พัก หรือยกเลิกแผนได้ทุกเมื่อ&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="159.37" width="270" x="20" y="85.31" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-phase3" parent="1" style="swimlane;html=1;rounded=1;startSize=36;fillColor=#FFFDF6;swimlaneFillColor=#FFF4D9;strokeColor=#D6A033;fontSize=15;fontStyle=1;fontColor=#6B5200;" value="3. เห็นความคืบหน้า — สร้างแรงจูงใจให้ออมต่อ" vertex="1">
+          <mxGeometry height="300" width="830" x="1520" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-s2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#49A987;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;กำหนดเป้าหมายของเงินสำรอง&lt;br&gt;&lt;/b&gt;คำนวณจากค่าใช้จ่ายจำเป็นต่อเดือน แล้วเอามา × 3 หรือ 6 เดือน และเลือกใส่ยอดเริ่มต้นหรือจะเริ่มต้นที่ 0 บาทก็ได้&lt;b&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="110" width="250" x="610" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-a2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B93D3;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;เมื่อถึงวันที่กำหนด&lt;br&gt;&lt;/b&gt;ระบบจะทำรายการตามแผนที่&lt;div&gt;ตั้งไว้ และแจ้งผลให้ผู้ใช้ทราบ&lt;b&gt;&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="200" x="1250" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-b1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D6A033;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;นับรอบออมสำเร็จ&lt;/b&gt;&lt;br&gt;เมื่อออมเงินเข้าแล้ว และ&lt;div&gt;ยอดเงินยังคงอยู่จนถึงวันสรุปรอบ&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="220" x="1560" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-b2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D6A033;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;ระดับของการออม&lt;/b&gt;&lt;br&gt;1 รอบ: เริ่มต้น&lt;br&gt;3 รอบ: ต่อเนื่อง&lt;br&gt;6 รอบ: มั่นคง" vertex="1">
+          <mxGeometry height="130" width="210" x="1830" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-dash" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DDF4EA;strokeColor=#2A8F6D;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;หน้าสรุปเงินสำรอง&lt;/b&gt;&lt;br&gt;แสดงยอดเงินเทียบกับเป้าหมาย , จำนวนเดือนที่ครอบคลุม, แผนออม,&amp;nbsp; ระดับการออม และรอบออมถัดไป" vertex="1">
+          <mxGeometry height="110" width="220" x="2090" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e02" edge="1" parent="1" source="p1-s1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#49A987;strokeWidth=2;" target="p1-s2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e03" edge="1" parent="1" source="p1-s2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#5B93D3;strokeWidth=2;" target="p1-a1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e04" edge="1" parent="1" source="p1-a1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#5B93D3;strokeWidth=2;" target="p1-a2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e05" edge="1" parent="1" source="p1-a2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#D6A033;strokeWidth=2;" target="p1-b1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e06" edge="1" parent="1" source="p1-b1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#D6A033;strokeWidth=2;" target="p1-b2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e07" edge="1" parent="1" source="p1-b2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#2A8F6D;strokeWidth=2;" target="p1-dash">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-out" parent="1" style="swimlane;html=1;rounded=1;startSize=36;fillColor=#FFFDF8;swimlaneFillColor=#FFF6DF;strokeColor=#D6A033;fontSize=15;fontStyle=1;fontColor=#6B5200;" value="4. ก่อนนำเงินออก — เตือนให้ทบทวนและตรวจความเสี่ยง" vertex="1">
+          <mxGeometry height="430" width="1780" x="320" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-continue" parent="p1-out" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DDF4EA;strokeColor=#2A8F6D;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;ผู้ใช้ยังเป็นผู้ตัดสินใจ&lt;/b&gt;&lt;br&gt;ผู้ใช้สามารถเลือกได้ว่าจะ&amp;nbsp;&lt;div&gt;&lt;strong&gt;ใช้เงินต่อ • เก็บไว้ •&amp;nbsp;&lt;/strong&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;ตรวจสอบเพิ่มเติม •&amp;nbsp;&lt;/strong&gt;&lt;/div&gt;&lt;div&gt;&lt;strong&gt;หรือยกเลิกรายการ&lt;/strong&gt;&lt;br&gt;จากนั้นค่อยกลับไปยังหน้า&lt;/div&gt;&lt;div&gt;สรุปเงินสำรอง&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ฉุกเฉิน&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="260" x="1440" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-w1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D6A033;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;ผู้ใช้ต้องการนำเงินสำรองออก&lt;/b&gt;&lt;br&gt;ระบุจำนวนเงิน และ บัญชีของผู้รับ" vertex="1">
+          <mxGeometry height="100" width="230" x="390" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-w2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4EEFF;strokeColor=#8A63C7;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;ประเมินความเสี่ยงจากหลายปัจจัย&lt;/b&gt;&lt;br&gt;แหล่งที่มาของเงิน • บัญชีของผู้รับ &lt;br&gt;(เช็คว่าตรงกับ Blacklist ไหม) • &lt;br&gt;รูปแบบของการโอนเงิน • &lt;br&gt;วัตถุประสงค์ของการใช้จ่าย • &lt;br&gt;ความเสี่ยงของบัญชีปลายทาง" vertex="1">
+          <mxGeometry height="120" width="270" x="700" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-wd" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF8E6;strokeColor=#D6A033;strokeWidth=2;fontSize=13;fontStyle=1;" value="พบปัจจัยเสี่ยงหลายอย่างพร้อมกันหรือไม่?" vertex="1">
+          <mxGeometry height="140" width="180" x="1050" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-nudge" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E6;strokeColor=#D6A033;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;ไม่พบความเสี่ยงสูง&lt;/b&gt;&lt;br&gt;มาสคอตจะแจ้งเตือนว่าเงินก้อนนี้เป็นเงินสำรองฉุกเฉิน และให้ผู้ใช้เลือกว่าจะ&amp;nbsp;&lt;div&gt;&lt;strong&gt;ใช้เงินสำรองฉุกเฉินต่อ&lt;/strong&gt; หรือ &lt;strong&gt;เก็บไว้ก่อน&lt;/strong&gt;&lt;br&gt;หากเลือกใช้ต่อ สามารถดำเนินการได้ทันที และระบบจะไม่แสดงคำเตือนซ้ำสำหรับรายการนั้น&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="300" x="1330" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-high" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEDE8;strokeColor=#E66C57;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;strong&gt;พบความเสี่ยงสูง&lt;/strong&gt;&lt;br&gt;แสดงเหตุผลของความเสี่ยงอย่างชัดเจน&amp;nbsp;&lt;div&gt;โดยไม่ใช้มาสคอต&lt;br&gt;มีการพักคำสั่งโอนเงินไว้ก่อนที่&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;เงินจะออกจากบัญชี&lt;/span&gt;&lt;/div&gt;&lt;div&gt;ผู้ใช้สามารถเลือกที่จะ&amp;nbsp;&lt;strong&gt;ตรวจสอบต่อ&lt;/strong&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;หรือ &lt;strong&gt;ยกเลิกและรายงาน &lt;/strong&gt;ได้&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="300" x="1330" y="815" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e08" edge="1" parent="1" source="p1-dash" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0;entryY=0.5;endArrow=block;endFill=1;strokeColor=#D6A033;strokeWidth=2;" target="p1-w1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2200" y="525" />
+              <mxPoint x="270" y="525" />
+              <mxPoint x="270" y="780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p1-e09" edge="1" parent="1" source="p1-w1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#8A63C7;strokeWidth=2;" target="p1-w2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e10" edge="1" parent="1" source="p1-w2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#8A63C7;strokeWidth=2;" target="p1-wd">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e11" edge="1" parent="1" source="p1-wd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=0;entryX=0;entryY=0.5;endArrow=block;endFill=1;strokeColor=#D6A033;fontSize=12;" target="p1-nudge" value="ไม่พบ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e12" edge="1" parent="1" source="p1-wd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0;entryY=0.5;endArrow=block;endFill=1;strokeColor=#E66C57;fontSize=12;" target="p1-high" value="พบ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e13" edge="1" parent="1" source="p1-nudge" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.3;endArrow=block;endFill=1;strokeColor=#2A8F6D;strokeWidth=2;" target="p1-continue">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e14" edge="1" parent="1" source="p1-high" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.7;endArrow=block;endFill=1;strokeColor=#2A8F6D;strokeWidth=2;" target="p1-continue">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="v6-autobenefit" name="02 การออมและสิทธิประโยชน์">
+    <mxGraphModel dx="1271" dy="707" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=27;fontStyle=1;fontColor=#285F9C;align=left;" value="การออมทำงานอย่างไร — ตั้งครั้งเดียว ระบบช่วยทำตามแผน" vertex="1">
+          <mxGeometry height="45" width="1900" x="50" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F7FAFF;strokeColor=#B6CBE3;fontSize=14;spacing=8;align=left;" value="&lt;b&gt;หลักการต้นแบบ:&lt;/b&gt; ตั้งจำนวนคงที่และวันที่ • เปอร์เซ็นต์เป็นเพียงตัวช่วยคำนวณ • ระบบไม่ตรวจจับว่าเงินเดือนเข้า • ระดับและสิทธิประโยชน์ต้องทดสอบและผ่านการอนุมัติ" vertex="1">
+          <mxGeometry height="55" width="2300" x="50" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-c1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B93D3;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;1. เลือกจำนวนที่จะออม&lt;/b&gt;&lt;br&gt;กรอกจำนวนคงที่ หรือใช้เปอร์เซ็นต์&lt;br&gt;คำนวณจากรายได้ประมาณการ" vertex="1">
+          <mxGeometry height="115" width="240" x="70" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-c2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B93D3;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;2. เลือกวันที่และบัญชีต้นทาง&lt;/b&gt;&lt;br&gt;เงินจะถูกจัดเข้า&lt;br&gt;กระเป๋าเงินสำรองตั้งหลัก" vertex="1">
+          <mxGeometry height="115" width="240" x="370" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-c3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B93D3;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;3. ตรวจทานและยินยอม&lt;/b&gt;&lt;br&gt;ดูจำนวน วันที่ บัญชี และเป้าหมาย&lt;br&gt;แก้ไข พัก หรือปิดได้" vertex="1">
+          <mxGeometry height="115" width="240" x="670" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-c4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF3FF;strokeColor=#5B93D3;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;4. ถึงวันที่กำหนด&lt;/b&gt;&lt;br&gt;ระบบเริ่มรายการตามแผน&lt;br&gt;ด้วยกลไกตั้งโอนล่วงหน้า" vertex="1">
+          <mxGeometry height="115" width="230" x="970" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-d1" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#EAF3FF;strokeColor=#5B93D3;strokeWidth=2;fontSize=13;fontStyle=1;" value="แผนยังเปิดอยู่&lt;br&gt;และเงินเพียงพอ?" vertex="1">
+          <mxGeometry height="145" width="170" x="1270" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-q" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DDF4EA;strokeColor=#2A8F6D;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;ออมเงินสำเร็จ&lt;/b&gt;&lt;br&gt;แสดงใบยืนยันแบบสั้น&lt;br&gt;ไม่แสดงคำเตือน Scam" vertex="1">
+          <mxGeometry height="115" width="220" x="1530" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-check" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF8E6;strokeColor=#D6A033;strokeWidth=2;fontSize=13;fontStyle=1;" value="เงินที่ออมยังอยู่&lt;br&gt;ถึงวันสรุปรอบ?" vertex="1">
+          <mxGeometry height="155" width="190" x="1840" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-count" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E6;strokeColor=#D6A033;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;นับเป็นรอบออมสำเร็จ&lt;/b&gt;&lt;br&gt;ความคืบหน้าเพิ่ม 1 รอบ" vertex="1">
+          <mxGeometry height="115" width="210" x="2110" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e01" edge="1" parent="1" source="p2-c1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#5B93D3;strokeWidth=2;" target="p2-c2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e02" edge="1" parent="1" source="p2-c2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#5B93D3;strokeWidth=2;" target="p2-c3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e03" edge="1" parent="1" source="p2-c3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#5B93D3;strokeWidth=2;" target="p2-c4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e04" edge="1" parent="1" source="p2-c4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#5B93D3;strokeWidth=2;" target="p2-d1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e05" edge="1" parent="1" source="p2-d1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#2A8F6D;fontSize=12;" target="p2-q" value="สำเร็จ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e06" edge="1" parent="1" source="p2-q" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#D6A033;strokeWidth=2;" target="p2-check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e07" edge="1" parent="1" source="p2-check" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#D6A033;fontSize=12;" target="p2-count" value="ใช่">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-grace" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F8F6;strokeColor=#8CA69D;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;เงินไม่พอ หรือผู้ใช้กดพัก&lt;/b&gt;&lt;br&gt;เดือนนี้ไม่เพิ่มรอบ แต่ระดับเดิมไม่หาย&lt;br&gt;ผ่อนผันได้ 1–2 รอบในต้นแบบ" vertex="1">
+          <mxGeometry height="120" width="260" x="1240" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-hold" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0EC;strokeColor=#E66C57;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;ถอนจนต่ำกว่ายอดอ้างอิง&lt;/b&gt;&lt;br&gt;ระดับเดิมไม่ลด แต่หยุดความคืบหน้า&lt;br&gt;จนกว่าจะเติมเงินกลับถึงจุดเดิม" vertex="1">
+          <mxGeometry height="120" width="250" x="1810" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e08" edge="1" parent="1" source="p2-d1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=block;endFill=1;strokeColor=#8CA69D;fontSize=12;" target="p2-grace" value="ไม่สำเร็จ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e09" edge="1" parent="1" source="p2-check" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=block;endFill=1;strokeColor=#E66C57;fontSize=12;" target="p2-hold" value="ไม่">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-tierlane" parent="1" style="swimlane;html=1;rounded=1;startSize=40;fillColor=#FFFDF6;swimlaneFillColor=#FFF4D9;strokeColor=#D6A033;fontSize=16;fontStyle=1;fontColor=#6B5200;" value="ระดับสิทธิประโยชน์ — ให้คุณค่ากับความต่อเนื่อง ไม่แข่งขันกันด้วยจำนวนเงิน" vertex="1">
+          <mxGeometry height="280" width="1740" x="330" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-t1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D6A033;strokeWidth=2;fontSize=16;spacing=8;" value="&lt;b&gt;ออมสำเร็จ 1 รอบ&lt;/b&gt;&lt;br&gt;ระดับ เริ่มต้น" vertex="1">
+          <mxGeometry height="100" width="260" x="420" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-t2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D6A033;strokeWidth=2;fontSize=16;spacing=8;" value="&lt;b&gt;ออมสำเร็จ 3 รอบ&lt;/b&gt;&lt;br&gt;ระดับ ต่อเนื่อง" vertex="1">
+          <mxGeometry height="100" width="260" x="790" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-t3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D6A033;strokeWidth=2;fontSize=16;spacing=8;" value="&lt;b&gt;ออมสำเร็จ 6 รอบ&lt;/b&gt;&lt;br&gt;ระดับ มั่นคง" vertex="1">
+          <mxGeometry height="100" width="260" x="1160" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-benefit" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E6;strokeColor=#D6A033;strokeWidth=2;fontSize=14;spacing=8;" value="&lt;b&gt;ตัวอย่างสิทธิประโยชน์&lt;/b&gt;&lt;br&gt;อาจเป็น K Point หรือคูปองพาร์ตเนอร์&lt;br&gt;&lt;font color=&quot;#8A5C00&quot;&gt;ต้องผ่านเงื่อนไขและการอนุมัติของธนาคาร&lt;br&gt;ต้นแบบไม่รับรองคะแนนหรือมูลค่า&lt;/font&gt;" vertex="1">
+          <mxGeometry height="130" width="420" x="1530" y="815" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e10" edge="1" parent="1" source="p2-count" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=block;endFill=1;strokeColor=#D6A033;strokeWidth=2;" target="p2-t1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2215" y="680" />
+              <mxPoint x="550" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2-e11" edge="1" parent="1" source="p2-t1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#D6A033;strokeWidth=2;" target="p2-t2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e12" edge="1" parent="1" source="p2-t2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#D6A033;strokeWidth=2;" target="p2-t3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e13" edge="1" parent="1" source="p2-t3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#D6A033;strokeWidth=2;" target="p2-benefit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="v6-protect" name="03 การนำเงินออกและการป้องกัน">
+    <mxGraphModel dx="1900" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p3-title" value="เมื่อต้องการนำเงินออก — คำเตือนเรื่องการออมและคำเตือนภัยแยกจากกัน" style="text;html=1;strokeColor=none;fillColor=none;fontSize=27;fontStyle=1;fontColor=#6B5200;align=left;" vertex="1" parent="1">
+          <mxGeometry x="50" y="25" width="1900" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-note" value="&lt;b&gt;หลักสำคัญ:&lt;/b&gt; การถอนเงินไม่ใช่ Scam โดยตัวมันเอง ระบบจะแสดงคำเตือนภัยร้ายแรงเมื่อพบหลายสัญญาณเสี่ยงร่วมกันเท่านั้น เพื่อลดการเตือนผิดและความรำคาญ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF8;strokeColor=#D6A033;fontSize=14;spacing=8;align=left;" vertex="1" parent="1">
+          <mxGeometry x="50" y="90" width="2500" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-start" value="&lt;b&gt;ผู้ใช้ขอนำเงินสำรองออก&lt;/b&gt;&lt;br&gt;กรอกยอด เลือกผู้รับ&lt;br&gt;และระบุเหตุผลกว้าง ๆ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D6A033;strokeWidth=2;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="70" y="440" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-signals" value="&lt;b&gt;ข้อมูลที่ระบบเห็นในรายการ&lt;/b&gt;&lt;br&gt;เงินมาจากกระเป๋าใด • ยอด • ผู้รับใหม่หรือไม่&lt;br&gt;โอนซ้ำหรือไม่ • เหตุผล • ความเสี่ยงปลายทาง*" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4EEFF;strokeColor=#8A63C7;strokeWidth=2;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="390" y="425" width="310" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-policy" value="&lt;b&gt;กติกาประเมินหลายสัญญาณ&lt;/b&gt;&lt;br&gt;รวมข้อมูลหลายข้อ ไม่ตัดสินจากคำตอบเดียว&lt;br&gt;ไม่อ่านข้อความ อีเมล หรือ Resume" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4EEFF;strokeColor=#8A63C7;strokeWidth=2;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="780" y="425" width="300" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-d" value="พบสัญญาณเสี่ยง&lt;br&gt;หลายข้อพร้อมกัน?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF8E6;strokeColor=#D6A033;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="415" width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e01" edge="1" parent="1" source="p3-start" target="p3-signals" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#8A63C7;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e02" edge="1" parent="1" source="p3-signals" target="p3-policy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#8A63C7;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e03" edge="1" parent="1" source="p3-policy" target="p3-d" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#8A63C7;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-nlane" value="เส้นทาง A — ไม่พบความเสี่ยงสูง: เตือนด้วยความห่วงใย แต่ผู้ใช้ตัดสินใจได้" style="swimlane;html=1;rounded=1;startSize=38;fillColor=#FFFDF6;swimlaneFillColor=#FFF4D9;strokeColor=#D6A033;fontSize=15;fontStyle=1;fontColor=#6B5200;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="185" width="1100" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-mascot" value="&lt;b&gt;มาสคอตเตือนสติเรื่องการออม&lt;/b&gt;&lt;br&gt;“ขอชวนคิดอีกครั้งนะ&lt;br&gt;นี่คือเงินสำรองสำหรับเหตุฉุกเฉิน”&lt;br&gt;พร้อมแสดงยอดและจำนวนเดือนที่เหลือ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E6;strokeColor=#D6A033;strokeWidth=2;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1510" y="295" width="300" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-choice" value="ยังต้องการใช้&lt;br&gt;เงินสำรองหรือไม่?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D6A033;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1880" y="300" width="170" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-send" value="&lt;b&gt;ยืนยันใช้เงินสำรอง&lt;/b&gt;&lt;br&gt;ส่งคำสั่งโอนตามปกติ&lt;br&gt;โดยไม่พักรายการ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DDF4EA;strokeColor=#2A8F6D;strokeWidth=2;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2130" y="285" width="240" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-support" value="มาสคอตส่งกำลังใจ:&lt;br&gt;“ขอให้ทุกอย่างผ่านไปได้ด้วยดีนะ”" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E9F7EF;strokeColor=#49A987;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2130" y="400" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-keep" value="เก็บเงินไว้ก่อน → กลับหน้าสรุป" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F8F6;strokeColor=#8CA69D;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1835" y="230" width="260" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e04" value="ไม่พบ" edge="1" parent="1" source="p3-d" target="p3-mascot" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=0;entryX=0;entryY=0.5;endArrow=block;endFill=1;strokeColor=#D6A033;fontSize=12;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e05" edge="1" parent="1" source="p3-mascot" target="p3-choice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#D6A033;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e06" value="ใช้" edge="1" parent="1" source="p3-choice" target="p3-send" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#2A8F6D;fontSize=12;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e07" value="เก็บ" edge="1" parent="1" source="p3-choice" target="p3-keep" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;endArrow=block;endFill=1;strokeColor=#8CA69D;fontSize=12;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e08" edge="1" parent="1" source="p3-send" target="p3-support" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=block;endFill=1;strokeColor=#49A987;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-hlane" value="เส้นทาง B — พบความเสี่ยงสูง: คำเตือนจริงจังและไม่มีมาสคอต" style="swimlane;html=1;rounded=1;startSize=38;fillColor=#FFF7F5;swimlaneFillColor=#FFE7E1;strokeColor=#E66C57;fontSize=15;fontStyle=1;fontColor=#8A3022;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="585" width="1100" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-warning" value="&lt;b&gt;คำเตือนตามบริบท&lt;/b&gt;&lt;br&gt;บอกเหตุผลที่สังเกตได้ 2–3 ข้อ&lt;br&gt;และจำนวนเงินสำรองที่กำลังเสี่ยง" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEDE8;strokeColor=#E66C57;strokeWidth=2;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1510" y="735" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-pending" value="&lt;b&gt;พักเฉพาะคำสั่งรายการนี้&lt;/b&gt;&lt;br&gt;เงินยังไม่ถูกส่งออก&lt;br&gt;&lt;b&gt;และยังไม่เข้าสู่ระบบโอน PromptPay&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4EEFF;strokeColor=#8A63C7;strokeWidth=2;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1860" y="735" width="270" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-hchoice" value="ผู้ใช้ต้องการ&lt;br&gt;ทำอย่างไรต่อ?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A63C7;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="2210" y="730" width="170" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-cancel" value="&lt;b&gt;ยกเลิกและรายงาน&lt;/b&gt;&lt;br&gt;เงินยังไม่ถูกส่ง&lt;br&gt;ส่งข้อมูลเท่าที่จำเป็นเมื่อผู้ใช้ยินยอม" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEDE8;strokeColor=#E66C57;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2160" y="635" width="270" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-verify" value="&lt;b&gt;รอและตรวจสอบอย่างอิสระ&lt;/b&gt;&lt;br&gt;ติดต่อบริษัทผ่านช่องทางที่หาเอง&lt;br&gt;ครบเวลาจึงประเมินซ้ำและยืนยันตัวตนเพิ่ม&lt;br&gt;จากนั้นผู้ใช้จึงยืนยันหรือยกเลิก" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4EEFF;strokeColor=#8A63C7;fontSize=13;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="2160" y="875" width="270" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e09" value="พบ" edge="1" parent="1" source="p3-d" target="p3-warning" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0;entryY=0.5;endArrow=block;endFill=1;strokeColor=#E66C57;fontSize=12;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e10" edge="1" parent="1" source="p3-warning" target="p3-pending" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#8A63C7;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e11" edge="1" parent="1" source="p3-pending" target="p3-hchoice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#8A63C7;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e12" value="ยกเลิก/รายงาน" edge="1" parent="1" source="p3-hchoice" target="p3-cancel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;endArrow=block;endFill=1;strokeColor=#E66C57;fontSize=12;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e13" value="พักและตรวจสอบ" edge="1" parent="1" source="p3-hchoice" target="p3-verify" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;endArrow=block;endFill=1;strokeColor=#8A63C7;fontSize=12;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-foot" value="* ความเสี่ยงปลายทางในต้นแบบเป็นข้อมูลจำลองจากระบบธนาคาร • JobShield ช่วยลดความเสี่ยง แต่ไม่รับประกันว่าจะหยุด Scam ได้ทุกกรณี" style="text;html=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#6A6A6A;align=left;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1030" width="1800" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="v6-integration" name="04 ระบบเดิม สิ่งที่เพิ่ม และคุณค่าธุรกิจ">
+    <mxGraphModel dx="1800" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p4-title" value="JobShield ใช้อะไรที่มีอยู่แล้ว เพิ่มอะไร และสร้างคุณค่าอย่างไร" style="text;html=1;strokeColor=none;fillColor=none;fontSize=27;fontStyle=1;fontColor=#174C3C;align=left;" vertex="1" parent="1">
+          <mxGeometry x="50" y="25" width="1500" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-core" value="ระบบทำงานร่วมกับ 3 ส่วนหลักของ K PLUS" style="swimlane;html=1;rounded=1;startSize=40;fillColor=#F4FBF8;swimlaneFillColor=#E7F6F0;strokeColor=#49A987;fontSize=16;fontStyle=1;fontColor=#174C3C;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="2300" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-i1" value="&lt;b&gt;1. K-ePocket — ที่เก็บเงิน&lt;/b&gt;&lt;br&gt;เก็บเงินสำรอง แสดงยอดและเป้าหมาย&lt;br&gt;บอกว่าเงินก้อนนี้ต้องได้รับการปกป้อง&lt;br&gt;&lt;font color=&quot;#49645C&quot;&gt;ใช้การตั้งโอนล่วงหน้าเป็นฐานการออม&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#49A987;strokeWidth=2;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="100" y="225" width="340" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-i2" value="&lt;b&gt;2. ข้อมูลธุรกรรมและความเสี่ยง&lt;/b&gt;&lt;br&gt;ดูผู้รับ ยอด และรูปแบบการโอน&lt;br&gt;รวมสัญญาณความเสี่ยงปลายทาง&lt;br&gt;ที่ระบบธนาคารอาจมีอยู่แล้ว" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4EEFF;strokeColor=#8A63C7;strokeWidth=2;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="560" y="225" width="360" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-i3" value="&lt;b&gt;3. เครื่องมือความปลอดภัย&lt;/b&gt;&lt;br&gt;คำเตือน การยืนยันตัวตน และการแจ้งเตือน&lt;br&gt;การพักคำสั่งตามความเสี่ยง&lt;br&gt;รวมทางยกเลิกและรายงาน" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E6;strokeColor=#D6A033;strokeWidth=2;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="225" width="370" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-policy" value="&lt;b&gt;JobShield เชื่อมทุกส่วนเข้าด้วยกัน&lt;/b&gt;&lt;br&gt;เป้าหมายเงินสำรอง + แผนออม + ระดับสิทธิประโยชน์&lt;br&gt;รวมกับการประเมินความเสี่ยงก่อนเงินออก&lt;br&gt;&lt;font color=&quot;#174C3C&quot;&gt;นี่คือส่วนแตกต่างหลักของแนวคิด&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DDF4EA;strokeColor=#2A8F6D;strokeWidth=3;fontSize=15;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1620" y="215" width="410" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-e01" edge="1" parent="1" source="p4-i1" target="p4-policy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=0;entryX=0.2;entryY=0;endArrow=block;endFill=1;strokeColor=#49A987;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="175" />
+              <mxPoint x="1702" y="175" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p4-e02" edge="1" parent="1" source="p4-i2" target="p4-policy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=1;endArrow=block;endFill=1;strokeColor=#8A63C7;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="395" />
+              <mxPoint x="1825" y="395" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p4-e03" edge="1" parent="1" source="p4-i3" target="p4-policy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;endArrow=block;endFill=1;strokeColor=#D6A033;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-boundary" value="แยกให้ชัด — ของเดิม / สิ่งที่ JobShield เพิ่ม / สิ่งที่ยังต้องยืนยัน" style="swimlane;html=1;rounded=1;startSize=40;fillColor=#FAFAFA;swimlaneFillColor=#EFEFEF;strokeColor=#999999;fontSize=16;fontStyle=1;fontColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="50" y="470" width="2300" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-reuse" value="&lt;b&gt;ของเดิมที่นำมาใช้ต่อ&lt;/b&gt;&lt;br&gt;K-ePocket • เป้าหมายออม • โอนและจ่าย&lt;br&gt;ตั้งโอนล่วงหน้า • ระบบ K Point&lt;br&gt;ยืนยันใบหน้า • แจ้งเตือน • ช่องทางรายงาน" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E9F7EF;strokeColor=#49A987;strokeWidth=2;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="110" y="550" width="600" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-proposed" value="&lt;b&gt;สิ่งที่ JobShield เสนอเพิ่ม&lt;/b&gt;&lt;br&gt;คำนวณเป้าหมาย • นับรอบ • ผ่อนผัน • ยอดอ้างอิง&lt;br&gt;ระดับสิทธิประโยชน์ • มาสคอตเตือนการออม&lt;br&gt;ประเมินเงินสำรองและพักคำสั่งก่อนโอน" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E6;strokeColor=#D6A033;strokeWidth=2;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="840" y="550" width="650" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-assume" value="&lt;b&gt;สิ่งที่ต้องยืนยันกับธนาคาร&lt;/b&gt;&lt;br&gt;ตรวจจับเงินเดือนเข้า • โอนเข้ากระเป๋าย่อยโดยตรง&lt;br&gt;หยุดอัตโนมัติเมื่อถึงเป้า • ข้อมูลความเสี่ยงจริง&lt;br&gt;เงื่อนไข K Point/คูปอง และต้นทุนโครงการ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0EC;strokeColor=#E66C57;strokeWidth=2;dashed=1;dashPattern=6 4;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1620" y="540" width="650" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-looplane" value="คุณค่าที่คาดหวังต่อผู้ใช้และธนาคาร — เป็นสมมติฐานที่ต้องพิสูจน์" style="swimlane;html=1;rounded=1;startSize=40;fillColor=#F7FAFF;swimlaneFillColor=#EAF3FF;strokeColor=#5B93D3;fontSize=16;fontStyle=1;fontColor=#285F9C;" vertex="1" parent="1">
+          <mxGeometry x="50" y="745" width="2300" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-v1" value="&lt;b&gt;ผู้ใช้ออมต่อเนื่องขึ้น&lt;/b&gt;&lt;br&gt;ไม่ต้องจำมาทำรายการทุกเดือน" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B93D3;strokeWidth=2;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="100" y="855" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-v2" value="&lt;b&gt;ผู้ใช้มีเงินสำรองดีขึ้น&lt;/b&gt;&lt;br&gt;และกลับมาใช้ K PLUS ต่อเนื่อง" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B93D3;strokeWidth=2;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="855" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-v3" value="&lt;b&gt;เงินฝากอาจมีเสถียรภาพขึ้น&lt;/b&gt;&lt;br&gt;ช่วยสนับสนุนฐานเงินทุน&lt;br&gt;และโอกาสสร้างคุณค่าให้ธนาคาร" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B93D3;strokeWidth=2;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="940" y="845" width="330" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-v4" value="&lt;b&gt;ธนาคารพิจารณาสิทธิประโยชน์&lt;/b&gt;&lt;br&gt;ตามต้นทุน ความเสี่ยง และกฎเกณฑ์&lt;br&gt;โดยต้องผ่านการอนุมัติทางธุรกิจ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E6;strokeColor=#D6A033;strokeWidth=2;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1390" y="845" width="360" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-v5" value="&lt;b&gt;ผู้ใช้เห็นแรงจูงใจที่ชัดขึ้น&lt;/b&gt;&lt;br&gt;ระดับ ความคืบหน้า และตัวอย่างสิทธิประโยชน์" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DDF4EA;strokeColor=#2A8F6D;strokeWidth=2;fontSize=14;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1870" y="855" width="340" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-e04" edge="1" parent="1" source="p4-v1" target="p4-v2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#5B93D3;strokeWidth=2;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-e05" edge="1" parent="1" source="p4-v2" target="p4-v3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#5B93D3;strokeWidth=2;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-e06" edge="1" parent="1" source="p4-v3" target="p4-v4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#5B93D3;strokeWidth=2;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-e07" edge="1" parent="1" source="p4-v4" target="p4-v5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#D6A033;strokeWidth=2;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-e08" edge="1" parent="1" source="p4-v5" target="p4-v1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=1;endArrow=block;endFill=1;strokeColor=#2A8F6D;strokeWidth=2;dashed=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2040" y="1000" />
+              <mxPoint x="250" y="1000" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p4-foot" value="ข้อควรระวัง: ไม่อ้างว่าเงินฝากทุกบาทกลายเป็นสินเชื่อหรือกำไรโดยตรง • ไม่รับรองสิทธิประโยชน์ • ต้องทดสอบความต้องการ ต้นทุน และความเป็นธรรมก่อนใช้งานจริง" style="text;html=1;strokeColor=none;fillColor=none;fontSize=13;fontColor=#6A6A6A;align=left;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1050" width="1900" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

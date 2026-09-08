@@ -1,0 +1,377 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36" compressed="false" version="29.6.6" pages="3">
+  <diagram id="product-lifecycle-v4" name="01 Product Lifecycle">
+    <mxGraphModel dx="1061" dy="582" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3000" pageHeight="1050" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p1-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=30;fontStyle=1;fontColor=#12352B;align=left;" value="K PLUS JobShield — Product Lifecycle" vertex="1">
+          <mxGeometry height="50" width="1700" x="50" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-sub" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=15;fontColor=#49645C;align=left;" value="ผลิตภัณฑ์เดียวตั้งแต่จัดเงิน สร้างเงินสำรอง ไปจนปกป้องก่อนโอน — อ่านจากซ้ายไปขวาและเลือกเพียงหนึ่งแถวตามช่วงชีวิต" vertex="1">
+          <mxGeometry height="35" width="2300" x="50" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F7F6;strokeColor=#B8C8C3;fontSize=13;fontColor=#36524A;align=left;spacingLeft=14;" value="กล่องขอบประ = จุดไปยังหน้ารายละเอียด • ระบบไม่เปลี่ยนวัตถุประสงค์ของเงินอัตโนมัติ • ทุก External Transfer กลับเข้าสู่ Protect policy เดียวกัน" vertex="1">
+          <mxGeometry height="50" width="2900" x="50" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-start" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DDF4EA;strokeColor=#2A8F6D;strokeWidth=2;fontSize=14;spacing=10;" value="User สามารถเปิดใช้งาน &lt;br&gt;JobShield ได้ทันที โดยไม่ต้องสร้าง K-ePocket ไว้ล่วงหน้า" vertex="1">
+          <mxGeometry height="100" width="230" x="60" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-stage" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF7DA;strokeColor=#E0AA28;strokeWidth=2;fontSize=14;fontStyle=1;align=center;" value="&lt;pre dir=&quot;ltr&quot;&gt;&lt;code&gt;คุณได้รับเงินเดือน&lt;br&gt;จากงานแล้วหรือยัง?&lt;/code&gt;&lt;/pre&gt;" vertex="1">
+          <mxGeometry height="130" width="190" x="370" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-pre-lane" parent="1" style="swimlane;html=1;rounded=1;startSize=42;fillColor=#EAF8F3;swimlaneFillColor=#F8FCFA;strokeColor=#49A987;fontSize=17;fontStyle=1;fontColor=#165E47;pointerEvents=0;" value="ก่อนรับเงินเดือนแรก" vertex="1">
+          <mxGeometry height="310" width="2300" x="650" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-pre3" parent="p1-pre-lane" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4EEFF;strokeColor=#8A63C7;strokeWidth=2;fontSize=14;spacing=10;" value="&lt;b&gt;กันเงินสำรองก้อนเดียว&lt;/b&gt;&lt;br&gt;ผู้ใช้นำเงินที่มีอยู่มากันเป็น&lt;br&gt;&lt;b&gt;เงินสำรองก่อนเงินเดือนแรก&lt;/b&gt;&lt;br&gt;สำหรับค่าใช้ชีวิตที่จำเป็น" vertex="1">
+          <mxGeometry height="135" width="325" x="675" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-pre2" parent="p1-pre-lane" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#49A987;strokeWidth=2;fontSize=14;spacing=10;" value="ระบบจะทำการเชื่อมต่อกับ&amp;nbsp;&lt;div&gt;K-ePocket ที่มีอยู่&amp;nbsp;&lt;div&gt;หรือ&amp;nbsp;&lt;/div&gt;&lt;div&gt;ถ้า User ยังไม่มี&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;K-ePocket&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ระบบสามารถสร้าง&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;K-ePocket&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;ใหม่ได้ทันที เพียงกดแค่ปุ่มเดียว&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="130" width="260" x="370" y="92.5" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e-pre2-pre3" edge="1" parent="p1-pre-lane" source="p1-pre2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#49A987;strokeWidth=2;endArrow=classic;" target="p1-pre3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-pre4" parent="p1-pre-lane" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#49A987;strokeWidth=2;fontSize=14;spacing=10;" value="&lt;b&gt;ทยอยใช้เมื่อจำเป็น&lt;/b&gt;&lt;br&gt;ค่าเช่า • ค่าอาหาร • ค่าเดินทางไปทำงาน&lt;br&gt;พร้อมดูยอดและระยะเวลาที่เงินยังครอบคลุม" vertex="1">
+          <mxGeometry height="100" width="310" x="1050" y="107.5" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e-pre3-pre4" edge="1" parent="p1-pre-lane" source="p1-pre3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#49A987;strokeWidth=2;endArrow=classic;" target="p1-pre4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-pre1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#49A987;strokeWidth=2;fontSize=14;spacing=10;" value="&lt;b&gt;เลือก Stage&lt;/b&gt;&lt;br&gt;กำลังหางาน หรือได้งานแล้วแต่ยังไม่ได้รับเงินเดือนแรก" vertex="1">
+          <mxGeometry height="95" width="240" x="720" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-pre5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4EEFF;strokeColor=#8A63C7;strokeWidth=2;dashed=1;fontSize=14;spacing=10;" value="&lt;b&gt;ไปหน้า 03 — Protect Transfer&lt;/b&gt;&lt;br&gt;เมื่อผู้ใช้กำลังโอนเงินออกไปยังบัญชีอื่น" vertex="1">
+          <mxGeometry height="95" width="280" x="2050" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-transition" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E6;strokeColor=#D6A033;dashed=1;fontSize=13;spacing=10;" value="&lt;b&gt;หลังได้รับเงินเดือนแรก&lt;/b&gt;&lt;br&gt;ผู้ใช้ยืนยันว่าจะเปลี่ยนเงินก้อนเดิมเป็นเงินสำรองฉุกเฉิน หรือเริ่ม Pocket ใหม่" vertex="1">
+          <mxGeometry height="125" width="460" x="2410" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-income-lane" parent="1" style="swimlane;html=1;rounded=1;startSize=42;fillColor=#EAF3FF;swimlaneFillColor=#F8FBFF;strokeColor=#5B93D3;fontSize=17;fontStyle=1;fontColor=#245B98;pointerEvents=0;" value="หลังเริ่มรับเงินเดือน" vertex="1">
+          <mxGeometry height="310" width="2300" x="650" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-inc1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B93D3;strokeWidth=2;fontSize=14;spacing=10;" value="&lt;b&gt;เลือก Stage&lt;/b&gt;&lt;br&gt;ได้รับเงินเดือนแล้ว" vertex="1">
+          <mxGeometry height="95" width="240" x="720" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-inc2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B93D3;strokeWidth=2;fontSize=14;spacing=10;" value="&lt;b&gt;ตั้งเงินสำรองฉุกเฉิน&lt;/b&gt;&lt;br&gt;ใช้ยอดเดิมเมื่อยืนยัน หรือเริ่มใหม่" vertex="1">
+          <mxGeometry height="95" width="250" x="1040" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-inc3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF3FF;strokeColor=#5B93D3;strokeWidth=2;dashed=1;fontSize=14;spacing=10;" value="&lt;b&gt;ไปหน้า 02 — Build Reserve&lt;/b&gt;&lt;br&gt;เป้าหมาย 3–6 เดือน + Auto-Routing" vertex="1">
+          <mxGeometry height="95" width="280" x="1370" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-inc4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DDF4EA;strokeColor=#2A8F6D;strokeWidth=2;fontSize=14;spacing=10;" value="&lt;b&gt;ติดตามเงินสำรอง&lt;/b&gt;&lt;br&gt;ยอด เป้าหมาย และจำนวนเดือนที่ครอบคลุม" vertex="1">
+          <mxGeometry height="105" width="270" x="1730" y="675" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-inc5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4EEFF;strokeColor=#8A63C7;strokeWidth=2;dashed=1;fontSize=14;spacing=10;" value="&lt;b&gt;ไปหน้า 03 — Protect Transfer&lt;/b&gt;&lt;br&gt;ทุกครั้งที่โอนไปภายนอก" vertex="1">
+          <mxGeometry height="95" width="280" x="2080" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-inc6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A8F6D;strokeWidth=2;fontSize=14;spacing=10;" value="&lt;b&gt;Continue&lt;/b&gt;&lt;br&gt;อัปเดตยอดและปรับแผนได้เสมอ" vertex="1">
+          <mxGeometry height="95" width="270" x="2440" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e-start-stage" edge="1" parent="1" source="p1-start" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#3E6C5D;strokeWidth=2;endArrow=classic;" target="p1-stage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e-stage-pre" edge="1" parent="1" source="p1-stage" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#49A987;strokeWidth=2;endArrow=classic;fontSize=12;exitX=1;exitY=0.3;entryX=0;entryY=0.5;" target="p1-pre1" value="ยังไม่ได้รับเงินเดือนแรก">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="610" y="454" />
+              <mxPoint x="610" y="348" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p1-e-stage-inc" edge="1" parent="1" source="p1-stage" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#5B93D3;strokeWidth=2;endArrow=classic;fontSize=12;exitX=1;exitY=0.7;entryX=0;entryY=0.5;" target="p1-inc1" value="ได้รับเงินเดือนแล้ว">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="506" />
+              <mxPoint x="620" y="728" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p1-e-pre1-pre2" edge="1" parent="1" source="p1-pre1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#49A987;strokeWidth=2;endArrow=classic;" target="p1-pre2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e-pre4-pre5" edge="1" parent="1" source="p1-pre4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#8A63C7;strokeWidth=2;endArrow=classic;" target="p1-pre5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e-inc1-inc2" edge="1" parent="1" source="p1-inc1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#5B93D3;strokeWidth=2;endArrow=classic;" target="p1-inc2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e-inc2-inc3" edge="1" parent="1" source="p1-inc2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#5B93D3;strokeWidth=2;endArrow=classic;" target="p1-inc3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e-inc3-inc4" edge="1" parent="1" source="p1-inc3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2A8F6D;strokeWidth=2;endArrow=classic;" target="p1-inc4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e-inc4-inc5" edge="1" parent="1" source="p1-inc4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#8A63C7;strokeWidth=2;endArrow=classic;" target="p1-inc5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e-inc5-inc6" edge="1" parent="1" source="p1-inc5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2A8F6D;strokeWidth=2;endArrow=classic;" target="p1-inc6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="build-reserve-v4" name="02 Build Reserve">
+    <mxGraphModel dx="3000" dy="1250" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3000" pageHeight="1250" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2-title" value="K PLUS JobShield — Build Reserve" style="text;html=1;strokeColor=none;fillColor=none;fontSize=30;fontStyle=1;fontColor=#12352B;align=left;" vertex="1" parent="1">
+          <mxGeometry x="50" y="25" width="1700" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-sub" value="สร้างเงินสำรองฉุกเฉินแบบผู้ใช้ควบคุมได้ และแยก Savings Nudge ออกจาก Fraud/Scam Intervention" style="text;html=1;strokeColor=none;fillColor=none;fontSize=15;fontColor=#49645C;align=left;" vertex="1" parent="1">
+          <mxGeometry x="50" y="78" width="2200" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-build-lane" value="BUILD — ตั้งเป้าและ Auto-Routing" style="swimlane;html=1;rounded=1;startSize=42;fillColor=#EAF3FF;swimlaneFillColor=#F8FBFF;strokeColor=#5B93D3;fontSize=17;fontStyle=1;fontColor=#245B98;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="140" width="2900" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-b0" value="&lt;b&gt;เริ่มหรือเปลี่ยน Stage&lt;/b&gt;&lt;br&gt;ยืนยันยอดตั้งต้น หรือเริ่ม Pocket ใหม่" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B93D3;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="90" y="270" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-b1" value="&lt;b&gt;ค่าใช้จ่ายจำเป็นต่อเดือน&lt;/b&gt;&lt;br&gt;เช่น ค่าเช่า อาหาร เดินทาง" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B93D3;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="430" y="270" width="250" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-b2" value="&lt;b&gt;เลือกเป้าหมาย&lt;/b&gt;&lt;br&gt;3 เดือน • 6 เดือน • กำหนดเอง" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B93D3;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="760" y="270" width="250" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-b3" value="&lt;b&gt;ตั้ง Auto-Routing&lt;/b&gt;&lt;br&gt;จำนวนคงที่หรือ % • หยุดเมื่อถึงเป้าหมาย" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF3FF;strokeColor=#5B93D3;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="260" width="270" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-b4" value="&lt;b&gt;Review &amp; Consent&lt;/b&gt;&lt;br&gt;Source • Destination • Cap • Next route&lt;br&gt;Edit / Pause / Off" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E6;strokeColor=#D6A033;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="255" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-b5" value="&lt;b&gt;Auto-Routing ทำงาน&lt;/b&gt;&lt;br&gt;แสดง receipt แบบเงียบ ไม่เตือน Scam ทุกครั้ง" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A8F6D;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="1800" y="270" width="270" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-b6" value="&lt;b&gt;Reserve Dashboard&lt;/b&gt;&lt;br&gt;ยอด • เป้าหมาย • เดือนที่ครอบคลุม&lt;br&gt;K Point = Future Concept" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DDF4EA;strokeColor=#2A8F6D;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="2150" y="255" width="290" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-b7" value="&lt;b&gt;ผู้ใช้ควบคุมได้เสมอ&lt;/b&gt;&lt;br&gt;ปรับ • พัก • ปิด • เปลี่ยนเป้าหมาย" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B93D3;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="2520" y="270" width="270" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-withdraw-lane" value="WHEN MONEY GOES OUT — เลือกการแทรกแซงตามเหตุผลจริง" style="swimlane;html=1;rounded=1;startSize=42;fillColor=#FFF6DE;swimlaneFillColor=#FFFCF5;strokeColor=#E0AA28;fontSize=17;fontStyle=1;fontColor=#7C5B0D;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="550" width="2900" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-w0" value="&lt;b&gt;Entry จาก Dashboard&lt;/b&gt;&lt;br&gt;ผู้ใช้ต้องการนำเงินออก" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D6A033;strokeWidth=2;dashed=1;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="790" width="240" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-w1" value="&lt;b&gt;แสดงผลกระทบก่อนยืนยัน&lt;/b&gt;&lt;br&gt;ยอดคงเหลือและเดือนที่ครอบคลุม" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D6A033;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="420" y="780" width="270" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-w2" value="ปลายทางและ&lt;br&gt;ความเสี่ยงเป็นแบบใด?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D6A033;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="770" y="775" width="210" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-em" value="&lt;b&gt;เหตุฉุกเฉินที่ตรวจสอบได้&lt;/b&gt;&lt;br&gt;บัญชีตนเอง / Verified Biller" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F2FF;strokeColor=#5B93D3;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="620" width="270" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-em-action" value="เตือนยอดคงเหลือหนึ่งครั้ง&lt;br&gt;ยืนยันใช้เงินได้ ไม่มี High-Risk delay" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#5B93D3;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="615" width="300" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-general" value="&lt;b&gt;ใช้จ่ายทั่วไป&lt;/b&gt;&lt;br&gt;ผู้รับเดิมและไม่มี Fraud signal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0D8;strokeColor=#E99B32;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="790" width="270" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-nudge" value="&lt;b&gt;Savings Nudge&lt;/b&gt;&lt;br&gt;ตัวละครช่วยเตือนอย่างเป็นมิตร&lt;br&gt;ไม่กล่าวหาว่าเป็น Scam" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E6;strokeColor=#D6A033;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="780" width="300" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-nudge-choice" value="เก็บไว้ก่อน&lt;br&gt;หรือทำรายการต่อได้ทันที" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E99B32;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="1870" y="790" width="270" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-risk" value="&lt;b&gt;พบ Fraud/Scam signals&lt;/b&gt;&lt;br&gt;เช่น ผู้รับใหม่ + protected reserve + destination risk" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE5DF;strokeColor=#DD6B55;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="970" width="290" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-risk-action" value="&lt;b&gt;ไปหน้า 03 — Protect Transfer&lt;/b&gt;&lt;br&gt;ประเมิน Low / Medium / High" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4EEFF;strokeColor=#8A63C7;strokeWidth=2;dashed=1;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="975" width="290" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-sep" value="Savings Nudge = วินัยการเงินและกดข้ามได้ • Fraud/Scam Intervention = การควบคุมความเสี่ยงตามหลายสัญญาณ • การถอน Reserve อย่างเดียวไม่ทำให้เป็น High" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F7F6;strokeColor=#B8C8C3;fontSize=13;spacing=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="2220" y="760" width="620" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e-b0-b1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#5B93D3;strokeWidth=2;endArrow=classic;" edge="1" source="p2-b0" target="p2-b1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e-b1-b2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#5B93D3;strokeWidth=2;endArrow=classic;" edge="1" source="p2-b1" target="p2-b2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e-b2-b3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#5B93D3;strokeWidth=2;endArrow=classic;" edge="1" source="p2-b2" target="p2-b3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e-b3-b4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D6A033;strokeWidth=2;endArrow=classic;" edge="1" source="p2-b3" target="p2-b4" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e-b4-b5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2A8F6D;strokeWidth=2;endArrow=classic;" edge="1" source="p2-b4" target="p2-b5" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e-b5-b6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2A8F6D;strokeWidth=2;endArrow=classic;" edge="1" source="p2-b5" target="p2-b6" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e-b6-b7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#5B93D3;strokeWidth=2;endArrow=classic;" edge="1" source="p2-b6" target="p2-b7" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e-w0-w1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D6A033;strokeWidth=2;endArrow=classic;" edge="1" source="p2-w0" target="p2-w1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e-w1-w2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D6A033;strokeWidth=2;endArrow=classic;" edge="1" source="p2-w1" target="p2-w2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e-w2-em" value="Own / Verified" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#5B93D3;strokeWidth=2;endArrow=classic;fontSize=12;exitX=1;exitY=0.2;entryX=0;entryY=0.5;" edge="1" source="p2-w2" target="p2-em" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1040" y="800" />
+              <mxPoint x="1040" y="668" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2-e-w2-general" value="General" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#E99B32;strokeWidth=2;endArrow=classic;fontSize=12;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="p2-w2" target="p2-general" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1060" y="838" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2-e-w2-risk" value="Risk signals" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DD6B55;strokeWidth=2;endArrow=classic;fontSize=12;exitX=1;exitY=0.8;entryX=0;entryY=0.5;" edge="1" source="p2-w2" target="p2-risk" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1080" y="875" />
+              <mxPoint x="1080" y="1025" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2-e-em-action" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#5B93D3;strokeWidth=2;endArrow=classic;" edge="1" source="p2-em" target="p2-em-action" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e-general-nudge" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#E99B32;strokeWidth=2;endArrow=classic;" edge="1" source="p2-general" target="p2-nudge" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e-nudge-choice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#E99B32;strokeWidth=2;endArrow=classic;" edge="1" source="p2-nudge" target="p2-nudge-choice" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e-risk-action" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DD6B55;strokeWidth=2;endArrow=classic;" edge="1" source="p2-risk" target="p2-risk-action" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="protect-transfer-v4" name="03 Protect Transfer">
+    <mxGraphModel dx="3000" dy="1150" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3000" pageHeight="1150" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p3-title" value="K PLUS JobShield — Protect Transfer" style="text;html=1;strokeColor=none;fillColor=none;fontSize=30;fontStyle=1;fontColor=#12352B;align=left;" vertex="1" parent="1">
+          <mxGeometry x="50" y="25" width="1700" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-sub" value="ประเมินก่อนเงินออกด้วยหลายสัญญาณ และแยก Low / Medium / High เป็นคนละแถวเพื่อให้เส้นไม่ทับกัน" style="text;html=1;strokeColor=none;fillColor=none;fontSize=15;fontColor=#49645C;align=left;" vertex="1" parent="1">
+          <mxGeometry x="50" y="78" width="2200" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-input-zone" value="TRANSACTION CONTEXT &amp; POLICY" style="swimlane;html=1;rounded=1;startSize=42;fillColor=#F1EBFF;swimlaneFillColor=#FBF9FF;strokeColor=#8A63C7;fontSize=16;fontStyle=1;fontColor=#5D3998;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="140" width="1350" height="890" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-action-zone" value="RISK-BASED ACTIONS" style="swimlane;html=1;rounded=1;startSize=42;fillColor=#FFF6DE;swimlaneFillColor=#FFFCF5;strokeColor=#E0AA28;fontSize=16;fontStyle=1;fontColor=#7C5B0D;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1430" y="140" width="1520" height="890" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-t0" value="&lt;b&gt;เริ่มรายการโอน&lt;/b&gt;&lt;br&gt;ผู้รับ • ยอด • แหล่งเงิน" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A63C7;strokeWidth=2;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="90" y="480" width="230" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-t1" value="&lt;b&gt;Transaction Context Bundle&lt;/b&gt;&lt;br&gt;• JobShield state + career stage&lt;br&gt;• บัญชีหลักหรือ protected reserve&lt;br&gt;• ผู้รับใหม่/เดิม/verified&lt;br&gt;• ยอดซ้ำและยอดสะสม&lt;br&gt;• Destination risk จำลอง&lt;br&gt;• Purpose เป็น weak signal&lt;br&gt;&lt;font color=&quot;#725D90&quot;&gt;ไม่อ่านข้อความหรืออีเมล&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4EEFF;strokeColor=#8A63C7;strokeWidth=2;fontSize=13;spacing=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="390" y="370" width="340" height="315" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-t2" value="&lt;b&gt;Multi-signal Policy&lt;/b&gt;&lt;br&gt;MVP ใช้ deterministic rules + synthetic data&lt;br&gt;ใช้ risk tier สูงสุดและไม่เปิด threshold ทั้งหมด" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E9DFFF;strokeColor=#7549B3;strokeWidth=2;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="800" y="445" width="310" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-t3" value="เลือกระดับ&lt;br&gt;การแทรกแซง" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7549B3;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="460" width="180" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-boundary" value="&lt;b&gt;ขอบเขต:&lt;/b&gt; แหล่งเงินหรือ career stage เพียงอย่างเดียวไม่ทำให้เป็น High • Purpose ห้ามใช้ลดระดับ • ระบบไม่รับประกันว่าจะหยุด Scam ได้ทุกกรณี" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F7F6;strokeColor=#B8C8C3;fontSize=12;spacing=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="90" y="825" width="1260" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-low" value="&lt;b&gt;LOW&lt;/b&gt;&lt;br&gt;ผู้รับ/ช่องทางตรวจสอบแล้ว หรือไม่มี signal ร่วมเพียงพอ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5F7EC;strokeColor=#48A66D;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="1490" y="225" width="270" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-low-action" value="ตรวจสอบและยืนยันตามปกติ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#48A66D;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="1840" y="235" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-low-result" value="ส่งคำสั่งเข้าสู่ระบบโอน" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DDF4EA;strokeColor=#2A8F6D;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="2170" y="235" width="250" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-med" value="&lt;b&gt;MEDIUM&lt;/b&gt;&lt;br&gt;พบความผิดปกติบางส่วน แต่ยังไม่ถึงระดับ High" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0D8;strokeColor=#E99B32;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="1490" y="440" width="270" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-med-action" value="&lt;b&gt;Contextual Warning&lt;/b&gt;&lt;br&gt;แสดงเหตุผล 1–2 ข้อและให้ยืนยันอย่างตั้งใจ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E99B32;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="1840" y="430" width="280" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-med-result" value="ยืนยันต่อ → ส่งคำสั่งโอน&lt;br&gt;หรือ Pause/Cancel → เงินยังไม่ถูกส่ง" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#E99B32;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="2200" y="435" width="320" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-high" value="&lt;b&gt;HIGH&lt;/b&gt;&lt;br&gt;หลายสัญญาณร่วม เช่น ผู้รับใหม่ + protected reserve + destination risk" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE5DF;strokeColor=#DD6B55;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="1490" y="675" width="290" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-warning" value="&lt;b&gt;Contextual Warning&lt;/b&gt;&lt;br&gt;เหตุผล 2–3 ข้อ&lt;br&gt;Pause &amp; Verify / Cancel &amp; Report" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#DD6B55;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="1850" y="670" width="280" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-pending" value="&lt;b&gt;Pending Instruction&lt;/b&gt;&lt;br&gt;พักเฉพาะคำสั่งและยอดนี้&lt;br&gt;ยังไม่ส่งเข้า PromptPay" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1EE;strokeColor=#DD6B55;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="2200" y="675" width="280" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-cooling" value="&lt;b&gt;Risk-based Cooling-off&lt;/b&gt;&lt;br&gt;รวม Dynamic Time Lock + independent verification&lt;br&gt;กดซ้ำไม่ข้ามเงื่อนไข" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E6;strokeColor=#D6A033;strokeWidth=2;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="2550" y="660" width="320" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-high-result" value="&lt;b&gt;หลังผ่านเงื่อนไข&lt;/b&gt;&lt;br&gt;Confirm ต่อ หรือ Cancel/Report&lt;br&gt;แล้วอัปเดตยอด/แผน" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7D8C87;fontSize=13;spacing=9;" vertex="1" parent="1">
+          <mxGeometry x="2550" y="860" width="320" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e-t0-t1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7549B3;strokeWidth=2;endArrow=classic;" edge="1" source="p3-t0" target="p3-t1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e-t1-t2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7549B3;strokeWidth=2;endArrow=classic;" edge="1" source="p3-t1" target="p3-t2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e-t2-t3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7549B3;strokeWidth=2;endArrow=classic;" edge="1" source="p3-t2" target="p3-t3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e-t3-low" value="Low" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#48A66D;strokeWidth=2;endArrow=classic;fontStyle=1;exitX=1;exitY=0.2;entryX=0;entryY=0.5;" edge="1" source="p3-t3" target="p3-low" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1410" y="487" />
+              <mxPoint x="1410" y="275" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p3-e-t3-med" value="Medium" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#E99B32;strokeWidth=2;endArrow=classic;fontStyle=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="p3-t3" target="p3-med" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1420" y="528" />
+              <mxPoint x="1420" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p3-e-t3-high" value="High" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DD6B55;strokeWidth=2;endArrow=classic;fontStyle=1;exitX=1;exitY=0.8;entryX=0;entryY=0.5;" edge="1" source="p3-t3" target="p3-high" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1430" y="568" />
+              <mxPoint x="1430" y="733" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p3-e-low-action" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#48A66D;strokeWidth=2;endArrow=classic;" edge="1" source="p3-low" target="p3-low-action" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e-low-result" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#48A66D;strokeWidth=2;endArrow=classic;" edge="1" source="p3-low-action" target="p3-low-result" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e-med-action" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#E99B32;strokeWidth=2;endArrow=classic;" edge="1" source="p3-med" target="p3-med-action" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e-med-result" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#E99B32;strokeWidth=2;endArrow=classic;" edge="1" source="p3-med-action" target="p3-med-result" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e-high-warning" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DD6B55;strokeWidth=2;endArrow=classic;" edge="1" source="p3-high" target="p3-warning" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e-warning-pending" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DD6B55;strokeWidth=2;endArrow=classic;" edge="1" source="p3-warning" target="p3-pending" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e-pending-cooling" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D6A033;strokeWidth=2;endArrow=classic;" edge="1" source="p3-pending" target="p3-cooling" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e-cooling-result" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7D8C87;strokeWidth=2;endArrow=classic;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="p3-cooling" target="p3-high-result" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

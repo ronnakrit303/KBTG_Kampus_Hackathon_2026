@@ -1,7 +1,9 @@
 # K PLUS JobShield — Formative Usability Test Plan
 
-สถานะ: Clickable prototype built; `0 pilot sessions conducted`; `0 participant sessions conducted` — 4 กันยายน 2026  
-ขอบเขต: เปรียบเทียบ contextual JobShield warning กับ generic warning และตรวจ legitimate/emergency friction  
+สถานะ: Existing clickable prototype is a prior snapshot; V6 flow specified but not yet on canvas; `0 pilot sessions conducted`; `0 participant sessions conducted` — 6 กันยายน 2026
+
+ขอบเขต: เปรียบเทียบ contextual JobShield warning กับ generic warning ตรวจ legitimate/emergency friction และทดสอบความเข้าใจ Auto-Routing/withdrawal extension หลัง canvas พร้อม
+
 ห้ามทำ: สร้างผลทดสอบ ผู้เข้าร่วม คำพูด เวลา หรือสถิติขึ้นเอง
 
 ## 1. Research Questions
@@ -10,14 +12,18 @@
 2. Contextual warning ทำให้ผู้ใช้เลือก Pause/Cancel ใน scam scenario มากกว่า generic warningในเชิงทิศทางหรือไม่
 3. ผู้ใช้ยังทำ legitimate payment และ emergency transfer สำเร็จได้หรือไม่
 4. ผู้ใช้เข้าใจความแตกต่างระหว่าง `verified payment channel` กับการรับรองว่า employer/offer งานเป็นของจริงหรือไม่
-5. Career Mode, Job Search Budget และ `เงินสำรองก่อนเงินเดือนแรก` มี mental model ที่ชัดหรือสร้างความสับสนหรือไม่
+5. ผู้ใช้เข้าใจหรือไม่ว่า `เงินสำรองตั้งหลัก` เป็น Pocket เดียวที่ใช้ต่อเนื่องได้ โดยไม่ต้องเปลี่ยนตามสถานะงาน
 6. ข้อความ/ขั้นตอนใดทำให้เกิด warning fatigue, ความกลัว หรือความรู้สึกว่าธนาคารกักเงิน
+7. ผู้ใช้ที่ยังไม่มี K-ePocket เข้าใจและสร้างเงินสำรองตั้งหลักก้อนเดียวภายใน onboarding ได้หรือไม่
+8. ผู้ใช้ตั้งเป้าและแผนออมรายเดือนแบบจำนวนคงที่ได้ในไม่กี่ขั้นตอน พร้อมเข้าใจว่าตัวเลือกเปอร์เซ็นต์เป็น calculator จากรายได้ประมาณการ ไม่ใช่การหักจากเงินเข้าจริง
+9. ผู้ใช้เข้าใจ Benefit Tier, Qualified Round, Grace และ Checkpoint โดยไม่คิดว่า K Point/คูปองเป็นสิทธิที่รับรองแล้ว
+9. ผู้ใช้แยกความแตกต่างระหว่าง self-control nudge, legitimate emergency reminder และ High-Risk Scam warning ได้หรือไม่
 
 ## 2. Study Type And Limits
 
 - รูปแบบ: moderated formative usability test แบบ remote หรือ in-person
 - กลุ่มเป้าหมาย: 5–8 คนที่เป็น First Jobbers อายุใกล้เคียง 22–30 หรืออยู่ในช่วงสมัคร/เริ่มงาน
-- ระยะเวลา: 20–30 นาทีต่อคน
+- ระยะเวลา: 25–35 นาทีต่อคนเมื่อรวมเงินสำรองตั้งหลัก/Auto-Routing module; หากเกินเวลาให้ทดสอบ Core safety tasks ก่อน
 - Data: synthetic prototype เท่านั้น ไม่ขอเลขบัญชี Resume อีเมล หรือประวัติการเงินจริง
 - Analysis: รายงานจำนวนคน ตัวอย่างพฤติกรรม และ median time เมื่อเหมาะสม; ไม่ทำ population inference หรืออ้าง statistical significance
 - Incentive/recording: ผู้จัดทดสอบต้องแจ้งและขอ consent จริงก่อนใช้; เอกสารนี้ไม่กำหนดเงินตอบแทนหรืออนุญาต recording อัตโนมัติ
@@ -47,7 +53,7 @@
 ### Warning variants
 
 - **G — Generic:** `โปรดระวัง มิจฉาชีพอาจหลอกให้โอนเงิน ตรวจสอบข้อมูลก่อนทำรายการ` พร้อม `ยืนยัน`/`ยกเลิก`
-- **C — Contextual JobShield:** เหตุผลจาก transaction 2–3 ข้อ + ผลกระทบต่อเงินสำรองก่อนเงินเดือนแรก + `Pause & Verify`/`Cancel/Report`
+- **C — Contextual JobShield:** เหตุผลจาก transaction 2–3 ข้อ + ผลกระทบต่อเงินสำรองตั้งหลัก + `Pause & Verify`/`Cancel/Report`
 
 ### Counterbalanced orders
 
@@ -80,29 +86,51 @@ Task prompt:
 
 ### Task L — Legitimate payment
 
-สถานการณ์: ชำระค่าสอบหรือใบรับรองที่วางแผนไว้จาก Job Search Budget ไป verified payment channel
+สถานการณ์: ชำระค่าเช่าที่พักจากเงินสำรองตั้งหลักไป verified payment channel
 
 Task prompt:
 
-> คุณวางแผนค่าสอบ ฿1,200 ไว้ใน Job Search Budget แล้ว โปรดชำระผ่านช่องทางที่แสดงในต้นแบบ
+> คุณต้องชำระค่าเช่าที่พัก ฿4,500 จากเงินสำรองตั้งหลัก โปรดชำระผ่านช่องทางที่แสดงในต้นแบบ
 
 Expected: ทำรายการสำเร็จโดยไม่เจอ High-Risk cooling-off
 
 ### Task E — Emergency transfer
 
-สถานการณ์: โอนเงินจาก `เงินสำรองก่อนเงินเดือนแรก` ไปบัญชีตนเองเพื่อใช้จ่ายฉุกเฉิน
+สถานการณ์: โอนเงินจาก `เงินสำรองตั้งหลัก` ไปบัญชีตนเองเพื่อใช้จ่ายฉุกเฉิน
 
 Task prompt:
 
-> คุณต้องย้ายเงิน ฿6,000 จากเงินสำรองก่อนเงินเดือนแรกไปบัญชีของคุณเองเพื่อใช้จ่ายจำเป็น โปรดทำรายการจนเสร็จ
+> คุณต้องย้ายเงิน ฿6,000 จากเงินสำรองตั้งหลักไปบัญชีของคุณเองเพื่อใช้จ่ายจำเป็น โปรดทำรายการจนเสร็จ
 
 Expected: ทำรายการสำเร็จโดยไม่เข้า High-Risk flow
 
 ### Optional Task M — Medium false-positive probe
 
-สถานการณ์: ค่าเอกสารสมัครงานจริง ฿900 แต่ปลายทางเป็นผู้รับใหม่ที่ยังไม่ verified
+สถานการณ์: ค่าเดินทางที่จำเป็น ฿900 แต่ปลายทางเป็นผู้รับใหม่ที่ยังไม่ verified
 
 ใช้เมื่อเวลาเหลือเพื่อทดสอบว่า Medium warning ให้ข้อมูลพอโดยไม่ทำให้ผู้ใช้รู้สึกถูกกล่าวหา
+
+### Task R — เงินสำรองตั้งหลัก, Auto-Save และ Benefit
+
+ใช้หลัง Core safety tasks และเฉพาะเมื่อหน้าจอตาม `prototype/figma-flow-spec-v6.md` ถูกสร้างและผ่าน visual/link QA แล้ว
+
+Task R1 — Setup:
+
+> คุณต้องการเริ่มสร้างเงินสำรองตั้งหลักสำหรับค่าใช้จ่ายจำเป็น โปรดตั้งเป้าหมาย ยอดเริ่มต้น และตั้งแผนออมรายเดือน หรือเลือกไว้ภายหลัง
+
+Observe: ผู้ใช้เข้าใจฐานคำนวณจากค่าใช้จ่ายจำเป็นหรือไม่, เข้าใจตัวเลือก `ไว้ภายหลัง` หรือไม่, เข้าใจว่าเปอร์เซ็นต์ถูกแปลงเป็นจำนวนคงที่หรือไม่, หา edit/pause/off เจอหรือไม่ และเข้าใจว่า Benefit Preview ยังขึ้นกับเงื่อนไขธนาคารหรือไม่
+
+Task R2 — Benefit states:
+
+> โปรดอธิบายว่าเดือนใดถูกนับเป็น Qualified Round, Tier เปลี่ยนเมื่อใด และจะเกิดอะไรขึ้นหากเงินไม่พอหรือถอนจนต่ำกว่า Checkpoint
+
+Expected: ผู้ใช้เข้าใจว่า 1/3/6 รอบเลื่อน Tier, Grace ไม่รีเซ็ต Tier และการต่ำกว่า Checkpoint พัก Progress โดยไม่ลด Tier ที่ได้แล้ว
+
+Task R3 — Withdrawal branches:
+
+1. ขอใช้เงินฉุกเฉินไปบัญชีตนเอง — ต้องทำสำเร็จโดยไม่มี High-Risk Cooling-off
+2. ขอใช้ซื้อของทั่วไป — ต้องเข้าใจว่าตัวละครเป็นคำเตือนสติและยังตัดสินใจเองได้
+3. ขอส่งไปผู้รับใหม่ที่มีหลายสัญญาณเสี่ยง — ต้องเข้า existing H05/H06 และเข้าใจว่าพักเฉพาะคำสั่ง/ยอดนั้น
 
 ## 7. Facilitator Guide
 
@@ -133,9 +161,10 @@ Expected: ทำรายการสำเร็จโดยไม่เข้�
 
 ### Closing
 
-- `Career Mode มีประโยชน์พอให้คุณเปิดหรือไม่?`
+- `JobShield มีประโยชน์พอให้คุณเปิดหรือไม่?`
 - `ขั้นตอนไหนรบกวนหรือทำให้ไม่ไว้ใจระบบ?`
-- `เงินสำรองก่อนเงินเดือนแรก หมายถึงอะไรในความเข้าใจของคุณ?`
+- `เงินสำรองตั้งหลัก หมายถึงอะไรในความเข้าใจของคุณ?`
+- `คุณคิดว่าต้องเปลี่ยน Pocket เมื่อเริ่มมีรายได้หรือไม่ เพราะอะไร?`
 - `verified payment channel รับรองอะไร และไม่ได้รับรองอะไร?`
 - `ถ้าแก้ได้หนึ่งอย่าง คุณจะเปลี่ยนอะไร?`
 
@@ -154,6 +183,12 @@ Expected: ทำรายการสำเร็จโดยไม่เข้�
 | Perceived friction | 1–5 + reason | Self-report |
 | Warning trust | 1–5 + reason | Self-report |
 | Terminology issue | free-text + observed confusion | Qualitative |
+| Auto-Routing setup success | success / assisted / fail; steps and time | Usability |
+| Auto-Save comprehension | knows fixed amount/date, calculator boundary and can find pause/edit/off: yes/no | Control comprehension |
+| Benefit-rule comprehension | understands qualified round / grace / checkpoint / tier: 0–4 | Product comprehension |
+| Warning-type distinction | correctly separates nudge / reminder / High Risk: 0–3 | Safety comprehension |
+| Alert-fatigue signal | dismisses without reading / says would disable / repeated-warning complaint | Behavioral + qualitative |
+| Reward understanding | proven benefit vs unconfirmed concept | Claim comprehension |
 
 ห้ามแปลง rubric ขนาดเล็กนี้เป็น model accuracy หรือ real-world fraud-prevention rate
 
@@ -196,10 +231,10 @@ Task L
 Task E
 - Success/assisted/fail:
 - Completion time:
-- Believes เงินสำรองก่อนเงินเดือนแรก is locked? yes/no/unclear
+- Believes เงินสำรองตั้งหลัก is permanently locked? yes/no/unclear
 
 Post-test
-- Career Mode value 1–5 + reason:
+- JobShield value 1–5 + reason:
 - Friction 1–5 + reason:
 - Warning trust 1–5 + reason:
 - Terminology issues:
@@ -231,7 +266,7 @@ Post-test
 | Legitimate success without assistance | — | |
 | Emergency success without assistance | — | |
 | Mistook verified payment for verified employer | — | |
-| Believed เงินสำรองก่อนเงินเดือนแรก was permanently locked | — | |
+| Believed เงินสำรองตั้งหลัก was permanently locked | — | |
 
 ### Severity coding
 
@@ -253,12 +288,12 @@ Post-test
 - ผู้เข้าร่วมจำเหตุผลไม่ได้หรือคิดว่าคะแนนของระบบยืนยันว่าเป็น Scam แน่นอน
 - `Pause & Verify`, `Cancel` และ `Report` ให้ผลที่ผู้ใช้คาดไม่ตรง
 - Medium warning ขัดขวางค่าใช้จ่ายจริงซ้ำ ๆ
-- `เงินสำรองก่อนเงินเดือนแรก` ถูกเข้าใจว่าเป็นเงินที่ถอนออกไม่ได้
+- `เงินสำรองตั้งหลัก` ถูกเข้าใจว่าเป็นเงินที่ถอนออกไม่ได้
 
 ### Fail/pivot condition
 
 - Contextual warning ไม่ดีกว่า Generic ใน action/comprehension ของกลุ่มทดสอบ
-- legitimate/emergency friction ทำให้หลายคนทำ task ไม่สำเร็จหรือไม่ต้องการเปิด Career Mode
+- legitimate/emergency friction ทำให้หลายคนทำ task ไม่สำเร็จหรือไม่ต้องการเปิด JobShield
 - คุณค่าที่ผู้ใช้รับรู้เหลือเพียง “pocket + warning” และอธิบาย context-aware policy ไม่ได้
 
 ## 12. Data Handling And Reporting

@@ -1,173 +1,68 @@
 # K PLUS JobShield — System Diagrams
 
-อัปเดตล่าสุด: 5 กันยายน 2026  
-FigJam ชุดปัจจุบัน: [K PLUS JobShield — Detailed System Flow](https://www.figma.com/board/2Zucnsm9P4uPJdZ1BHVRv9)
+อัปเดตล่าสุด: 6 กันยายน 2026
+สถานะ: **V6 เป็น canonical repository diagram; Figma canvas ยังไม่ได้ Sync V6**
 
-ไฟล์นี้เป็น canonical Mermaid source ของ FigJam ชุดใหม่ มี 3 แผนภาพ:
+## Current V6
 
-1. End-to-End Flow — ตั้งแต่เปิด Career Mode จนรายการสำเร็จหรือถูกยกเลิก
-2. Core Integrations and Risk Evaluation — แสดง 3 integrations และข้อมูลที่แต่ละส่วนรับผิดชอบ
-3. High-Risk Cooling-off — แสดงว่าระบบพักคำสั่งก่อนส่งเข้าสู่ระบบโอน/PromptPay
+- Draw.io ที่แก้ไขได้: [jobshield-kplus-integration-benefits-v6.drawio](./jobshield-kplus-integration-benefits-v6.drawio)
+- End-to-End Flow ภาษาไทย: [jobshield-flow-v6.md](./jobshield-flow-v6.md)
+- Figma screen/state specification: [figma-flow-spec-v6.md](./figma-flow-spec-v6.md)
+- Figma scope-sync handoff: [figma-scope-sync-v6.md](./figma-scope-sync-v6.md)
 
-## Diagram 1 — End-to-End Flow
+ภาพ Preview ที่ตรวจจากไฟล์ V6:
 
-```mermaid
-flowchart TD
-    user(["First Jobber อยู่ในช่วงสมัครงานหรือรอเงินเดือนแรก"])
+- [หน้า 1 — End-to-End Lifecycle](./jobshield-kplus-integration-benefits-v6-page-1.png)
+- [หน้า 2 — Auto-Save and Benefit](./jobshield-kplus-integration-benefits-v6-page-2.png)
+- [หน้า 3 — Withdraw and Protect](./jobshield-kplus-integration-benefits-v6-page-3.png)
+- [หน้า 4 — Integration and Value Loop](./jobshield-kplus-integration-benefits-v6-page-4.png)
 
-    subgraph prepare["1. เตรียมเงินและเปิดการป้องกัน"]
-        mode["ผู้ใช้เลือกเปิด Career Mode"]
-        period["กำหนดระยะเวลาและวันหมดอายุ"]
-        pockets["แยกเงินตามวัตถุประสงค์ใน K-ePocket"]
-        budget["Job Search Budget<br/>เงินสำหรับค่าใช้จ่ายหางานตามแผน"]
-        reserve["เงินสำรองก่อนเงินเดือนแรก<br/>ค่าเช่า อาหาร เดินทาง และเหตุจำเป็น"]
-        mode --> period --> pockets
-        pockets --> budget
-        pockets --> reserve
-    end
+## วิธีอ่านตามกลุ่มผู้ชม
 
-    request["ได้รับคำขอให้จ่ายค่าสมัคร<br/>ค่าอบรม ค่าอุปกรณ์ หรือเงินมัดจำ"]
-    transfer["เริ่มทำรายการโอนใน K PLUS"]
+- ผู้บริหาร: อ่านหน้า 1 เพื่อเข้าใจแนวคิด แล้วไปหน้า 4 เพื่อดูความแตกต่าง ความเป็นไปได้ และคุณค่าทางธุรกิจ
+- คนทั่วไปหรือผู้ใช้: อ่านหน้า 1 → หน้า 2 → หน้า 3 เพื่อเห็นตั้งแต่เริ่มออมจนถึงตอนนำเงินออก
+- ทีม Product/Cyber Security: อ่านหน้า 3 และหน้า 4 เพื่อดูเงื่อนไขความเสี่ยง จุดพักคำสั่ง และ capability boundary
 
-    subgraph assess["2. ประเมินความเสี่ยงก่อนเงินออก"]
-        context["บริบทจาก Career Mode และแหล่งเงิน"]
-        tx["ผู้รับใหม่ ยอดเงิน และรูปแบบการโอนสะสม"]
-        destination["สัญญาณความเสี่ยงปลายทาง<br/>จำลองจากระบบธนาคาร"]
-        policy["Multi-signal rules / policy<br/>รวมหลายสัญญาณโดยไม่พึ่งคำตอบเดียว"]
-        tier{"ระดับความเสี่ยง"}
-        context --> policy
-        tx --> policy
-        destination --> policy
-        policy --> tier
-    end
+## โครงสร้าง 4 หน้า
 
-    subgraph act["3. เลือกการแทรกแซงตามความเสี่ยง"]
-        low["Low<br/>ตรวจสอบและโอนตามปกติ"]
-        medium["Medium<br/>อธิบายเหตุผลและให้ยืนยันอย่างตั้งใจ"]
-        high["High<br/>Pause & Verify + Cooling-off"]
-        emergency["Limited break-glass<br/>บัญชีตนเองหรือ verified biller"]
-    end
+1. **ภาพรวมสำหรับผู้บริหาร** — อธิบาย JobShield ในประโยคเดียว แล้วไล่จากเริ่มตั้งค่า ออมต่อเนื่อง เห็นความคืบหน้า จนถึงการปกป้องก่อนนำเงินออก
+2. **การออมและสิทธิประโยชน์** — อธิบายการตั้งออมรายเดือน รอบออมสำเร็จ การผ่อนผัน ยอดอ้างอิง ระดับ 1/3/6 รอบ และสิทธิประโยชน์ที่ยังต้องผ่านการอนุมัติ
+3. **การนำเงินออกและการป้องกัน** — แยกมาสคอตเตือนเรื่องการออมสำหรับรายการทั่วไป ออกจากคำเตือนจริงจังและการพักคำสั่งสำหรับรายการที่พบหลายสัญญาณเสี่ยง
+4. **ระบบเดิม สิ่งที่เพิ่ม และคุณค่าธุรกิจ** — แสดง 3 ส่วนหลักของ K PLUS ที่นำมาใช้ ข้อเสนอใหม่ของ JobShield สิ่งที่ยังต้องยืนยัน และประโยชน์ที่เป็นสมมติฐาน
 
-    subgraph result["4. ผลลัพธ์"]
-        done(["ส่งคำสั่งเข้าสู่ระบบโอน<br/>เมื่อผ่านเงื่อนไขแล้ว"])
-        cancel(["ยกเลิกรายการ<br/>เงินยังไม่ถูกส่ง"])
-        report(["แจ้งข้อกังวลและเก็บ audit data ที่จำเป็น"])
-        limit["เป้าหมายคือช่วยลดความเสี่ยง<br/>ไม่รับประกันว่าจะหยุด Scam ได้ทุกกรณี"]
-    end
+## คำอธิบายสัญลักษณ์
 
-    user --> mode
-    budget --> request
-    reserve --> request
-    request --> transfer
-    transfer --> context
-    transfer --> tx
-    transfer -. "สัญญาณจำลอง" .-> destination
-    tier -->|Low| low
-    tier -->|Medium| medium
-    tier -->|High| high
-    tier -->|เส้นทางฉุกเฉินที่เข้าเงื่อนไข| emergency
-    low --> done
-    medium -->|ยืนยันต่อ| done
-    medium -->|หยุด| cancel
-    high -->|ผ่าน Cooling-off และตรวจสอบแล้ว| done
-    high -->|ยกเลิก| cancel
-    high -->|แจ้งข้อกังวล| report
-    emergency --> done
-    done --> limit
-    cancel --> limit
-    report --> limit
+- เส้นทึบ = เส้นทางการทำงานหรือข้อมูลใน Core concept
+- เส้นประ = ความสัมพันธ์เชิงสมมติฐานหรือสิ่งที่ยังต้องทดสอบ/อนุมัติ ไม่ใช่ผลลัพธ์รับรอง
+- กรอบเส้นประสีแดง = internal dependency หรือ Business-dependent capability ที่ public sources ยังไม่ยืนยัน
+- `Destination risk` = synthetic flag ที่ใช้จำลองสัญญาณจากระบบ Fraud Risk ฝั่งธนาคาร ทีมไม่ได้อ้างว่าเข้าถึงข้อมูลภายในจริง
+- `Pending Instruction` = คำสั่งและยอดของรายการ High-Risk ที่พักไว้ก่อนส่งเข้าสู่ระบบโอน/PromptPay ไม่ได้ล็อกทั้งบัญชีหรือดึงเงินคืนหลังโอน
+- `Dynamic Time Lock` = การกำหนดระยะพักตามระดับความเสี่ยงภายใน Cooling-off ไม่ใช่ฟีเจอร์แยก
 
-    style prepare fill:#C2E5FF,stroke:#3DADFF
-    style assess fill:#DCCCFF,stroke:#874FFF
-    style act fill:#FFECBD,stroke:#FFC943
-    style result fill:#C6FAF6,stroke:#5AD8CC
-    style high fill:#FFCDC2,stroke:#FF7556
-    style medium fill:#FFE0C2,stroke:#FF9E42
-    style low fill:#CDF4D3,stroke:#66D575
-    style cancel fill:#FFCDC2,stroke:#FF7556
-```
+## Scope Lock
 
-## Diagram 2 — Core Integrations and Risk Evaluation
+- ใช้เงินก้อนเดียวชื่อ `เงินสำรองตั้งหลัก (Protected Reserve)` โดยไม่มี Stage branching
+- ไม่มี Job Search Budget
+- JobShield ไม่อ่านข้อความ อีเมล หรือ Resume
+- Prototype ใช้ deterministic multi-signal policy และ synthetic data; ไม่มี AI/ML model จริง
+- Core มี 3 Integration เท่านั้น: `K-ePocket`, `K PLUS Transaction + Bank-side Fraud Risk` และ `K PLUS Security & Fraud Response`
+- K Point/คูปองเป็นเพียงตัวอย่างสิทธิประโยชน์ภายใต้เงื่อนไขธนาคาร ไม่ระบุคะแนน มูลค่า หรือรับรองสิทธิ
+- เงินฝากที่เพิ่มขึ้นอาจสนับสนุนฐานเงินทุนและ Engagement แต่ไม่อ้างว่าเงินฝากทุกบาทเปลี่ยนเป็นสินเชื่อหรือกำไรโดยตรง
 
-```mermaid
-flowchart LR
-    user(["ผู้ใช้ทำรายการใน K PLUS"])
+## Prior Snapshots
 
-    subgraph core["Core — 3 Integrations"]
-        pocket["1. K-ePocket<br/>ระบุว่าเงินมาจาก Job Search Budget<br/>หรือเงินสำรองก่อนเงินเดือนแรก"]
-        transaction["2. K PLUS Transaction + Bank-side Fraud Risk<br/>ผู้รับใหม่ ยอด รูปแบบสะสม<br/>และสัญญาณความเสี่ยงปลายทาง"]
-        response["3. K PLUS Security & Fraud Response<br/>คำเตือน การยืนยันที่เข้มขึ้น<br/>Cooling-off และ Cancel/Report"]
-    end
+- V5: [jobshield-continuous-reserve-v5.drawio](./jobshield-continuous-reserve-v5.drawio)
+- V4: [jobshield-integrated-lifecycle-v4.drawio](./jobshield-integrated-lifecycle-v4.drawio)
+- V3: [jobshield-integrated-lifecycle-v3.drawio](./jobshield-integrated-lifecycle-v3.drawio)
+- V2: [jobshield-integrated-lifecycle-v2.drawio](./jobshield-integrated-lifecycle-v2.drawio)
+- Original: [jobshield-system-flow.drawio](./jobshield-system-flow.drawio)
 
-    policy["Context-aware multi-signal policy<br/>ใช้ deterministic rules กับ synthetic data ใน Prototype"]
-    decision{"Low / Medium / High / Break-glass"}
+ไฟล์ prior snapshots เก็บไว้เพื่อย้อนดูพัฒนาการของแนวคิดเท่านั้น ห้ามใช้เป็น source of truth สำหรับ Prototype หรือ Proposal รุ่นถัดไป
 
-    subgraph future["Optional / Future — ไม่ใช่ Core"]
-        shared["ผู้ใช้เลือกส่ง Email/Link เพื่อตรวจ<br/>ต้องขอ consent รายครั้ง"]
-        specialist["Fraud Specialist workflow"]
-        employer["Verified-employer / registry lookup"]
-    end
+## Testing Status
 
-    user --> pocket
-    user --> transaction
-    pocket --> policy
-    transaction --> policy
-    policy --> decision --> response
-    shared -. "optional signal" .-> policy
-    response -. "future escalation" .-> specialist
-    employer -. "future verification" .-> response
+- Pilot sessions conducted: `0`
+- Participant sessions conducted: `0`
+- Synthetic participant results: ไม่มี
 
-    style core fill:#DCCCFF,stroke:#874FFF
-    style future fill:#F2F2F2,stroke:#999999,stroke-dasharray:5 5
-    style policy fill:#FFECBD,stroke:#FFC943
-    style response fill:#C6FAF6,stroke:#5AD8CC
-```
-
-## Diagram 3 — High-Risk Cooling-off
-
-```mermaid
-sequenceDiagram
-    actor U as ผู้ใช้
-    participant A as K PLUS / JobShield
-    participant P as Multi-signal Policy
-    participant Q as Pending Instruction Queue
-    participant R as ระบบโอน / PromptPay
-
-    U->>A: ตรวจสอบรายการโอนไปผู้รับใหม่
-    A->>P: ส่ง Career Mode, แหล่งเงิน, ผู้รับ, ยอด และสัญญาณปลายทาง
-    P-->>A: High Risk พร้อมเหตุผลที่สังเกตได้ 2–3 ข้อ
-    A-->>U: แสดง Pause & Verify และ Cancel/Report
-
-    alt ผู้ใช้เลือก Pause & Verify
-        A->>Q: พักคำสั่งเป็น Pending Instruction
-        Note over Q,R: ระหว่าง Cooling-off ยังไม่ส่งคำสั่งเข้าสู่ระบบโอน/PromptPay
-        A-->>U: แนะนำให้ตรวจสอบผ่านช่องทางบริษัทที่หาเอง
-        U->>A: กลับมายืนยันหลังผ่านเงื่อนไข
-        A->>P: ประเมินซ้ำและทำ stronger verification ตาม policy
-        alt ผ่านเงื่อนไขและผู้ใช้ยืนยันต่อ
-            Q->>R: ส่งคำสั่งโอน
-            R-->>U: แสดงผลรายการ
-        else ยังคลุมเครือหรือผู้ใช้ยกเลิก
-            A->>Q: ยกเลิก Pending Instruction
-            Q-->>U: เงินยังไม่ถูกส่ง
-        end
-    else ผู้ใช้เลือก Cancel/Report
-        A->>Q: ไม่สร้างหรือยกเลิก Pending Instruction
-        A-->>U: ยืนยันว่าเงินยังไม่ถูกส่ง และเปิดทางแจ้งข้อกังวล
-    else Limited break-glass ที่เข้าเงื่อนไข
-        Note over A,P: จำกัดเฉพาะบัญชีตนเองหรือ verified biller<br/>ไม่ใช้เป็นทางลัดสำหรับผู้รับใหม่
-        A->>R: ส่งคำสั่งเมื่อผ่านการตรวจตาม policy
-        R-->>U: แสดงผลรายการ
-    end
-```
-
-## คำอธิบายสัญลักษณ์และขอบเขต
-
-- เส้นทึบ = เส้นทางหลักหรือข้อมูลที่ Core ใช้จริงในแนวคิด
-- เส้นประ = ข้อมูลจำลอง, Optional/Future integration หรือความเชื่อมโยงที่ยังไม่ยืนยัน
-- `Destination risk` = สัญญาณจากระบบ Fraud Risk ฝั่งธนาคารที่ Prototype จำลองขึ้นด้วย synthetic flag; ทีมไม่ได้อ้างว่าเข้าถึงข้อมูลภายในจริง
-- `Dynamic Time Lock` = กลไกที่ปรับระดับการพักตามความเสี่ยงภายใน Cooling-off ไม่ใช่ฟีเจอร์แยก และ Prototype ยังไม่กำหนดระยะเวลาจริง
-- `Pending Instruction` = คำสั่งที่ถูกพักไว้ก่อนเข้าสู่ระบบโอน/PromptPay; จึงไม่ใช่การดึงเงินกลับหลังโอนสำเร็จ
-- JobShield ไม่อ่านข้อความหรืออีเมลอัตโนมัติ Email/Link scanning จะมีได้เฉพาะส่วน Optional/Future และต้องขอ consent ทุกครั้ง
-- Prototype ใช้ rules/policy และ synthetic data ไม่ได้มี ML model และไม่แสดงคะแนนที่อ้างว่าเป็นผลจากโมเดลจริง
-- การทำรายการสำเร็จไม่ได้แปลว่าระบบรับรองนายจ้างหรือรับประกันว่าปลอดภัยจาก Scam
+ภาพ Preview และการตรวจโครงสร้างเป็น QA evidence ไม่ใช่ผลทดสอบกับผู้ใช้
