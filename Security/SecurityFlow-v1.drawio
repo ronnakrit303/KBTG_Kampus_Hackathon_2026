@@ -1,0 +1,291 @@
+<mxfile host="app.diagrams.net" agent="Codex" compressed="false" pages="2">
+  <diagram id="user-mobile-security" name="01 User &amp; Mobile Security">
+    <mxGraphModel dx="2400" dy="1400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="p1-title" value="K PLUS JobShield — User &amp;amp; Mobile Security Flow" style="text;html=1;strokeColor=none;fillColor=none;fontSize=28;fontStyle=1;fontColor=#174C3C;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="50" y="25" width="1500" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-sub" value="พิสูจน์ว่าแอป อุปกรณ์ เซสชัน และคำสั่งเป็นของจริง — แล้วจึงช่วยผู้ใช้ประเมินว่าเจตนากำลังถูก Scam ชักจูงหรือไม่" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontColor=#49645C;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="50" y="70" width="1650" height="35" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p1-legend" value="&lt;b&gt;คำอธิบายเส้น&lt;/b&gt;&lt;br&gt;เส้นทึบ = เส้นทางคำสั่งหลัก&amp;nbsp;&amp;nbsp; • &amp;nbsp;&amp;nbsp;เส้นประ = Telemetry/ผลประเมินประกอบ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F7FAF9;strokeColor=#9AB7AE;fontSize=13;fontColor=#36564D;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="1720" y="25" width="630" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p1-principle-a" value="&lt;b&gt;คำถามที่ 1 — Technical authenticity&lt;/b&gt;&lt;br&gt;Request มาจากผู้ใช้ แอป และอุปกรณ์ที่เชื่อถือได้หรือไม่? รายละเอียดธุรกรรมถูกแก้ไขหรือเล่นซ้ำหรือไม่?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF4FF;strokeColor=#4A90E2;strokeWidth=2;fontSize=15;fontColor=#174A73;align=left;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="50" y="125" width="1110" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-principle-b" value="&lt;b&gt;คำถามที่ 2 — Intent integrity&lt;/b&gt;&lt;br&gt;แม้เป็นผู้ใช้จริง เขากำลังตัดสินใจเองหรือกำลังถูก Fake Recruiter กดดันให้โอน? Biometrics เพียงอย่างเดียวตอบคำถามนี้ไม่ได้" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E3;strokeColor=#E59B3A;strokeWidth=2;fontSize=15;fontColor=#7A4B0E;align=left;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="125" width="1160" height="105" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p1-user-lane" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1FBF6;strokeColor=#6EC5A4;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="270" width="440" height="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-user-head" value="1. ผู้ใช้และเจตนา" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;fontColor=#19765A;align=left;" vertex="1" parent="1">
+          <mxGeometry x="70" y="295" width="350" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-user-action" value="&lt;b&gt;ผู้ใช้เริ่มทำรายการสำคัญ&lt;/b&gt;&lt;br&gt;&lt;br&gt;ตัวอย่าง: นำเงิน 8,000 บาทออกจาก ‘เงินสำรองตั้งหลัก’ เพื่อโอนไปยังบัญชีบุคคลใหม่ โดยระบุว่าเป็นค่าใช้จ่ายเพื่อเริ่มงาน" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#37A77C;strokeWidth=2;fontSize=15;fontColor=#24483D;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry x="80" y="370" width="360" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-user-review" value="&lt;b&gt;หน้าจอยืนยันต้องแสดงข้อมูลที่กำลังเซ็น&lt;/b&gt;&lt;br&gt;• แหล่งเงิน&lt;br&gt;• ผู้รับ&lt;br&gt;• จำนวนและวัตถุประสงค์&lt;br&gt;• ผลกระทบต่อเงินสำรอง" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E4F7EF;strokeColor=#37A77C;fontSize=14;fontColor=#24483D;align=left;verticalAlign=top;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="650" width="360" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-user-private" value="&lt;b&gt;Privacy boundary&lt;/b&gt;&lt;br&gt;JobShield ไม่อ่านข้อความ อีเมล เสียงสนทนา หรือ Clipboard โดยอัตโนมัติ และไม่ส่งข้อมูล Biometrics ให้ระบบหลังบ้าน" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAF9;strokeColor=#91AAA2;dashed=1;fontSize=14;fontColor=#49645C;align=left;verticalAlign=top;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="930" width="360" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-user-note" value="ผู้ใช้จริง + Biometrics ผ่าน ≠ ธุรกรรมปลอดภัยเสมอ&lt;br&gt;เพราะ Social Engineering อาจทำให้ผู้ใช้ยืนยันรายการด้วยตนเอง" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7F0;strokeColor=#E59B3A;fontStyle=1;fontSize=14;fontColor=#7A4B0E;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1140" width="360" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p1-mobile-lane" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F8FE;strokeColor=#6AA7E8;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="510" y="270" width="920" height="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-mobile-head" value="2. Lightweight Mobile Security Gate" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;fontColor=#2267A5;align=left;" vertex="1" parent="1">
+          <mxGeometry x="540" y="295" width="600" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-m1" value="&lt;b&gt;1) App &amp;amp; Device Integrity&lt;/b&gt;&lt;br&gt;ใช้ Platform attestation ช่วยตรวจแอปจริง Binary ไม่ถูกแก้ และ Device posture เท่าที่ Platform รองรับ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4A90E2;strokeWidth=2;fontSize=14;fontColor=#234A6B;align=left;verticalAlign=top;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="365" width="390" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-m2" value="&lt;b&gt;2) Device &amp;amp; Session Binding&lt;/b&gt;&lt;br&gt;ตรวจ Session, Device binding, Token expiry และการเปลี่ยนอุปกรณ์; เปลี่ยน Binding ต้อง Re-enroll/Step-up" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4A90E2;strokeWidth=2;fontSize=14;fontColor=#234A6B;align=left;verticalAlign=top;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="990" y="365" width="390" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-m3" value="&lt;b&gt;3) Canonical Transaction Payload&lt;/b&gt;&lt;br&gt;ผูก Transaction ID, แหล่งเงิน, ผู้รับ, จำนวน, Purpose, Policy version, Nonce และ Expiry เป็นชุดข้อมูลเดียว" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4A90E2;strokeWidth=2;fontSize=14;fontColor=#234A6B;align=left;verticalAlign=top;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="560" width="390" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-m4" value="&lt;b&gt;4) Local Authentication&lt;/b&gt;&lt;br&gt;PIN/Biometrics ของเครื่องอนุญาตให้ใช้ Hardware-backed key — ไม่ส่งใบหน้าหรือลายนิ้วมือไปยัง JobShield" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4A90E2;strokeWidth=2;fontSize=14;fontColor=#234A6B;align=left;verticalAlign=top;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="990" y="560" width="390" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-m5" value="&lt;b&gt;5) Transaction Intent Signing&lt;/b&gt;&lt;br&gt;ลงลายมือชื่อ Payload หลังผู้ใช้ตรวจรายละเอียด เพื่อช่วยตรวจว่าจำนวน ผู้รับ หรือแหล่งเงินไม่ถูกแก้ภายหลัง" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4A90E2;strokeWidth=2;fontSize=14;fontColor=#234A6B;align=left;verticalAlign=top;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="755" width="390" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-m6" value="&lt;b&gt;6) Secure Request Transport&lt;/b&gt;&lt;br&gt;ส่งผ่าน TLS พร้อม Access Token, request hash, single-use nonce และ idempotency key เพื่อป้องกันดักแก้ เล่นซ้ำ และกดซ้ำ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4A90E2;strokeWidth=2;fontSize=14;fontColor=#234A6B;align=left;verticalAlign=top;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="990" y="755" width="390" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-mobile-proof" value="&lt;b&gt;สิ่งที่ Gate นี้พิสูจน์ได้&lt;/b&gt;&lt;br&gt;แอป/อุปกรณ์/Session/คำขอมีความน่าเชื่อถือ และ Payload ไม่ถูกแก้หรือเล่นซ้ำ&lt;br&gt;&lt;br&gt;&lt;b&gt;สิ่งที่ยังพิสูจน์ไม่ได้&lt;/b&gt;&lt;br&gt;ผู้ใช้กำลังถูกหลอกให้ยืนยันรายการหรือไม่ — ต้องประเมินบริบทธุรกรรมต่อที่ Server" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E7F1FD;strokeColor=#4A90E2;fontSize=14;fontColor=#234A6B;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry x="620" y="985" width="700" height="230" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p1-bank-lane" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF9F1;strokeColor=#E4A24A;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="270" width="890" height="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-bank-head" value="3. Server Validation &amp;amp; User Intervention" style="text;html=1;strokeColor=none;fillColor=none;fontSize=20;fontStyle=1;fontColor=#9A5A10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1490" y="295" width="650" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-b1" value="&lt;b&gt;Server ตรวจ Technical authenticity&lt;/b&gt;&lt;br&gt;Signature • Key binding • Attestation verdict • Session • Nonce/Expiry • Request hash • Idempotency" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4A90E2;strokeWidth=2;fontSize=14;fontColor=#234A6B;align=left;verticalAlign=top;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="1510" y="370" width="430" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-b-decision" value="คำขอผ่าน&lt;br&gt;Technical&lt;br&gt;validation?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#EAF4FF;strokeColor=#4A90E2;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#174A73;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1990" y="365" width="150" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-reject" value="&lt;b&gt;ไม่ผ่าน: ปฏิเสธคำขอ&lt;/b&gt;&lt;br&gt;ไม่ใช่ Scam warning แต่เป็น Security rejection เช่น Signature ผิด, Replay หรือ Session หมดอายุ&lt;br&gt;→ บันทึก Security alert และขอ Re-authenticate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDECEC;strokeColor=#D9534F;strokeWidth=2;fontSize=13;fontColor=#8B2D2A;align=left;verticalAlign=top;spacing=11;" vertex="1" parent="1">
+          <mxGeometry x="2160" y="350" width="160" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-risk" value="&lt;b&gt;ผ่าน: ส่งต่อให้ Transaction Risk Correlation&lt;/b&gt;&lt;br&gt;Server รวมแหล่งเงิน ผู้รับ Purpose, velocity, destination risk และ device/session posture แล้วตอบกลับ Low / Medium / High" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2DD;strokeColor=#E59B3A;strokeWidth=2;fontSize=14;fontColor=#7A4B0E;align=left;verticalAlign=top;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="615" width="730" height="145" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p1-low" value="&lt;b&gt;LOW&lt;/b&gt;&lt;br&gt;ดำเนินรายการตามปกติ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F6ED;strokeColor=#38A169;strokeWidth=2;fontSize=14;fontColor=#23613E;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1510" y="825" width="245" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-medium" value="&lt;b&gt;MEDIUM&lt;/b&gt;&lt;br&gt;อธิบายเหตุผล 2–3 ข้อ&lt;br&gt;ให้ผู้ใช้ยืนยันอย่างตั้งใจ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF4DB;strokeColor=#DDAA33;strokeWidth=2;fontSize=14;fontColor=#795B15;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1780" y="825" width="245" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-high" value="&lt;b&gt;HIGH&lt;/b&gt;&lt;br&gt;พักคำสั่งก่อนเงินออก&lt;br&gt;Pause &amp;amp; Verify / Cancel &amp;amp; Report" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDECEC;strokeColor=#D9534F;strokeWidth=2;fontSize=14;fontColor=#8B2D2A;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="2050" y="825" width="270" height="115" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p1-warning" value="&lt;b&gt;ตัวอย่าง Contextual Warning&lt;/b&gt;&lt;br&gt;“คุณกำลังนำเงิน 8,000 บาทออกจากเงินสำรองตั้งหลัก ไปยังบัญชีบุคคลที่ไม่เคยโอนมาก่อน และระบุว่าเป็นค่าใช้จ่ายเพื่อเริ่มงาน”&lt;br&gt;&lt;br&gt;ปุ่มหลัก: &lt;b&gt;หยุดไว้และตรวจสอบ&lt;/b&gt; / &lt;b&gt;ยกเลิกและรายงาน&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D9534F;strokeWidth=2;fontSize=14;fontColor=#5C3836;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry x="1510" y="1005" width="810" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-cooling-note" value="Cooling-off พักเฉพาะคำสั่งโอนรายการเสี่ยงก่อนส่งเข้าสู่ Payment Hub — ไม่ได้ล็อก Pocket หรือเงินทั้งหมดของผู้ใช้" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF4F4;strokeColor=#D9534F;fontStyle=1;fontSize=14;fontColor=#8B2D2A;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1560" y="1240" width="710" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p1-e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37A77C;strokeWidth=3;endArrow=block;endFill=1;" edge="1" parent="1" source="p1-user-action" target="p1-m1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e2" value="Secure request" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4A90E2;strokeWidth=3;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="p1-m6" target="p1-b1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4A90E2;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="p1-b1" target="p1-b-decision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e4" value="ไม่ผ่าน" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D9534F;strokeWidth=2;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="p1-b-decision" target="p1-reject">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e5" value="ผ่าน" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E59B3A;strokeWidth=2;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="p1-b-decision" target="p1-risk">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2065" y="575" />
+              <mxPoint x="1915" y="575" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p1-e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#38A169;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="p1-risk" target="p1-low">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDAA33;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="p1-risk" target="p1-medium">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D9534F;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="p1-risk" target="p1-high">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e9" value="เฉพาะ High" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D9534F;strokeWidth=2;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="p1-high" target="p1-warning">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="bank-detection-response" name="02 Detection &amp; Incident Response">
+    <mxGraphModel dx="2400" dy="1600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="p2-title" value="K PLUS JobShield — Bank-side Detection &amp;amp; Incident Response" style="text;html=1;strokeColor=none;fillColor=none;fontSize=28;fontStyle=1;fontColor=#253B6E;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="50" y="25" width="1650" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-sub" value="ระบบตรวจแบบหลายสัญญาณจากฝั่ง Server: เริ่มจาก Lightweight controls แล้วเพิ่มการวิเคราะห์ตามความเสี่ยง ก่อนอนุญาตให้คำสั่งเข้าสู่ระบบโอน" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontColor=#53617D;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="50" y="70" width="1800" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-legend" value="&lt;b&gt;เส้นทึบ&lt;/b&gt; = Transaction decision path&amp;nbsp;&amp;nbsp; • &amp;nbsp;&amp;nbsp;&lt;b&gt;เส้นประ&lt;/b&gt; = Telemetry/Audit ส่งแบบไม่ขวางธุรกรรม" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F7F7FB;strokeColor=#9B9EBD;fontSize=13;fontColor=#474A68;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="1740" y="25" width="610" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2-principle" value="&lt;b&gt;Lightweight risk cascade&lt;/b&gt; — L0/L1 ใช้กับธุรกรรมที่เข้าเกณฑ์ทั้งหมดเพราะรวดเร็วและใช้ข้อมูลที่มีอยู่แล้ว; L2 เรียก Graph/Enhanced checks เฉพาะรายการที่เริ่มเสี่ยง; L3 สร้าง Intervention หรือ Case เฉพาะรายการ High Risk" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF3FF;strokeColor=#6C7FC7;strokeWidth=2;fontSize=15;fontColor=#344578;align=left;spacing=14;" vertex="1" parent="1">
+          <mxGeometry x="50" y="125" width="2300" height="85" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2-zone1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F9FE;strokeColor=#7FADE2;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="245" width="340" height="700" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-z1-head" value="1. Bank Edge" style="text;html=1;strokeColor=none;fillColor=none;fontSize=19;fontStyle=1;fontColor=#2267A5;align=left;" vertex="1" parent="1">
+          <mxGeometry x="65" y="265" width="250" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-event" value="&lt;b&gt;TRANSFER_INTENT&lt;/b&gt;&lt;br&gt;คำขอที่ Client ลงลายมือชื่อแล้ว พร้อม Correlation ID" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4A90E2;strokeWidth=2;fontSize=14;fontColor=#234A6B;align=left;verticalAlign=top;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="75" y="330" width="270" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-bff" value="&lt;b&gt;Mobile BFF / API Gateway&lt;/b&gt;&lt;br&gt;Authentication • Session • Rate limit • Schema validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4A90E2;strokeWidth=2;fontSize=14;fontColor=#234A6B;align=left;verticalAlign=top;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="75" y="500" width="270" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-auth" value="&lt;b&gt;Request Security Validation&lt;/b&gt;&lt;br&gt;Signature • Key binding • Attestation • Nonce/Expiry • Idempotency" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F2FE;strokeColor=#4A90E2;fontSize=14;fontColor=#234A6B;align=left;verticalAlign=top;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="75" y="680" width="270" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-reject-note" value="Signature/Replay/Authorization ผิด → &lt;b&gt;Reject ทันที&lt;/b&gt;&lt;br&gt;แยกจากการตัดสิน Scam Risk" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDECEC;strokeColor=#D9534F;fontSize=13;fontColor=#8B2D2A;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="75" y="855" width="270" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2-zone2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F8FE;strokeColor=#6AA7E8;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="410" y="245" width="470" height="700" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-z2-head" value="2. Lightweight Detection Cascade" style="text;html=1;strokeColor=none;fillColor=none;fontSize=19;fontStyle=1;fontColor=#2267A5;align=left;" vertex="1" parent="1">
+          <mxGeometry x="435" y="265" width="400" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-l0" value="&lt;b&gt;L0 — Always-on validation&lt;/b&gt;&lt;br&gt;Eligible transaction • Source type • Payee status • Required fields • Duplicate check" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4A90E2;strokeWidth=2;fontSize=13;fontColor=#234A6B;align=left;verticalAlign=top;spacing=11;" vertex="1" parent="1">
+          <mxGeometry x="450" y="325" width="390" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-l1" value="&lt;b&gt;L1 — Fast risk features&lt;/b&gt;&lt;br&gt;New payee • Protected source • Amount • Velocity • Split/repeated transfer • Cached risk flag" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4A90E2;strokeWidth=2;fontSize=13;fontColor=#234A6B;align=left;verticalAlign=top;spacing=11;" vertex="1" parent="1">
+          <mxGeometry x="450" y="475" width="390" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-l2" value="&lt;b&gt;L2 — Enhanced analysis&lt;/b&gt;&lt;br&gt;เรียกเมื่อเริ่มเสี่ยง: Graph query • Fresh enhanced attestation • Cross-account pattern • Optional model ในอนาคต" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4EEFF;strokeColor=#8B64C6;strokeWidth=2;fontSize=13;fontColor=#5B3D87;align=left;verticalAlign=top;spacing=11;" vertex="1" parent="1">
+          <mxGeometry x="450" y="625" width="390" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-l3" value="&lt;b&gt;L3 — Intervention / Case&lt;/b&gt;&lt;br&gt;ทำเฉพาะรายการ High: Pending, Cooling-off, Independent verification หรือเปิด Case" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1E8;strokeColor=#E59B3A;strokeWidth=2;fontSize=13;fontColor=#7A4B0E;align=left;verticalAlign=top;spacing=11;" vertex="1" parent="1">
+          <mxGeometry x="450" y="790" width="390" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2-zone3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8F5FC;strokeColor=#9A79C7;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="910" y="245" width="500" height="700" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-z3-head" value="3. Multi-signal Risk Correlation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=19;fontStyle=1;fontColor=#6D4C9C;align=left;" vertex="1" parent="1">
+          <mxGeometry x="935" y="265" width="420" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-signals" value="&lt;b&gt;Signal groups&lt;/b&gt;&lt;br&gt;&lt;br&gt;1. &lt;b&gt;Asset:&lt;/b&gt; เงินสำรองตั้งหลัก / Save Point&lt;br&gt;2. &lt;b&gt;Payee:&lt;/b&gt; ผู้รับใหม่ บุคคล Biller หรือบัญชีตนเอง&lt;br&gt;3. &lt;b&gt;Behavior:&lt;/b&gt; Amount, velocity, split/repeated transfer&lt;br&gt;4. &lt;b&gt;Declared context:&lt;/b&gt; จ่ายเพื่อสมัครหรือเริ่มงาน&lt;br&gt;5. &lt;b&gt;Destination:&lt;/b&gt; Graph/risk flag/รายงานที่เกี่ยวข้อง&lt;br&gt;6. &lt;b&gt;Device/session:&lt;/b&gt; Attestation, session change, control risk" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8B64C6;strokeWidth=2;fontSize=14;fontColor=#4E3A68;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry x="950" y="330" width="420" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-graph-note" value="&lt;b&gt;Destination Risk&lt;/b&gt;&lt;br&gt;Prototype ใช้ข้อมูลจำลองจาก Fraud Analytics/Transaction Graph — ไม่อ้างว่าเข้าถึงข้อมูล Production" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1E9FC;strokeColor=#8B64C6;dashed=1;fontSize=13;fontColor=#5B3D87;align=left;verticalAlign=top;spacing=11;" vertex="1" parent="1">
+          <mxGeometry x="950" y="720" width="420" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-rule" value="ไม่พึ่ง Signal เดียว และไม่เปิด Rule weights ทั้งหมดให้ Client&lt;br&gt;ส่งกลับเฉพาะ Risk level + เหตุผลที่ผู้ใช้เข้าใจได้ 2–3 ข้อ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9A79C7;fontStyle=1;fontSize=13;fontColor=#4E3A68;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="950" y="850" width="420" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2-zone4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF9EE;strokeColor=#DBA84B;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="245" width="390" height="700" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-z4-head" value="4. Versioned Policy Engine" style="text;html=1;strokeColor=none;fillColor=none;fontSize=19;fontStyle=1;fontColor=#8B641B;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1465" y="265" width="330" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-policy" value="&lt;b&gt;ตัดสินตาม Risk appetite&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#23613E&quot;&gt;&lt;b&gt;LOW&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Normal flow&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#795B15&quot;&gt;&lt;b&gt;MEDIUM&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Contextual warning + deliberate confirmation&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#8B2D2A&quot;&gt;&lt;b&gt;HIGH&lt;/b&gt;&lt;/font&gt;&lt;br&gt;Server-side pending + cooling-off + verify/report" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#DBA84B;strokeWidth=2;fontSize=14;fontColor=#604917;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="330" width="310" height="345" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-timeout" value="&lt;b&gt;Dependency timeout&lt;/b&gt;&lt;br&gt;• Security invariant ผิด → Reject&lt;br&gt;• Optional signal หาย → Step-up/Medium ตาม Policy&lt;br&gt;• ห้ามปล่อย High pending เพราะ Service ล่มโดยอัตโนมัติ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E3;strokeColor=#E59B3A;fontSize=13;fontColor=#7A4B0E;align=left;verticalAlign=top;spacing=11;" vertex="1" parent="1">
+          <mxGeometry x="1480" y="720" width="310" height="160" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2-zone5" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F6FAF7;strokeColor=#6FB28A;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1860" y="245" width="490" height="700" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-z5-head" value="5. Enforcement Before Money Moves" style="text;html=1;strokeColor=none;fillColor=none;fontSize=19;fontStyle=1;fontColor=#2F7650;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1885" y="265" width="430" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-low" value="&lt;b&gt;LOW — Release approved&lt;/b&gt;&lt;br&gt;ส่งต่อโดยไม่เพิ่ม Friction" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F6ED;strokeColor=#38A169;strokeWidth=2;fontSize=13;fontColor=#23613E;align=left;verticalAlign=top;spacing=11;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="325" width="410" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-med" value="&lt;b&gt;MEDIUM — Explain &amp;amp; Confirm&lt;/b&gt;&lt;br&gt;แสดงเหตุผลเฉพาะรายการ; เมื่อยืนยันครบจึง Release" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF4DB;strokeColor=#DDAA33;strokeWidth=2;fontSize=13;fontColor=#795B15;align=left;verticalAlign=top;spacing=11;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="455" width="410" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-high" value="&lt;b&gt;HIGH — PENDING_COOLING_OFF&lt;/b&gt;&lt;br&gt;คำสั่งยังไม่เข้า Payment Hub; ผู้ใช้ Pause &amp;amp; Verify, Cancel &amp;amp; Report หรือ Release ตามเงื่อนไข Policy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDECEC;strokeColor=#D9534F;strokeWidth=2;fontSize=13;fontColor=#8B2D2A;align=left;verticalAlign=top;spacing=11;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="595" width="410" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-payment-gate" value="&lt;b&gt;Payment Gate invariant&lt;/b&gt;&lt;br&gt;Payment Hub รับเฉพาะรายการสถานะ &lt;b&gt;RELEASE_APPROVED&lt;/b&gt; จาก Server เท่านั้น" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E9F6EE;strokeColor=#38A169;strokeWidth=2;fontSize=14;fontColor=#23613E;align=center;verticalAlign=middle;spacing=11;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="785" width="410" height="105" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2-e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4A90E2;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="p2-event" target="p2-bff"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="p2-e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4A90E2;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="p2-bff" target="p2-auth"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="p2-e3" value="ผ่าน" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4A90E2;strokeWidth=3;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="p2-auth" target="p2-l0"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="p2-e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4A90E2;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="p2-l0" target="p2-l1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="p2-e5" value="Elevated" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8B64C6;strokeWidth=2;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="p2-l1" target="p2-l2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="p2-e6" value="High" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#E59B3A;strokeWidth=2;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="p2-l2" target="p2-l3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="p2-e7" value="Feature set" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8B64C6;strokeWidth=3;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="p2-l1" target="p2-signals"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="p2-e8" value="Risk + reason codes" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DBA84B;strokeWidth=3;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="p2-signals" target="p2-policy"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="p2-e9" value="Policy decision" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#38A169;strokeWidth=3;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="p2-policy" target="p2-payment-gate"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="p2-bottom-bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAFAFC;strokeColor=#9B9EBD;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="990" width="2310" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-bottom-head" value="Monitoring, Incident Detection และการวัดผล" style="text;html=1;strokeColor=none;fillColor=none;fontSize=21;fontStyle=1;fontColor=#474A68;align=left;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1015" width="700" height="35" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2-state" value="&lt;b&gt;Authoritative transaction state machine&lt;/b&gt;&lt;br&gt;&lt;br&gt;RECEIVED → EVALUATING&lt;br&gt;├ LOW → RELEASE_APPROVED → SENT_TO_PAYMENT&lt;br&gt;├ MEDIUM → USER_CONFIRMED → RELEASE_APPROVED&lt;br&gt;└ HIGH → PENDING_COOLING_OFF&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;├ USER_CANCELLED → CANCELLED / REPORTED&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;├ VERIFIED / POLICY_RELEASE → RELEASE_APPROVED&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;└ EXPIRED → CANCELLED / REVIEW&lt;br&gt;&lt;br&gt;Server clock เป็นแหล่งเวลาจริง; การกดซ้ำไม่สร้างรายการใหม่" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C7FC7;strokeWidth=2;fontSize=14;fontColor=#394267;align=left;verticalAlign=top;spacing=14;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry x="75" y="1080" width="690" height="400" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2-incident" value="&lt;b&gt;Event ≠ Incident&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Event&lt;/b&gt; — transfer intent / attestation / risk update&lt;br&gt;↓ Correlation&lt;br&gt;&lt;b&gt;Detection&lt;/b&gt; — Rule พบรูปแบบที่ควรตรวจ&lt;br&gt;↓ Threshold&lt;br&gt;&lt;b&gt;Alert&lt;/b&gt; — ต้องมี Action เช่น High-risk pending&lt;br&gt;↓ Grouping + Investigation&lt;br&gt;&lt;b&gt;Case&lt;/b&gt; — รวมผู้รับ อุปกรณ์ และ Timeline&lt;br&gt;↓ Validation&lt;br&gt;&lt;b&gt;Incident&lt;/b&gt; — เหตุที่ยืนยันและต้อง Respond/Recover&lt;br&gt;&lt;br&gt;SIEM รับ Telemetry เพื่อ Correlate; Inline Risk Engine ยังเป็นผู้ตัดสินก่อนเงินออก" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8B64C6;strokeWidth=2;fontSize=14;fontColor=#4E3A68;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry x="800" y="1080" width="690" height="400" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2-metrics" value="&lt;b&gt;Metrics ที่ต้องแยกให้ชัด&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Coverage&lt;/b&gt;&lt;br&gt;Threat / Signal / Platform / Policy / Label / Test coverage&lt;br&gt;&lt;br&gt;&lt;b&gt;Precision = TP ÷ (TP + FP)&lt;/b&gt;&lt;br&gt;รายการที่เตือนเป็น Scam จริงมากเพียงใด — สำคัญต่อ False Positive และ Alert Fatigue&lt;br&gt;&lt;br&gt;&lt;b&gt;Recall = TP ÷ (TP + FN)&lt;/b&gt;&lt;br&gt;จาก Scam จริงทั้งหมด ระบบจับได้เท่าใด&lt;br&gt;&lt;br&gt;&lt;b&gt;Performance&lt;/b&gt;&lt;br&gt;p50/p95/p99 decision latency • timeout/error • enhanced-check rate&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#8B2D2A&quot;&gt;&lt;b&gt;Synthetic data วัด Rule/Test coverage ได้ แต่ยังห้ามอ้าง Precision/Recall จริง&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D28A8A;strokeWidth=2;fontSize=14;fontColor=#4D4141;align=left;verticalAlign=top;spacing=14;" vertex="1" parent="1">
+          <mxGeometry x="1525" y="1080" width="785" height="400" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2-telemetry" value="Async telemetry / audit copy" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#8B64C6;strokeWidth=2;dashed=1;dashPattern=6 6;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="p2-policy" target="p2-incident">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1635" y="965" />
+              <mxPoint x="1145" y="965" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

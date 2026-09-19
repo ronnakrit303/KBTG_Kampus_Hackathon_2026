@@ -1,5 +1,8 @@
 # Research: Applied Security Techniques and Encryption
 
+> **สถานะ: เอกสารร่างเดิม (superseded)**  
+> สำหรับ Architecture ปัจจุบันให้ยึด [deep-technical-security-and-detection.md](./deep-technical-security-and-detection.md) เป็นหลัก โดยเฉพาะการใช้คำว่า TLS แทน E2EE, Local biometric authentication with hardware-backed key แทน “Biometric Encryption” และการไม่กำหนดเวลา Cooling-off ตายตัวใน MVP เนื้อหาด้านล่างเก็บไว้เพื่อการตรวจสอบที่มาของแนวคิดเท่านั้นและไม่ควรนำไปอ้างใน Proposal โดยตรง
+
 **Topic:** เทคนิคด้านความปลอดภัยและการเข้ารหัส (Security Techniques & Encryption) สำหรับปกป้องเงินสำรอง
 **Related Track:** Track 3 (Cyber Security & Digital Trust)
 
