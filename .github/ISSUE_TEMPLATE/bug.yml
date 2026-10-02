@@ -1,0 +1,83 @@
+name: Bug report
+description: Report reproducible behavior that differs from the approved contract or Acceptance Criteria.
+title: "[Bug]: "
+labels:
+  - type:bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: What happened and why does it matter?
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Branch/commit, browser/device, frontend/backend versions, scenario ID.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Reset scenario ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Cite the contract, test oracle, or Acceptance Criterion when possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - Critical — bypass, data/secret exposure, or demo cannot proceed
+        - High — Core security/product behavior is incorrect
+        - Medium — Important flow degrades but has a workaround
+        - Low — Minor behavior or presentation defect
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      placeholder: Screenshot, sanitized log, failing test, or recording. Never attach real/private data.
+
+  - type: textarea
+    id: security_privacy
+    attributes:
+      label: Security/privacy notes
+      placeholder: Could this bypass risk/state, duplicate an instruction, expose data, or create unsafe warning behavior?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety checklist
+      options:
+        - label: The report and attachments contain synthetic data only.
+          required: true
+        - label: I searched for an existing Issue before opening this report.
+          required: true

@@ -1,0 +1,57 @@
+name: Research or decision
+description: Resolve an evidence, product, UX, architecture, or security question before implementation.
+title: "[Decision]: "
+labels:
+  - type:research
+  - needs-decision
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Decision question
+      placeholder: What single decision must be made, and what work does it unblock?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and constraints
+      placeholder: Proposal promise, user need, technical/security constraint, deadline, or dependency.
+    validations:
+      required: true
+
+  - type: textarea
+    id: options
+    attributes:
+      label: Options and trade-offs
+      placeholder: Compare at least two plausible options, including cost, risk, and reversibility.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence required
+      placeholder: Primary sources, prototype measurement, usability observation, or technical spike.
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: Acceptance Criteria
+      placeholder: |
+        - [ ] Evidence is linked and limitations are stated
+        - [ ] Decision and rationale are recorded
+        - [ ] Affected canonical documents/backlog Issues are updated
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: integrity
+    attributes:
+      label: Evidence integrity
+      options:
+        - label: I will not invent statistics, interviews, model results, or production capabilities.
+          required: true

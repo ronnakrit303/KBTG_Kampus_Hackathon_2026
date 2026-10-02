@@ -1,0 +1,32 @@
+name: Repository guardrails
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: repository-guardrails-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-repository:
+    name: Validate canonical repository files
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Validate repository
+        run: python scripts/validate_repository.py

@@ -1,0 +1,110 @@
+name: Feature or engineering task
+description: Plan one reviewable product, security, test, documentation, or tooling change.
+title: "[Task]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One Issue should normally map to one branch and one PR. Read `AGENTS.md`, the current milestone, and relevant canonical documents before filling this form.
+
+  - type: dropdown
+    id: milestone
+    attributes:
+      label: Milestone
+      options:
+        - M0 — Repository Foundation
+        - M1 — Mobile PWA Shell & Hero Journey
+        - M2 — Protected Reserve & Auto-Allocation
+        - M3 — Multi-signal Risk & Graph Simulation
+        - M4 — Risk-based Intervention
+        - M5 — Security, Quality & Observability
+        - M6 — Deploy, User Test & Demo Readiness
+    validations:
+      required: true
+
+  - type: dropdown
+    id: truth_level
+    attributes:
+      label: Intended truth level
+      description: What will be true when this Issue is complete?
+      options:
+        - Implemented
+        - Simulated
+        - Future/Bank dependency documentation only
+        - No product truth-label change
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and outcome
+      description: Describe the user/engineering problem and the observable outcome, not only the implementation.
+      placeholder: What is missing or unsafe, and what should become possible?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: In scope
+      placeholder: List the smallest complete slice included in this Issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+      placeholder: State related work that this Issue intentionally will not do.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Use testable checkboxes.
+      placeholder: |
+        - [ ] Given ..., when ..., then ...
+        - [ ] Relevant automated test passes
+        - [ ] Documentation/contract is updated
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies and blockers
+      placeholder: Blocked by #... / Depends on decision ... / None
+    validations:
+      required: true
+
+  - type: textarea
+    id: security_privacy
+    attributes:
+      label: Security and privacy impact
+      placeholder: Signals/data/state affected, abuse cases, privacy boundary, or "No impact" with reason.
+    validations:
+      required: true
+
+  - type: textarea
+    id: test_evidence
+    attributes:
+      label: Required test evidence
+      placeholder: Unit/API/E2E/security/accessibility/manual evidence expected in the PR.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Ready checklist
+      options:
+        - label: I checked the canonical Proposal/Product/Architecture/Security documents relevant to this task.
+          required: true
+        - label: The Issue is small enough for one understandable PR or has been split.
+          required: true
+        - label: No real customer, account, credential, or private banking data is required.
+          required: true
